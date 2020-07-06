@@ -33,7 +33,7 @@ namespace DO_AN_DT_LOD
             DataRow[] r = tblNhanVien.Select("Username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'");
             if (r.Count() > 0)
             {
-                fMain.Text = "Quản Lý Nhà Sách - Chào " + r[0]["ten_nv"].ToString();
+                fMain.Text = "Quản lý Linh Kiện điện tử - Chào " + r[0]["ten_nv"].ToString();
                 fMain.maNV = r[0]["ma_nv"].ToString();
                 fMain.enableControl((int)r[0]["MaLTK"]);
                 this.Close();
@@ -58,6 +58,11 @@ namespace DO_AN_DT_LOD
         private void frmDangNhap_Enter(object sender, EventArgs e)
         {
             btnDangNhap_Click(sender, e);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

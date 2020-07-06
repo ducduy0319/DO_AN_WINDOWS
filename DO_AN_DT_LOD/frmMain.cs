@@ -81,5 +81,37 @@ namespace DO_AN_DT_LOD
             f.WindowState = FormWindowState.Normal;
             f.ShowDialog();
         }
+
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
+            frmMain_Load(sender, e);
+        }
+
+        private void btnDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("tabPadeDoiMatKhau");
+            if (index >= 0)
+            {
+                tabControlMain.SelectedIndex = index;
+            }
+            else
+            {
+                frmDoiMatKhau f = new frmDoiMatKhau();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPadeDoiMatKhau";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+                f.Show();
+            }
+        }
     }
+    
 }
