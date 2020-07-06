@@ -11,7 +11,9 @@ namespace DO_AN_DT_LOD.Modules
     class XLBANG : DataTable
     {
         #region Fields
-        public static string cnnStr = "Data Source=DESKTOP-F9HG3KK\\SQLEXPRESS;Initial Catalog=QLNHASACH;Integrated Security=True";
+        // duy : Data Source=DESKTOP-F9HG3KK\\SQLEXPRESS;Initial Catalog=QL_LKDT_LOD;Integrated Security=True
+        // Oanh :
+        public static string cnnStr = "Data Source=DESKTOP-F9HG3KK\\SQLEXPRESS;Initial Catalog=QL_LKDT_LOD;Integrated Security=True";
         private static SqlConnection _cnn;
         private SqlDataAdapter _da = new SqlDataAdapter();
         private string _query; // Cau truy van
