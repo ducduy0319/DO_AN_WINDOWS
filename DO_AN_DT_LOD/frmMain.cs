@@ -93,6 +93,7 @@ namespace DO_AN_DT_LOD
 
         private void btnDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+           
             int index = tabControlMain.TabPages.IndexOfKey("tabPadeDoiMatKhau");
             if (index >= 0)
             {
@@ -100,7 +101,7 @@ namespace DO_AN_DT_LOD
             }
             else
             {
-                frmDoiMatKhau f = new frmDoiMatKhau();
+                frmDoiMatKhau f = new frmDoiMatKhau(maNV);
                 TabPage p = new TabPage(f.Text);
                 p.Name = "tabPadeDoiMatKhau";
                 f.TopLevel = false;
@@ -111,6 +112,7 @@ namespace DO_AN_DT_LOD
                 tabControlMain.SelectedTab = p;
                 f.Show();
             }
+            
         }
     }
     
