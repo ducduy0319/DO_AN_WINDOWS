@@ -96,8 +96,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackgroundImageStore = global::DO_AN_DT_LOD.Properties.Resources.duy;
             this.ClientSize = new System.Drawing.Size(377, 228);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
