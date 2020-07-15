@@ -12,8 +12,8 @@ namespace DO_AN_DT_LOD.Modules
     {
         #region Fields
         // duy : Data Source=DESKTOP-F9HG3KK\\SQLEXPRESS;Initial Catalog=QL_LKDT_LOD;Integrated Security=True
-        // Oanh :Data Source=DESKTOP-SR3BE2S\\SQLEXPRESS;Initial Catalog=QL_LKDT_LOD;Integrated Security=True
-        public static string cnnStr = "Data Source=DESKTOP-F9HG3KK\\SQLEXPRESS;Initial Catalog=QL_LKDT_LOD;Integrated Security=True";
+        // Oanh :Data Source=DESKTOP-SR3BE2S\\SQLEXPRESS;Initial Catalog=LKDT_LOD;Integrated Security=True;
+        public static string cnnStr = "Data Source=DESKTOP-SR3BE2S\\SQLEXPRESS;Initial Catalog=LKDT_LOD;Integrated Security=True";
         private static SqlConnection _cnn;
         private SqlDataAdapter _da = new SqlDataAdapter();
         private string _query; // Cau truy van

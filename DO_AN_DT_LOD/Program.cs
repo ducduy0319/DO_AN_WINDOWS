@@ -19,7 +19,8 @@ namespace DO_AN_DT_LOD
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new SanPham());
+            Application.Run(new DS_nhanvien());
         }
     }
 }
+

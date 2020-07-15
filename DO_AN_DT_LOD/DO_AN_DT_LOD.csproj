@@ -82,6 +82,17 @@
     <Compile Include="frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSanPham.Designer.cs">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LKDT_LODDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LKDT_LODDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modules\XLBANG.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -105,6 +116,9 @@
     <EmbeddedResource Include="frmPhieuNhap.resx">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSanPham.resx">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +131,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <None Include="LKDT_LODDataSet.xsc">
+      <DependentUpon>LKDT_LODDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LKDT_LODDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LKDT_LODDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LKDT_LODDataSet.xss">
+      <DependentUpon>LKDT_LODDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
