@@ -96,7 +96,16 @@
     <Compile Include="Modules\XLBANG.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Modules\XLNCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modules\XLNHANVIEN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\XLPHIEUNHAP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\XLSANPHAM.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />

@@ -28,26 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuNhap));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhieuNhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNgayNhap = new System.Windows.Forms.TextBox();
+            this.txtNoiDung = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sophieunhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaypn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mancc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dsphieunhap = new System.Windows.Forms.DataGridView();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.cbMaNCC = new System.Windows.Forms.ComboBox();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboNV = new System.Windows.Forms.ComboBox();
+            this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
+            this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sophieuphap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayphieunhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ma_ncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noidung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ma_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dsphieunhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,12 +67,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Số PN:";
             // 
-            // textBox1
+            // txtPhieuNhap
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 21);
-            this.textBox1.TabIndex = 1;
+            this.txtPhieuNhap.Location = new System.Drawing.Point(134, 71);
+            this.txtPhieuNhap.Name = "txtPhieuNhap";
+            this.txtPhieuNhap.Size = new System.Drawing.Size(139, 21);
+            this.txtPhieuNhap.TabIndex = 1;
             // 
             // label2
             // 
@@ -78,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(296, 74);
+            this.label3.Location = new System.Drawing.Point(297, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 3;
@@ -93,20 +101,20 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Nội Dung:";
             // 
-            // textBox3
+            // txtNgayNhap
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 21);
-            this.textBox3.TabIndex = 6;
+            this.txtNgayNhap.Location = new System.Drawing.Point(134, 109);
+            this.txtNgayNhap.Name = "txtNgayNhap";
+            this.txtNgayNhap.Size = new System.Drawing.Size(139, 21);
+            this.txtNgayNhap.TabIndex = 6;
             // 
-            // textBox4
+            // txtNoiDung
             // 
-            this.textBox4.Location = new System.Drawing.Point(356, 114);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(122, 21);
-            this.textBox4.TabIndex = 7;
+            this.txtNoiDung.Location = new System.Drawing.Point(356, 114);
+            this.txtNoiDung.Multiline = true;
+            this.txtNoiDung.Name = "txtNoiDung";
+            this.txtNoiDung.Size = new System.Drawing.Size(122, 21);
+            this.txtNoiDung.TabIndex = 7;
             // 
             // label5
             // 
@@ -118,37 +126,114 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "PHIẾU NHẬP";
             // 
-            // dataGridView1
+            // dsphieunhap
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sophieunhap,
-            this.ngaypn,
-            this.mancc,
+            this.dsphieunhap.AutoGenerateColumns = false;
+            this.dsphieunhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dsphieunhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sophieuphap,
+            this.ngayphieunhap,
+            this.ma_ncc,
             this.noidung,
-            this.manv});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 214);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(560, 150);
-            this.dataGridView1.TabIndex = 9;
+            this.ma_nv});
+            this.dsphieunhap.DataSource = this.lKDTLODDataSetBindingSource;
+            this.dsphieunhap.Location = new System.Drawing.Point(12, 243);
+            this.dsphieunhap.Name = "dsphieunhap";
+            this.dsphieunhap.Size = new System.Drawing.Size(560, 163);
+            this.dsphieunhap.TabIndex = 9;
             // 
-            // sophieunhap
+            // btnThem
             // 
-            this.sophieunhap.DataPropertyName = "sophieunhap";
-            this.sophieunhap.HeaderText = "Số PN";
-            this.sophieunhap.Name = "sophieunhap";
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(44, 184);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 36);
+            this.btnThem.TabIndex = 10;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // ngaypn
+            // btnXoa
             // 
-            this.ngaypn.DataPropertyName = "ngaynhap";
-            this.ngaypn.HeaderText = "Ngày PN";
-            this.ngaypn.Name = "ngaypn";
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(147, 184);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 36);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // mancc
+            // btnSua
             // 
-            this.mancc.DataPropertyName = "ma_ncc";
-            this.mancc.HeaderText = "MÃ NCC";
-            this.mancc.Name = "mancc";
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(241, 184);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 36);
+            this.btnSua.TabIndex = 12;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // cbMaNCC
+            // 
+            this.cbMaNCC.FormattingEnabled = true;
+            this.cbMaNCC.Location = new System.Drawing.Point(357, 66);
+            this.cbMaNCC.Name = "cbMaNCC";
+            this.cbMaNCC.Size = new System.Drawing.Size(121, 21);
+            this.cbMaNCC.TabIndex = 13;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(347, 184);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 36);
+            this.btnThoat.TabIndex = 14;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(74, 155);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Mã NCC:";
+            // 
+            // cboNV
+            // 
+            this.cboNV.FormattingEnabled = true;
+            this.cboNV.Location = new System.Drawing.Point(134, 147);
+            this.cboNV.Name = "cboNV";
+            this.cboNV.Size = new System.Drawing.Size(139, 21);
+            this.cboNV.TabIndex = 13;
+            // 
+            // lKDT_LODDataSet
+            // 
+            this.lKDT_LODDataSet.DataSetName = "LKDT_LODDataSet";
+            this.lKDT_LODDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lKDTLODDataSetBindingSource
+            // 
+            this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
+            this.lKDTLODDataSetBindingSource.Position = 0;
+            // 
+            // sophieuphap
+            // 
+            this.sophieuphap.DataPropertyName = "sophieuphap";
+            this.sophieuphap.HeaderText = "Số PN";
+            this.sophieuphap.Name = "sophieuphap";
+            // 
+            // ngayphieunhap
+            // 
+            this.ngayphieunhap.DataPropertyName = "ngayphieunhap";
+            this.ngayphieunhap.HeaderText = "Ngày PN";
+            this.ngayphieunhap.Name = "ngayphieunhap";
+            // 
+            // ma_ncc
+            // 
+            this.ma_ncc.DataPropertyName = "ma_ncc";
+            this.ma_ncc.HeaderText = "MÃ NCC";
+            this.ma_ncc.Name = "ma_ncc";
             // 
             // noidung
             // 
@@ -156,68 +241,39 @@
             this.noidung.HeaderText = "Nội Dung";
             this.noidung.Name = "noidung";
             // 
-            // manv
+            // ma_nv
             // 
-            this.manv.DataPropertyName = "ma_nv";
-            this.manv.HeaderText = "Mã NV";
-            this.manv.Name = "manv";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(44, 160);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 36);
-            this.simpleButton1.TabIndex = 10;
-            this.simpleButton1.Text = "Thêm";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(134, 160);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 36);
-            this.simpleButton2.TabIndex = 11;
-            this.simpleButton2.Text = "Xóa";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(228, 160);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 36);
-            this.simpleButton3.TabIndex = 12;
-            this.simpleButton3.Text = "Sửa";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(356, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 13;
+            this.ma_nv.DataPropertyName = "ma_nv";
+            this.ma_nv.HeaderText = "Mã NV";
+            this.ma_nv.Name = "ma_nv";
             // 
             // frmPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 388);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(621, 435);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.cboNV);
+            this.Controls.Add(this.cbMaNCC);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.dsphieunhap);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNoiDung);
+            this.Controls.Add(this.txtNgayNhap);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPhieuNhap);
             this.Controls.Add(this.label1);
             this.Name = "frmPhieuNhap";
             this.Text = "frmPhieuNhap";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmPhieuNhap_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsphieunhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,22 +282,27 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhieuNhap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNgayNhap;
+        private System.Windows.Forms.TextBox txtNoiDung;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sophieunhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaypn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mancc;
+        private System.Windows.Forms.DataGridView dsphieunhap;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
+        private System.Windows.Forms.ComboBox cbMaNCC;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboNV;
+        private System.Windows.Forms.BindingSource lKDTLODDataSetBindingSource;
+        private LKDT_LODDataSet lKDT_LODDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sophieuphap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayphieunhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ma_ncc;
         private System.Windows.Forms.DataGridViewTextBoxColumn noidung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ma_nv;
     }
 }

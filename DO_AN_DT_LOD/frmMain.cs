@@ -114,6 +114,76 @@ namespace DO_AN_DT_LOD
             }
             
         }
+
+        private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("tabPadeDS_nhanvien");
+            if (index >= 0)
+            {
+                tabControlMain.SelectedIndex = index;
+            }
+            else
+            {
+                DS_nhanvien f = new DS_nhanvien();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPadeNhanVien";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+                f.Show();
+            }
+
+        }
+
+        private void btnSanPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("tabPadeSanPham");
+            if (index >= 0)
+            {
+                tabControlMain.SelectedIndex = index;
+            }
+            else
+            {
+                frmSanPham f = new frmSanPham();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPadeSanPham";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+                f.Show();
+            }
+
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            int index = tabControlMain.TabPages.IndexOfKey("tabPadePhieuNhap");
+            if (index >= 0)
+            {
+                tabControlMain.SelectedIndex = index;
+            }
+            else
+            {
+                frmPhieuNhap f = new frmPhieuNhap();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPadePhieuNhap";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+                f.Show();
+            }
+
+        }
     }
     
 }

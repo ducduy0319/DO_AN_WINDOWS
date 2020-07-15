@@ -28,7 +28,8 @@ namespace DO_AN_DT_LOD
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
