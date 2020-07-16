@@ -104,5 +104,13 @@ namespace DO_AN_DT_LOD
             TabPage T = (TabPage)this.Parent;
             T.Dispose();
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSPN.CancelCurrentEdit();
+            tblPhieuNhap.RejectChanges();
+            capnhat = true;
+            enableButton();
+        }
     }
 }

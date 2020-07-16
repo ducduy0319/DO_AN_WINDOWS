@@ -26,7 +26,7 @@ namespace DO_AN_DT_LOD
                     btnDangXuat.Enabled = true;
                     btnDoiMatKhau.Enabled = true;
 
-                    btnNhanVien.Enabled = true;
+                    btnNhanVien1.Enabled = true;
                     btnChamCong.Enabled = true;
                     btnLoaiSanPham.Enabled = true;
                     btnSanPham.Enabled = true; ;
@@ -34,11 +34,15 @@ namespace DO_AN_DT_LOD
                     btnKhachHang.Enabled = true;
                     btnTaoHoaDon.Enabled = true;
                     btnThongKe.Enabled = true;
+
+                    btnXemSanPham.Enabled = true;
+
+
                     break;
                 case 2: //Nhan vien ban hang
                     btnDangXuat.Enabled = true;
                     btnDoiMatKhau.Enabled = true;
-                    btnNhanVien.Enabled = false;
+                    btnNhanVien1.Enabled = false;
                     btnChamCong.Enabled = false;
                     btnLoaiSanPham.Enabled = false;
                     btnSanPham.Enabled = false;
@@ -50,7 +54,7 @@ namespace DO_AN_DT_LOD
                 case 3: //Nhan vien quan ly kho
                     btnDangXuat.Enabled = true;
                     btnDoiMatKhau.Enabled = true;
-                    btnNhanVien.Enabled = false;
+                    btnNhanVien1.Enabled = false;
                     btnChamCong.Enabled = false;
                     btnLoaiSanPham.Enabled = true;
                     btnSanPham.Enabled = true;
@@ -62,7 +66,7 @@ namespace DO_AN_DT_LOD
                 default:
                     btnDangXuat.Enabled = false;
                     btnDoiMatKhau.Enabled = false;
-                    btnNhanVien.Enabled = false;
+                    btnNhanVien1.Enabled = false;
                     btnChamCong.Enabled = false;
                     btnLoaiSanPham.Enabled = false;
                     btnSanPham.Enabled = false;
@@ -94,10 +98,10 @@ namespace DO_AN_DT_LOD
         private void btnDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
            
-            int index = tabControlMain.TabPages.IndexOfKey("tabPadeDoiMatKhau");
+            int index = tabBanhang.TabPages.IndexOfKey("tabPadeDoiMatKhau");
             if (index >= 0)
             {
-                tabControlMain.SelectedIndex = index;
+                tabBanhang.SelectedIndex = index;
             }
             else
             {
@@ -108,8 +112,8 @@ namespace DO_AN_DT_LOD
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
                 f.FormBorderStyle = FormBorderStyle.None;
-                tabControlMain.TabPages.Add(p);
-                tabControlMain.SelectedTab = p;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
                 f.Show();
             }
             
@@ -117,10 +121,10 @@ namespace DO_AN_DT_LOD
 
         private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int index = tabControlMain.TabPages.IndexOfKey("tabPadeDS_nhanvien");
+            int index = tabBanhang.TabPages.IndexOfKey("tabPadeDS_nhanvien");
             if (index >= 0)
             {
-                tabControlMain.SelectedIndex = index;
+                tabBanhang.SelectedIndex = index;
             }
             else
             {
@@ -131,8 +135,8 @@ namespace DO_AN_DT_LOD
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
                 f.FormBorderStyle = FormBorderStyle.None;
-                tabControlMain.TabPages.Add(p);
-                tabControlMain.SelectedTab = p;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
                 f.Show();
             }
 
@@ -140,10 +144,10 @@ namespace DO_AN_DT_LOD
 
         private void btnSanPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int index = tabControlMain.TabPages.IndexOfKey("tabPadeSanPham");
+            int index = tabBanhang.TabPages.IndexOfKey("tabPadeSanPham");
             if (index >= 0)
             {
-                tabControlMain.SelectedIndex = index;
+                tabBanhang.SelectedIndex = index;
             }
             else
             {
@@ -154,8 +158,8 @@ namespace DO_AN_DT_LOD
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
                 f.FormBorderStyle = FormBorderStyle.None;
-                tabControlMain.TabPages.Add(p);
-                tabControlMain.SelectedTab = p;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
                 f.Show();
             }
 
@@ -164,10 +168,10 @@ namespace DO_AN_DT_LOD
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            int index = tabControlMain.TabPages.IndexOfKey("tabPadePhieuNhap");
+            int index = tabBanhang.TabPages.IndexOfKey("tabPadePhieuNhap");
             if (index >= 0)
             {
-                tabControlMain.SelectedIndex = index;
+                tabBanhang.SelectedIndex = index;
             }
             else
             {
@@ -178,10 +182,15 @@ namespace DO_AN_DT_LOD
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
                 f.FormBorderStyle = FormBorderStyle.None;
-                tabControlMain.TabPages.Add(p);
-                tabControlMain.SelectedTab = p;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
                 f.Show();
             }
+
+        }
+
+        private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

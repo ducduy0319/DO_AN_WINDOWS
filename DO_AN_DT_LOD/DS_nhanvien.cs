@@ -48,19 +48,17 @@ namespace DO_AN_DT_LOD
         }
         private void enableButton()
         {
-            btnLuu.Enabled = !capnhat;
+            btnLuu.Enabled = capnhat;
             btnSua.Enabled = !capnhat;
             btnThem.Enabled = !capnhat;
             btnXoa.Enabled = !capnhat;
             btnthoat.Enabled = !capnhat;
-
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             DSNV.AddNew();
-            capnhat = true;
+            capnhat = false;
             enableButton();
         }
 
@@ -83,7 +81,7 @@ namespace DO_AN_DT_LOD
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            capnhat = true;
+            capnhat = false;
             enableButton();
         }
 
@@ -138,6 +136,19 @@ namespace DO_AN_DT_LOD
         {
             TabPage T = (TabPage)this.Parent;
             T.Dispose();
+        }
+
+        private void dsNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSNV.CancelCurrentEdit();
+            tblNhanVien.RejectChanges();
+            capnhat = true;
+            enableButton();
         }
     }
 }

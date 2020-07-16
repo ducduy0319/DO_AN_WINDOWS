@@ -32,6 +32,7 @@ namespace DO_AN_DT_LOD
 
         private void frmSanPham_Load(object sender, EventArgs e)
         {
+
             tblSanPham = new XLSANPHAM();
             DSSP = this.BindingContext[tblSanPham];
             loadsanpham();
@@ -56,6 +57,7 @@ namespace DO_AN_DT_LOD
             btnThem.Enabled = !capnhat;
             btnXoa.Enabled = !capnhat;
             btnThoat.Enabled = !capnhat;
+            btnHuy.Enabled = !capnhat;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -71,9 +73,9 @@ namespace DO_AN_DT_LOD
             try
             {
                 DSSP.RemoveAt(DSSP.Position);
+        
                 tblSanPham.ghi();
                 tblSanPham.AcceptChanges();
-
             }
             catch (SqlException ex)
             {
@@ -126,6 +128,25 @@ namespace DO_AN_DT_LOD
         {
             if (e.KeyChar == (char)Keys.Enter)
                 btntimkiem_Click(sender, e);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSSP.CancelCurrentEdit();
+            tblSanPham.RejectChanges();
+            capnhat = true;
+            enableButton();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dsSanPham_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dsSanPham.Rows)
+                r.Cells[0].Value = r.Index + 1;
         }
     }
 }
