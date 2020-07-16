@@ -74,6 +74,7 @@
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabBanhang = new System.Windows.Forms.TabControl();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -330,7 +331,8 @@
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
             this.ribbonPageGroup7,
-            this.ribbonPageGroup13});
+            this.ribbonPageGroup13,
+            this.ribbonPageGroup14});
             this.ribBanHang.Name = "ribBanHang";
             this.ribBanHang.Text = "QUẢN LÝ BÁN HÀNG";
             // 
@@ -452,6 +454,11 @@
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "ribbonPageGroup13";
             // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            this.ribbonPageGroup14.Text = "ribbonPageGroup14";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -517,6 +524,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
     }
 }
 
