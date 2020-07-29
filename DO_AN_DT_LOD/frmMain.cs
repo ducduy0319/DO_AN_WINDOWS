@@ -23,57 +23,61 @@ namespace DO_AN_DT_LOD
             switch (maLTK)
             {
                 case 1: //admin
+                    //Quản lý bán hàng
                     btnDangXuat.Enabled = true;
                     btnDoiMatKhau.Enabled = true;
+                    btnXemSanPham.Enabled = true;
+                    btnKhachHang.Enabled = true;
+                    btnDonHang.Enabled = true;
+                    btnTaoHoaDon.Enabled = true;
+                    btnTimKiem.Enabled = true;
+                    btnUngDung.Enabled = true;
 
+                    //Quản lý hàng hóa
+                    btnPhieuNhap.Enabled = true;
+                    btnLSanPham.Enabled = true;
+                    btnSanPham.Enabled = true;
+
+                    //Quản lý doanh thu
+                    btnTKTThang.Enabled = true;
+                    btnTKTTuan.Enabled = true;
+                    btnTKTNgay.Enabled = true;
+
+                    //Quản lý nhân viên
                     btnNhanVien1.Enabled = true;
                     btnChamCong.Enabled = true;
-                    btnLoaiSanPham.Enabled = true;
-                    btnSanPham.Enabled = true; ;
-                    btnDonHang.Enabled = true; ;
-                    btnKhachHang.Enabled = true;
-                    btnTaoHoaDon.Enabled = true;
-                    btnThongKe.Enabled = true;
+                    btnPhanCong.Enabled = true;
+                    btnXemPhanCong.Enabled = true;
 
+                    break;
+
+                default: //Nhan vien ban hang
+                    //Quản lý bán hàng
+                    btnDangXuat.Enabled = true;
+                    btnDoiMatKhau.Enabled = true;
                     btnXemSanPham.Enabled = true;
-
-
-                    break;
-                case 2: //Nhan vien ban hang
-                    btnDangXuat.Enabled = true;
-                    btnDoiMatKhau.Enabled = true;
-                    btnNhanVien1.Enabled = false;
-                    btnChamCong.Enabled = false;
-                    btnLoaiSanPham.Enabled = false;
-                    btnSanPham.Enabled = false;
-                    btnDonHang.Enabled = false;
                     btnKhachHang.Enabled = true;
+                    btnDonHang.Enabled = true;
                     btnTaoHoaDon.Enabled = true;
-                    btnThongKe.Enabled = false;
-                    break;
-                case 3: //Nhan vien quan ly kho
-                    btnDangXuat.Enabled = true;
-                    btnDoiMatKhau.Enabled = true;
-                    btnNhanVien1.Enabled = false;
-                    btnChamCong.Enabled = false;
-                    btnLoaiSanPham.Enabled = true;
-                    btnSanPham.Enabled = true;
-                    btnDonHang.Enabled = false;
-                    btnKhachHang.Enabled = false;
-                    btnTaoHoaDon.Enabled = false;
-                    btnThongKe.Enabled = false;
-                    break;
-                default:
-                    btnDangXuat.Enabled = false;
-                    btnDoiMatKhau.Enabled = false;
-                    btnNhanVien1.Enabled = false;
-                    btnChamCong.Enabled = false;
-                    btnLoaiSanPham.Enabled = false;
+                    btnTimKiem.Enabled = true;
+                    btnUngDung.Enabled = true;
+
+                    //Quản lý hàng hóa
+                    btnPhieuNhap.Enabled = false;
+                    btnLSanPham.Enabled = false;
                     btnSanPham.Enabled = false;
-                    btnDonHang.Enabled = false;
-                    btnKhachHang.Enabled = false;
-                    btnTaoHoaDon.Enabled = false;
-                    btnThongKe.Enabled = false;
+
+                    //Quản lý doanh thu
+                    btnTKTThang.Enabled = false;
+                    btnTKTTuan.Enabled = false;
+                    btnTKTNgay.Enabled = false;
+
+                    //Quản lý nhân viên
+                    btnNhanVien1.Enabled = false;
+                    btnChamCong.Enabled = false;
+                    btnPhanCong.Enabled = false;
+                    btnXemPhanCong.Enabled = true;
+
                     break;
             }
         }
@@ -194,26 +198,9 @@ namespace DO_AN_DT_LOD
 
         }
 
-        private void btnDonHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnUngDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int index = tabBanhang.TabPages.IndexOfKey("tabPadeHoaDon");
-            if (index >= 0)
-            {
-                tabBanhang.SelectedIndex = index;
-            }
-            else
-            {
-                HoaDon f = new HoaDon();
-                TabPage p = new TabPage(f.Text);
-                p.Name = "tabPadeHoaDon";
-                f.TopLevel = false;
-                p.Controls.Add(f);
-                f.Dock = DockStyle.Fill;
-                f.FormBorderStyle = FormBorderStyle.None;
-                tabBanhang.TabPages.Add(p);
-                tabBanhang.SelectedTab = p;
-                f.Show();
-            }
+
         }
     }
     
