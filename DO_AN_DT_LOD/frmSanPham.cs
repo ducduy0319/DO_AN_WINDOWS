@@ -52,12 +52,13 @@ namespace DO_AN_DT_LOD
         }
         private void enableButton()
         {
-            btnLuu.Enabled = !capnhat;
-            btnSua.Enabled = !capnhat;
             btnThem.Enabled = !capnhat;
+            btnSua.Enabled = !capnhat;
             btnXoa.Enabled = !capnhat;
             btnThoat.Enabled = !capnhat;
-            btnHuy.Enabled = !capnhat;
+
+            btnLuu.Enabled = capnhat;
+            btnHuy.Enabled = capnhat;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -65,7 +66,6 @@ namespace DO_AN_DT_LOD
             DSSP.AddNew();
             capnhat = true;
             enableButton();
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -73,12 +73,13 @@ namespace DO_AN_DT_LOD
             try
             {
                 DSSP.RemoveAt(DSSP.Position);
-        
+                capnhat = false;
                 tblSanPham.ghi();
                 tblSanPham.AcceptChanges();
             }
             catch (SqlException ex)
             {
+                //sửa lại cần thông bào trước khi xóa
                 tblSanPham.RejectChanges();
                 MessageBox.Show("xóa thất bại !!!");
             }
@@ -94,6 +95,7 @@ namespace DO_AN_DT_LOD
         {
             try
             {
+                DSSP.EndCurrentEdit();
                 tblSanPham.ghi();
                 tblSanPham.AcceptChanges();
                 capnhat = false;
@@ -134,7 +136,7 @@ namespace DO_AN_DT_LOD
         {
             DSSP.CancelCurrentEdit();
             tblSanPham.RejectChanges();
-            capnhat = true;
+            capnhat = false;
             enableButton();
         }
 
