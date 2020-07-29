@@ -73,8 +73,6 @@
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabBanhang = new System.Windows.Forms.TabControl();
-            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +109,6 @@
             this.barButtonItem14,
             this.barButtonItem15});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 27;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -119,7 +116,7 @@
             this.ribHangHoa,
             this.ribDoanhThu,
             this.ribNhanVien});
-            this.ribbonControl1.Size = new System.Drawing.Size(1186, 178);
+            this.ribbonControl1.Size = new System.Drawing.Size(1017, 143);
             // 
             // btnDangXuat
             // 
@@ -210,6 +207,7 @@
             this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.Image")));
             this.btnDonHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.LargeImage")));
             this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDonHang_ItemClick);
             // 
             // btnKhachHang
             // 
@@ -298,6 +296,8 @@
             // 
             this.btnXemSanPham.Caption = "Sản Phẩm";
             this.btnXemSanPham.Id = 23;
+            this.btnXemSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemSanPham.ImageOptions.Image")));
+            this.btnXemSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXemSanPham.ImageOptions.LargeImage")));
             this.btnXemSanPham.Name = "btnXemSanPham";
             // 
             // barButtonItem12
@@ -330,9 +330,7 @@
             this.ribbonPageGroup1,
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup7,
-            this.ribbonPageGroup13,
-            this.ribbonPageGroup14});
+            this.ribbonPageGroup7});
             this.ribBanHang.Name = "ribBanHang";
             this.ribBanHang.Text = "QUẢN LÝ BÁN HÀNG";
             // 
@@ -441,32 +439,20 @@
             // tabBanhang
             // 
             this.tabBanhang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabBanhang.Location = new System.Drawing.Point(0, 178);
-            this.tabBanhang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabBanhang.Location = new System.Drawing.Point(0, 143);
             this.tabBanhang.Name = "tabBanhang";
             this.tabBanhang.SelectedIndex = 0;
-            this.tabBanhang.Size = new System.Drawing.Size(1186, 640);
+            this.tabBanhang.Size = new System.Drawing.Size(1017, 493);
             this.tabBanhang.TabIndex = 1;
             this.tabBanhang.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
             // 
-            // ribbonPageGroup13
-            // 
-            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.Text = "ribbonPageGroup13";
-            // 
-            // ribbonPageGroup14
-            // 
-            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            this.ribbonPageGroup14.Text = "ribbonPageGroup14";
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 818);
+            this.ClientSize = new System.Drawing.Size(1017, 636);
             this.Controls.Add(this.tabBanhang);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "frmmain";
@@ -523,8 +509,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
     }
 }
 
