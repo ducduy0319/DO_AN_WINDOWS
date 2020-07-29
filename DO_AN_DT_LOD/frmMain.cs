@@ -202,6 +202,28 @@ namespace DO_AN_DT_LOD
         {
 
         }
+
+        private void btnDonHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tabPadeHoaDon");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                HoaDon f = new HoaDon();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPadeHoaDon";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+        }
     }
     
 }

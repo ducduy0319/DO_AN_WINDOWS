@@ -57,11 +57,13 @@
             this.btnPhanCong = new DevExpress.XtraBars.BarButtonItem();
             this.btnXemPhanCong = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTimKiem = new DevExpress.XtraBars.BarButtonItem();
             this.ribBanHang = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribHangHoa = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -74,8 +76,6 @@
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabBanhang = new System.Windows.Forms.TabControl();
-            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnTimKiem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,6 +213,7 @@
             this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.Image")));
             this.btnDonHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.LargeImage")));
             this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDonHang_ItemClick);
             // 
             // btnKhachHang
             // 
@@ -274,24 +275,24 @@
             // 
             this.btnTKTThang.Caption = "Thống Kê Theo Tháng";
             this.btnTKTThang.Id = 19;
-            this.btnTKTThang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.btnTKTThang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.btnTKTThang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKTThang.ImageOptions.Image")));
+            this.btnTKTThang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTKTThang.ImageOptions.LargeImage")));
             this.btnTKTThang.Name = "btnTKTThang";
             // 
             // btnTKTTuan
             // 
             this.btnTKTTuan.Caption = "Thống Kê Theo Tuần";
             this.btnTKTTuan.Id = 20;
-            this.btnTKTTuan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.btnTKTTuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.btnTKTTuan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKTTuan.ImageOptions.Image")));
+            this.btnTKTTuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTKTTuan.ImageOptions.LargeImage")));
             this.btnTKTTuan.Name = "btnTKTTuan";
             // 
             // btnTKTNgay
             // 
             this.btnTKTNgay.Caption = "Thống Kê Theo Ngày";
             this.btnTKTNgay.Id = 21;
-            this.btnTKTNgay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
-            this.btnTKTNgay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
+            this.btnTKTNgay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKTNgay.ImageOptions.Image")));
+            this.btnTKTNgay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTKTNgay.ImageOptions.LargeImage")));
             this.btnTKTNgay.Name = "btnTKTNgay";
             // 
             // barButtonItem10
@@ -312,24 +313,24 @@
             // 
             this.btnLSanPham.Caption = "Loại Sản Phẩm";
             this.btnLSanPham.Id = 24;
-            this.btnLSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.btnLSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.btnLSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLSanPham.ImageOptions.Image")));
+            this.btnLSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLSanPham.ImageOptions.LargeImage")));
             this.btnLSanPham.Name = "btnLSanPham";
             // 
             // btnPhanCong
             // 
             this.btnPhanCong.Caption = "Phân Công";
             this.btnPhanCong.Id = 25;
-            this.btnPhanCong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.ImageOptions.Image")));
-            this.btnPhanCong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.ImageOptions.LargeImage")));
+            this.btnPhanCong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanCong.ImageOptions.Image")));
+            this.btnPhanCong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhanCong.ImageOptions.LargeImage")));
             this.btnPhanCong.Name = "btnPhanCong";
             // 
             // btnXemPhanCong
             // 
             this.btnXemPhanCong.Caption = "Xem Phân Công";
             this.btnXemPhanCong.Id = 26;
-            this.btnXemPhanCong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.ImageOptions.Image")));
-            this.btnXemPhanCong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.ImageOptions.LargeImage")));
+            this.btnXemPhanCong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemPhanCong.ImageOptions.Image")));
+            this.btnXemPhanCong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXemPhanCong.ImageOptions.LargeImage")));
             this.btnXemPhanCong.Name = "btnXemPhanCong";
             // 
             // barButtonItem11
@@ -337,6 +338,14 @@
             this.barButtonItem11.Caption = "barButtonItem11";
             this.barButtonItem11.Id = 27;
             this.barButtonItem11.Name = "barButtonItem11";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Caption = "Tìm Kiếm";
+            this.btnTimKiem.Id = 28;
+            this.btnTimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.Image")));
+            this.btnTimKiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.LargeImage")));
+            this.btnTimKiem.Name = "btnTimKiem";
             // 
             // ribBanHang
             // 
@@ -377,6 +386,12 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.btnTimKiem);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Thông tin ứng dụng";
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.btnUngDung);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            this.ribbonPageGroup13.Text = "ribbonPageGroup13";
             // 
             // ribHangHoa
             // 
@@ -465,20 +480,6 @@
             this.tabBanhang.Size = new System.Drawing.Size(1186, 625);
             this.tabBanhang.TabIndex = 1;
             this.tabBanhang.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
-            // 
-            // ribbonPageGroup13
-            // 
-            this.ribbonPageGroup13.ItemLinks.Add(this.btnUngDung);
-            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.Text = "ribbonPageGroup13";
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Caption = "Tìm Kiếm";
-            this.btnTimKiem.Id = 28;
-            this.btnTimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.Image")));
-            this.btnTimKiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.LargeImage")));
-            this.btnTimKiem.Name = "btnTimKiem";
             // 
             // frmMain
             // 
