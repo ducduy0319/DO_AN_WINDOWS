@@ -25,13 +25,15 @@ namespace DO_AN_DT_LOD
         DataTable tblHOADON, tblNHANVIEN;
         SqlDataAdapter daHOADON, daNHANVIEN;
         BindingManagerBase DSHD;
-        bool capNhat = false;
+        bool capnhat = false;
         private void HoaDon_Load(object sender, EventArgs e)
         {
             tblHOADON = new DataTable();
             daHOADON = new SqlDataAdapter("select * from HOADON", XLBANG.cnnStr);
-            daNHANVIEN = new SqlDataAdapter("select * from NHANVIEN", XLBANG.cnnStr);
             tblNHANVIEN = new DataTable();
+            daNHANVIEN = new SqlDataAdapter("select * from NHANVIEN", XLBANG.cnnStr);
+            
+            
             try
             {
                 daHOADON.Fill(tblHOADON);
@@ -48,32 +50,118 @@ namespace DO_AN_DT_LOD
             txtNgHD.DataBindings.Add("text", tblHOADON, "ngayhoadon", true);
             txtnoidung.DataBindings.Add("text", tblHOADON, "noidung", true);
             txtSHD.DataBindings.Add("text", tblHOADON, "sohoadon", true);
-            cbma_nv.DataBindings.Add("text", tblNHANVIEN, "ma_nv", true);
+            cbma_nv.DataBindings.Add("selectedValue", tblHOADON, "ma_nv", true);
+
             DSHD = this.BindingContext[tblHOADON];
-            EnabledButton();
+            enabledButton();
         }
         private void LoadDSNHANVIEN()
         {
             dgvDSHD.AutoGenerateColumns = false;
             dgvDSHD.DataSource = tblHOADON;
         }
+
+      
+        private void dgvDSHD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dgvDSHD.Rows)
+                r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            DSHD.AddNew();
+            capnhat = true;
+            enabledButton();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+            capnhat = true;
+            enabledButton();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn có muốn xóa sách " + txtSHD.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DSHD.RemoveAt(DSHD.Position);
+                    capnhat = false;
+                    daHOADON.Update(tblHOADON);
+
+                    tblHOADON.AcceptChanges();
+                    MessageBox.Show("Xóa thành công!");
+                }
+            }
+            catch (SqlException ex)
+            {
+                //sửa lại cần thông bào trước khi xóa
+                tblHOADON.RejectChanges();
+                MessageBox.Show("xóa thất bại !!!");
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DSHD.EndCurrentEdit();
+                daHOADON.Update(tblHOADON);
+                tblHOADON.AcceptChanges();
+                capnhat = false;
+                enabledButton();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSHD.CancelCurrentEdit();
+            tblHOADON.RejectChanges();
+            capnhat = false;
+            enabledButton();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
+
+        private void cbma_nv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void LoadHOADON()
         {
             cbma_nv.DataSource = tblNHANVIEN;
-            cbma_nv.DisplayMember = "ten_nv";
+            cbma_nv.DisplayMember = "ma_nv";
             cbma_nv.ValueMember = "ma_nv";
         }
 
 
-        private void EnabledButton()
+        private void enabledButton()
         {
-            btnThem.Enabled = !capNhat;
-            btnXoa.Enabled = !capNhat;
-            btnSua.Enabled = !capNhat;
-            btnLuu.Enabled = capNhat;
-            btnHuy.Enabled = capNhat;
-         
+            btnThem.Enabled = !capnhat;
+            btnSua.Enabled = !capnhat;
+            btnXoa.Enabled = !capnhat;
+            btnThoat.Enabled = !capnhat;
 
+            btnLuu.Enabled = capnhat;
+            btnHuy.Enabled = capnhat;
         }
+
     }
 }

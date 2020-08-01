@@ -48,10 +48,9 @@ namespace DO_AN_DT_LOD
                     btnChamCong.Enabled = true;
                     btnPhanCong.Enabled = true;
                     btnXemPhanCong.Enabled = true;
-
+            
                     break;
-
-                default: //Nhan vien ban hang
+                case 2: //nhân viên
                     //Quản lý bán hàng
                     btnDangXuat.Enabled = true;
                     btnDoiMatKhau.Enabled = true;
@@ -77,6 +76,63 @@ namespace DO_AN_DT_LOD
                     btnChamCong.Enabled = false;
                     btnPhanCong.Enabled = false;
                     btnXemPhanCong.Enabled = true;
+
+                    break;
+                case 3: // nhân viên kho (đang sửa lí)
+                    //Quản lý bán hàng
+                    btnDangXuat.Enabled = true;
+                    btnDoiMatKhau.Enabled = true;
+                    btnXemSanPham.Enabled = true;
+                    btnKhachHang.Enabled = true;
+                    btnDonHang.Enabled = true;
+                    btnTaoHoaDon.Enabled = true;
+                    btnTimKiem.Enabled = true;
+                    btnUngDung.Enabled = true;
+
+                    //Quản lý hàng hóa
+                    btnPhieuNhap.Enabled = false;
+                    btnLSanPham.Enabled = false;
+                    btnSanPham.Enabled = false;
+
+                    //Quản lý doanh thu
+                    btnTKTThang.Enabled = false;
+                    btnTKTTuan.Enabled = false;
+                    btnTKTNgay.Enabled = false;
+
+                    //Quản lý nhân viên
+                    btnNhanVien1.Enabled = false;
+                    btnChamCong.Enabled = false;
+                    btnPhanCong.Enabled = false;
+                    btnXemPhanCong.Enabled = true;
+
+                    break;
+
+                default: //Nhan vien ban hang
+                    //Quản lý bán hàng
+                    btnDangXuat.Enabled = true;
+                    btnDoiMatKhau.Enabled = false;
+                    btnXemSanPham.Enabled = false;
+                    btnKhachHang.Enabled = false;
+                    btnDonHang.Enabled = false;
+                    btnTaoHoaDon.Enabled = false;
+                    btnTimKiem.Enabled = false;
+                    btnUngDung.Enabled = false;
+
+                    //Quản lý hàng hóa
+                    btnPhieuNhap.Enabled = false;
+                    btnLSanPham.Enabled = false;
+                    btnSanPham.Enabled = false;
+
+                    //Quản lý doanh thu
+                    btnTKTThang.Enabled = false;
+                    btnTKTTuan.Enabled = false;
+                    btnTKTNgay.Enabled = false;
+
+                    //Quản lý nhân viên
+                    btnNhanVien1.Enabled = false;
+                    btnChamCong.Enabled = false;
+                    btnPhanCong.Enabled = false;
+                    btnXemPhanCong.Enabled = false;
 
                     break;
             }
@@ -200,7 +256,24 @@ namespace DO_AN_DT_LOD
 
         private void btnUngDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            int index = tabBanhang.TabPages.IndexOfKey("tabPadeUngDung");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmUngDung f = new frmUngDung();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPadeHoaDon";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
         }
 
         private void btnDonHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -215,6 +288,51 @@ namespace DO_AN_DT_LOD
                 HoaDon f = new HoaDon();
                 TabPage p = new TabPage(f.Text);
                 p.Name = "tabPadeHoaDon";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+        }
+
+        private void btnXemSanPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tabXemSanPham");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmXemSanPham f = new frmXemSanPham();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabXemSanPham";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+
+        }
+
+        private void btnLSanPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tabloaisanpham");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmLoaiSanPham f = new frmLoaiSanPham();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabloaisanpham";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;

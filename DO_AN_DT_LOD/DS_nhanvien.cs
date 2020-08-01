@@ -43,27 +43,31 @@ namespace DO_AN_DT_LOD
             txtSDT.DataBindings.Add("text", tblNhanVien, "sdt", true);
             radnam.DataBindings.Add("checked", tblNhanVien, "gioitinh", true);
             dtNgaySinh.DataBindings.Add("value", tblNhanVien, "ngaysinh", true);
+
             DSNV = this.BindingContext[tblNhanVien];
             enableButton();
         }
         private void enableButton()
         {
-            btnLuu.Enabled = capnhat;
-            btnSua.Enabled = !capnhat;
             btnThem.Enabled = !capnhat;
+            btnSua.Enabled = !capnhat;
             btnXoa.Enabled = !capnhat;
-            btnthoat.Enabled = !capnhat;
+            btnThoat.Enabled = !capnhat;
+
+            btnLuu.Enabled = capnhat;
+            btnHuy.Enabled = capnhat;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             DSNV.AddNew();
-            capnhat = false;
+            capnhat = true;
             enableButton();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 DSNV.RemoveAt(DSNV.Position);
@@ -76,17 +80,37 @@ namespace DO_AN_DT_LOD
                 tblNhanVien.RejectChanges();
                 MessageBox.Show("xóa thất bại !!!");
             }
-           
+            */
+            try
+            {
+                if (MessageBox.Show("Bạn có muốn xóa sách " + txtMaNV.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DSNV.RemoveAt(DSNV.Position);
+                    capnhat = false;
+                    tblNhanVien.ghi();
+                    tblNhanVien.AcceptChanges();
+
+                    tblNhanVien.AcceptChanges();
+                    MessageBox.Show("Xóa thành công!");
+                }
+            }
+            catch (SqlException ex)
+            {
+                //sửa lại cần thông bào trước khi xóa
+                tblNhanVien.RejectChanges();
+                MessageBox.Show("xóa thất bại !!!");
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            capnhat = false;
+            capnhat = true;
             enableButton();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 tblNhanVien.ghi();
@@ -98,7 +122,19 @@ namespace DO_AN_DT_LOD
             {
                 MessageBox.Show(ex.Message);
             }
-
+            */
+            try
+            {
+                DSNV.EndCurrentEdit();
+                tblNhanVien.ghi();
+                tblNhanVien.AcceptChanges();
+                capnhat = false;
+                enableButton();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void radnam_CheckedChanged(object sender, EventArgs e)
@@ -109,8 +145,7 @@ namespace DO_AN_DT_LOD
         private void txtTimKiem_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
-                btnTimKiem_Click(sender, e);
-              
+                btnTimKiem_Click(sender, e);      
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -137,18 +172,32 @@ namespace DO_AN_DT_LOD
             TabPage T = (TabPage)this.Parent;
             T.Dispose();
         }
-
-        private void dsNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DSNV.CancelCurrentEdit();
             tblNhanVien.RejectChanges();
-            capnhat = true;
+            capnhat = false;
             enableButton();
+        }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (radMa.Checked == true)
+            {
+                string std = string.Format("ma_nv like '%{0}%'", txtTimKiem.Text);
+                tblNhanVien.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("ten_nv like '%{0}%'", txtTimKiem.Text);
+                tblNhanVien.DefaultView.RowFilter = std;
+            }
         }
     }
 }

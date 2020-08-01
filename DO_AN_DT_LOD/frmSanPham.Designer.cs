@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSanPham));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMaLoai = new System.Windows.Forms.TextBox();
+            this.txtMaLoai = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbDVT = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMasp = new System.Windows.Forms.Label();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbDVT = new System.Windows.Forms.TextBox();
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dsSanPham = new System.Windows.Forms.DataGridView();
@@ -72,12 +72,12 @@
             this.groupBox1.Controls.Add(this.txtMaLoai);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cbDVT);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblMasp);
             this.groupBox1.Controls.Add(this.txtDonGia);
             this.groupBox1.Controls.Add(this.txtMaSP);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cbDVT);
             this.groupBox1.Controls.Add(this.txtTenSP);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -93,11 +93,12 @@
             // 
             // txtMaLoai
             // 
-            this.txtMaLoai.Location = new System.Drawing.Point(409, 95);
-            this.txtMaLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaLoai.FormattingEnabled = true;
+            this.txtMaLoai.Location = new System.Drawing.Point(415, 98);
             this.txtMaLoai.Name = "txtMaLoai";
-            this.txtMaLoai.Size = new System.Drawing.Size(128, 24);
-            this.txtMaLoai.TabIndex = 24;
+            this.txtMaLoai.Size = new System.Drawing.Size(128, 25);
+            this.txtMaLoai.TabIndex = 25;
+            this.txtMaLoai.SelectedIndexChanged += new System.EventHandler(this.txtMaLoai_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -116,15 +117,6 @@
             this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 22;
             this.label1.Text = "Đơn Giá:";
-            // 
-            // cbDVT
-            // 
-            this.cbDVT.FormattingEnabled = true;
-            this.cbDVT.Location = new System.Drawing.Point(113, 129);
-            this.cbDVT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbDVT.Name = "cbDVT";
-            this.cbDVT.Size = new System.Drawing.Size(151, 25);
-            this.cbDVT.TabIndex = 21;
             // 
             // label2
             // 
@@ -168,6 +160,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên SP:";
             // 
+            // cbDVT
+            // 
+            this.cbDVT.Location = new System.Drawing.Point(113, 127);
+            this.cbDVT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbDVT.Name = "cbDVT";
+            this.cbDVT.Size = new System.Drawing.Size(151, 24);
+            this.cbDVT.TabIndex = 12;
+            // 
             // txtTenSP
             // 
             this.txtTenSP.Location = new System.Drawing.Point(113, 89);
@@ -200,7 +200,7 @@
             this.dsSanPham.Location = new System.Drawing.Point(28, 284);
             this.dsSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dsSanPham.Name = "dsSanPham";
-            this.dsSanPham.Size = new System.Drawing.Size(543, 351);
+            this.dsSanPham.Size = new System.Drawing.Size(642, 351);
             this.dsSanPham.TabIndex = 24;
             this.dsSanPham.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dsSanPham_DataBindingComplete);
             // 
@@ -321,6 +321,7 @@
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.Size = new System.Drawing.Size(242, 23);
             this.txttimkiem.TabIndex = 31;
+            this.txttimkiem.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
             this.txttimkiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttimkiem_KeyPress);
             this.txttimkiem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txttimkiem_MouseDown);
             // 
@@ -401,10 +402,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dsSanPham;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtMaLoai;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbDVT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource lKDTLODDataSetBindingSource;
         private LKDT_LODDataSet lKDT_LODDataSet;
@@ -419,5 +418,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn donvitinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_loai;
+        private System.Windows.Forms.ComboBox txtMaLoai;
+        private System.Windows.Forms.TextBox cbDVT;
     }
 }

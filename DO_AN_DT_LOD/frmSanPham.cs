@@ -20,7 +20,8 @@ namespace DO_AN_DT_LOD
         {
             InitializeComponent();
         }
-        XLSANPHAM tblSanPham;
+        DataTable tblSANPHAM, tblLOAI_SP;
+        SqlDataAdapter daSANPHAM, daLOAI_SP;
         BindingManagerBase DSSP;
         bool capnhat = false;
 
@@ -32,23 +33,46 @@ namespace DO_AN_DT_LOD
 
         private void frmSanPham_Load(object sender, EventArgs e)
         {
+            tblSANPHAM = new DataTable();
+            daSANPHAM = new SqlDataAdapter("select * from SANPHAM", XLBANG.cnnStr);
+            tblLOAI_SP = new DataTable();
+            daLOAI_SP = new SqlDataAdapter("select * from LOAI_SP", XLBANG.cnnStr);
 
-            tblSanPham = new XLSANPHAM();
-            DSSP = this.BindingContext[tblSanPham];
-            loadsanpham();
-        }
-        private void loadsanpham()
-        {
-           dsSanPham.AutoGenerateColumns = false;
-            dsSanPham.DataSource = tblSanPham;
-            txtMaSP.DataBindings.Add("text", tblSanPham, "ma_sp", true);
-            txtTenSP.DataBindings.Add("text", tblSanPham, "ten_sp", true);
-            txtDonGia.DataBindings.Add("text", tblSanPham, "dongia", true);
-            cbDVT.DataBindings.Add("text", tblSanPham, "donvitinh", true);
-            txtMaLoai.DataBindings.Add("text", tblSanPham, "ma_loai", true);
-            DSSP = this.BindingContext[tblSanPham];
+            try
+            {
+                daSANPHAM.Fill(tblSANPHAM);
+                daLOAI_SP.Fill(tblLOAI_SP);
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            var cmb = new SqlCommandBuilder(daSANPHAM);
+            var cmd = new SqlCommandBuilder(daLOAI_SP);
+
+            LoadSANPHAM();
+            LoadLOAI_SP();
+
+            txtMaSP.DataBindings.Add("text", tblSANPHAM, "ma_sp", true);
+            txtTenSP.DataBindings.Add("text", tblSANPHAM, "ten_sp", true);
+            txtDonGia.DataBindings.Add("text", tblSANPHAM, "dongia", true);
+            cbDVT.DataBindings.Add("text", tblSANPHAM, "donvitinh", true);
+            txtMaLoai.DataBindings.Add("text", tblSANPHAM, "ma_loai", true);//selectedValue
+            DSSP = this.BindingContext[tblSANPHAM];
             enableButton();
 
+        }
+        private void LoadSANPHAM()
+        {
+            dsSanPham.AutoGenerateColumns = false;
+            dsSanPham.DataSource = tblSANPHAM;
+        }
+        private void LoadLOAI_SP()
+        {
+            txtMaLoai.DataSource = tblLOAI_SP;
+            txtMaLoai.DisplayMember = "ma_loai";
+            txtMaLoai.ValueMember = "ma_loai";
         }
         private void enableButton()
         {
@@ -72,17 +96,23 @@ namespace DO_AN_DT_LOD
         {
             try
             {
-                DSSP.RemoveAt(DSSP.Position);
-                capnhat = false;
-                tblSanPham.ghi();
-                tblSanPham.AcceptChanges();
+                if (MessageBox.Show("Bạn có muốn xóa sách " + txtMaSP.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DSSP.RemoveAt(DSSP.Position);
+                    capnhat = false;
+                    daSANPHAM.Update(tblSANPHAM);
+
+                    tblSANPHAM.AcceptChanges();
+                    MessageBox.Show("Xóa thành công!");
+                }
             }
             catch (SqlException ex)
             {
                 //sửa lại cần thông bào trước khi xóa
-                tblSanPham.RejectChanges();
+                tblSANPHAM.RejectChanges();
                 MessageBox.Show("xóa thất bại !!!");
             }
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -96,8 +126,8 @@ namespace DO_AN_DT_LOD
             try
             {
                 DSSP.EndCurrentEdit();
-                tblSanPham.ghi();
-                tblSanPham.AcceptChanges();
+                daSANPHAM.Update(tblSANPHAM);
+                tblSANPHAM.AcceptChanges();
                 capnhat = false;
                 enableButton();
             }
@@ -111,8 +141,8 @@ namespace DO_AN_DT_LOD
         {
             try
             {
-                DataRow r = tblSanPham.Select("ma_sp='" + txttimkiem.Text + "'")[0];
-                DSSP.Position = tblSanPham.Rows.IndexOf(r);
+                DataRow r = tblSANPHAM.Select("ma_sp='" + txttimkiem.Text + "'")[0];
+                DSSP.Position = tblSANPHAM.Rows.IndexOf(r);
 
             }
             catch (Exception ex)
@@ -135,7 +165,7 @@ namespace DO_AN_DT_LOD
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DSSP.CancelCurrentEdit();
-            tblSanPham.RejectChanges();
+            tblSANPHAM.RejectChanges();
             capnhat = false;
             enableButton();
         }
@@ -149,6 +179,16 @@ namespace DO_AN_DT_LOD
         {
             foreach (DataGridViewRow r in dsSanPham.Rows)
                 r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void txttimkiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

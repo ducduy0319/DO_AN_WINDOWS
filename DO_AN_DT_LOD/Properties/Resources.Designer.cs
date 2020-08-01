@@ -69,5 +69,25 @@ namespace DO_AN_DT_LOD.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap linh_kien_dien_tu3 {
+            get {
+                object obj = ResourceManager.GetObject("linh-kien-dien-tu3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tang_133333up {
+            get {
+                object obj = ResourceManager.GetObject("tang-133333up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
