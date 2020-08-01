@@ -48,7 +48,7 @@ namespace DO_AN_DT_LOD
                     btnChamCong.Enabled = true;
                     btnPhanCong.Enabled = true;
                     btnXemPhanCong.Enabled = true;
-            
+
                     break;
                 case 2: //nhân viên
                     //Quản lý bán hàng
@@ -157,7 +157,7 @@ namespace DO_AN_DT_LOD
 
         private void btnDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           
+
             int index = tabBanhang.TabPages.IndexOfKey("tabPadeDoiMatKhau");
             if (index >= 0)
             {
@@ -176,7 +176,7 @@ namespace DO_AN_DT_LOD
                 tabBanhang.SelectedTab = p;
                 f.Show();
             }
-            
+
         }
 
         private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -342,6 +342,30 @@ namespace DO_AN_DT_LOD
                 f.Show();
             }
         }
+
+        private void btnTKTThang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            int index = tabBanhang.TabPages.IndexOfKey("tabThongKe1");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmThongKe1 f = new frmThongKe1();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabThongKe1";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+
+            }
+        }
+
     }
-    
 }

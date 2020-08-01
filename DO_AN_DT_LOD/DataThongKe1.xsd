@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataThongKe1" targetNamespace="http://tempuri.org/DataThongKe1.xsd" xmlns:mstns="http://tempuri.org/DataThongKe1.xsd" xmlns="http://tempuri.org/DataThongKe1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LKDT_LODConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LKDT_LODConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DO_AN_DT_LOD.Properties.Settings.GlobalReference.Default.LKDT_LODConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QL_LKDT_LODConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QL_LKDT_LODConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DO_AN_DT_LOD.Properties.Settings.GlobalReference.Default.QL_LKDT_LODConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HOADONTableAdapter" GeneratorDataComponentClassName="HOADONTableAdapter" Name="HOADON" UserDataComponentName="HOADONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QL_LKDT_LODConnectionString (Settings)" DbObjectName="QL_LKDT_LOD.dbo.HOADON" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        HOADON.sohoadon, HOADON.ngayhoadon, SUM(HOADONCT.soluong) AS SL, SUM(HOADONCT.soluong * SANPHAM.dongia) AS ThanhTien
+FROM            HOADON INNER JOIN
+                         HOADONCT ON HOADON.sohoadon = HOADONCT.sohoadon AND HOADON.sohoadon = HOADONCT.sohoadon INNER JOIN
+                         SANPHAM ON HOADONCT.ma_sp = SANPHAM.ma_sp AND HOADONCT.ma_sp = SANPHAM.ma_sp
+GROUP BY HOADON.sohoadon, HOADON.ngayhoadon</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sohoadon" DataSetColumn="sohoadon" />
+              <Mapping SourceColumn="ngayhoadon" DataSetColumn="ngayhoadon" />
+              <Mapping SourceColumn="SL" DataSetColumn="SL" />
+              <Mapping SourceColumn="ThanhTien" DataSetColumn="ThanhTien" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataThongKe1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataThongKe1" msprop:Generator_UserDSName="DataThongKe1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HOADON" msprop:Generator_TableClassName="HOADONDataTable" msprop:Generator_TableVarName="tableHOADON" msprop:Generator_TablePropName="HOADON" msprop:Generator_RowDeletingName="HOADONRowDeleting" msprop:Generator_RowChangingName="HOADONRowChanging" msprop:Generator_RowEvHandlerName="HOADONRowChangeEventHandler" msprop:Generator_RowDeletedName="HOADONRowDeleted" msprop:Generator_UserTableName="HOADON" msprop:Generator_RowChangedName="HOADONRowChanged" msprop:Generator_RowEvArgName="HOADONRowChangeEvent" msprop:Generator_RowClassName="HOADONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sohoadon" msprop:Generator_ColumnVarNameInTable="columnsohoadon" msprop:Generator_ColumnPropNameInRow="sohoadon" msprop:Generator_ColumnPropNameInTable="sohoadonColumn" msprop:Generator_UserColumnName="sohoadon">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ngayhoadon" msprop:Generator_ColumnVarNameInTable="columnngayhoadon" msprop:Generator_ColumnPropNameInRow="ngayhoadon" msprop:Generator_ColumnPropNameInTable="ngayhoadonColumn" msprop:Generator_UserColumnName="ngayhoadon" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSL" msprop:Generator_ColumnPropNameInRow="SL" msprop:Generator_ColumnPropNameInTable="SLColumn" msprop:Generator_UserColumnName="SL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ThanhTien" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnThanhTien" msprop:Generator_ColumnPropNameInRow="ThanhTien" msprop:Generator_ColumnPropNameInTable="ThanhTienColumn" msprop:Generator_UserColumnName="ThanhTien" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:HOADON" />
+      <xs:field xpath="mstns:sohoadon" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

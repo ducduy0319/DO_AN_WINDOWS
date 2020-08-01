@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.BonusSkins.v19.1" />
     <Reference Include="DevExpress.Data.v19.1" />
     <Reference Include="DevExpress.Printing.v19.1.Core" />
@@ -42,6 +47,8 @@
     <Reference Include="DevExpress.XtraEditors.v19.1" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataThongKe1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataThongKe1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,18 @@
     <Compile Include="frmTaiKhoan.Designer.cs">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKe1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe1.Designer.cs">
+      <DependentUpon>frmThongKe1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTKDTcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTKDTcs.Designer.cs">
+      <DependentUpon>frmTKDTcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUngDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +170,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptThongKe1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptThongKe1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="DS_nhanvien.resx">
       <DependentUpon>DS_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +200,12 @@
     <EmbeddedResource Include="frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe1.resx">
+      <DependentUpon>frmThongKe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKDTcs.resx">
+      <DependentUpon>frmTKDTcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUngDung.resx">
       <DependentUpon>frmUngDung.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,7 +226,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptThongKe1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptThongKe1.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="DataThongKe1.xsc">
+      <DependentUpon>DataThongKe1.xsd</DependentUpon>
+    </None>
+    <None Include="DataThongKe1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataThongKe1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataThongKe1.xss">
+      <DependentUpon>DataThongKe1.xsd</DependentUpon>
+    </None>
     <None Include="LKDT_LODDataSet.xsc">
       <DependentUpon>LKDT_LODDataSet.xsd</DependentUpon>
     </None>
@@ -220,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tang-133333up.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
