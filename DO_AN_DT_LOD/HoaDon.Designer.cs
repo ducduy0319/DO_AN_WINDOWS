@@ -33,8 +33,6 @@
             this.txtnoidung = new System.Windows.Forms.TextBox();
             this.txtSHD = new System.Windows.Forms.TextBox();
             this.txtNgHD = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txttimkiem = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +40,11 @@
             this.lblMasp = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDSHD = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sohoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayhoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noidung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ma_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
@@ -49,12 +52,10 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btntimkiem = new DevExpress.XtraEditors.SimpleButton();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sohoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayhoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noidung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ma_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radTimTheoTen = new System.Windows.Forms.RadioButton();
+            this.radMa = new System.Windows.Forms.RadioButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).BeginInit();
             this.SuspendLayout();
@@ -93,24 +94,6 @@
             this.txtNgHD.Name = "txtNgHD";
             this.txtNgHD.Size = new System.Drawing.Size(151, 24);
             this.txtNgHD.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 311);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 21);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Tìm Kiếm:";
-            // 
-            // txttimkiem
-            // 
-            this.txttimkiem.Location = new System.Drawing.Point(124, 312);
-            this.txttimkiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txttimkiem.Name = "txttimkiem";
-            this.txttimkiem.Size = new System.Drawing.Size(242, 23);
-            this.txttimkiem.TabIndex = 43;
             // 
             // groupBox1
             // 
@@ -189,9 +172,43 @@
             this.dgvDSHD.Location = new System.Drawing.Point(28, 360);
             this.dgvDSHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvDSHD.Name = "dgvDSHD";
-            this.dgvDSHD.Size = new System.Drawing.Size(705, 123);
+            this.dgvDSHD.Size = new System.Drawing.Size(705, 255);
             this.dgvDSHD.TabIndex = 36;
             this.dgvDSHD.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHD_DataBindingComplete);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 60;
+            // 
+            // sohoadon
+            // 
+            this.sohoadon.DataPropertyName = "sohoadon";
+            this.sohoadon.HeaderText = "Số Hóa Đơn";
+            this.sohoadon.Name = "sohoadon";
+            this.sohoadon.Width = 150;
+            // 
+            // ngayhoadon
+            // 
+            this.ngayhoadon.DataPropertyName = "ngayhoadon";
+            this.ngayhoadon.HeaderText = "Ngày Hóa Đơn";
+            this.ngayhoadon.Name = "ngayhoadon";
+            this.ngayhoadon.Width = 150;
+            // 
+            // noidung
+            // 
+            this.noidung.DataPropertyName = "noidung";
+            this.noidung.HeaderText = "Nội Dung";
+            this.noidung.Name = "noidung";
+            this.noidung.Width = 150;
+            // 
+            // ma_nv
+            // 
+            this.ma_nv.DataPropertyName = "ma_nv";
+            this.ma_nv.HeaderText = "Mã NV";
+            this.ma_nv.Name = "ma_nv";
+            this.ma_nv.Width = 150;
             // 
             // label6
             // 
@@ -269,57 +286,57 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
-            // btntimkiem
+            // radTimTheoTen
             // 
-            this.btntimkiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btntimkiem.ImageOptions.Image")));
-            this.btntimkiem.Location = new System.Drawing.Point(383, 311);
-            this.btntimkiem.Name = "btntimkiem";
-            this.btntimkiem.Size = new System.Drawing.Size(43, 37);
-            this.btntimkiem.TabIndex = 47;
+            this.radTimTheoTen.AutoSize = true;
+            this.radTimTheoTen.Location = new System.Drawing.Point(483, 316);
+            this.radTimTheoTen.Name = "radTimTheoTen";
+            this.radTimTheoTen.Size = new System.Drawing.Size(156, 21);
+            this.radTimTheoTen.TabIndex = 50;
+            this.radTimTheoTen.Text = "Tìm theo số hóa đơn";
+            this.radTimTheoTen.UseVisualStyleBackColor = true;
+            this.radTimTheoTen.CheckedChanged += new System.EventHandler(this.radTimTheoTen_CheckedChanged);
             // 
-            // STT
+            // radMa
             // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 60;
+            this.radMa.AutoSize = true;
+            this.radMa.Checked = true;
+            this.radMa.Location = new System.Drawing.Point(337, 316);
+            this.radMa.Name = "radMa";
+            this.radMa.Size = new System.Drawing.Size(127, 21);
+            this.radMa.TabIndex = 49;
+            this.radMa.TabStop = true;
+            this.radMa.Text = "Tìm theo mã NV";
+            this.radMa.UseVisualStyleBackColor = true;
             // 
-            // sohoadon
+            // txtTimKiem
             // 
-            this.sohoadon.DataPropertyName = "sohoadon";
-            this.sohoadon.HeaderText = "Số Hóa Đơn";
-            this.sohoadon.Name = "sohoadon";
-            this.sohoadon.Width = 150;
+            this.txtTimKiem.Location = new System.Drawing.Point(28, 316);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(284, 23);
+            this.txtTimKiem.TabIndex = 48;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // ngayhoadon
+            // label4
             // 
-            this.ngayhoadon.DataPropertyName = "ngayhoadon";
-            this.ngayhoadon.HeaderText = "Ngày Hóa Đơn";
-            this.ngayhoadon.Name = "ngayhoadon";
-            this.ngayhoadon.Width = 150;
-            // 
-            // noidung
-            // 
-            this.noidung.DataPropertyName = "noidung";
-            this.noidung.HeaderText = "Nội Dung";
-            this.noidung.Name = "noidung";
-            this.noidung.Width = 150;
-            // 
-            // ma_nv
-            // 
-            this.ma_nv.DataPropertyName = "ma_nv";
-            this.ma_nv.HeaderText = "Mã NV";
-            this.ma_nv.Name = "ma_nv";
-            this.ma_nv.Width = 150;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 296);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Tìm Kiếm:";
             // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 509);
-            this.Controls.Add(this.btntimkiem);
+            this.ClientSize = new System.Drawing.Size(1245, 715);
+            this.Controls.Add(this.radTimTheoTen);
+            this.Controls.Add(this.radMa);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txttimkiem);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -330,7 +347,7 @@
             this.Controls.Add(this.label6);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HoaDon";
-            this.Text = "HoaDon";
+            this.Text = resources.GetString("$this.Text");
             this.Load += new System.EventHandler(this.HoaDon_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -346,8 +363,6 @@
         private System.Windows.Forms.TextBox txtSHD;
         private System.Windows.Forms.TextBox txtNgHD;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txttimkiem;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
@@ -361,11 +376,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvDSHD;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.SimpleButton btntimkiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn sohoadon;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayhoadon;
         private System.Windows.Forms.DataGridViewTextBoxColumn noidung;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_nv;
+        private System.Windows.Forms.RadioButton radTimTheoTen;
+        private System.Windows.Forms.RadioButton radMa;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label4;
     }
 }

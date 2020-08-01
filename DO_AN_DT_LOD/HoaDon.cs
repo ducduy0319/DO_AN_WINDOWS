@@ -144,6 +144,25 @@ namespace DO_AN_DT_LOD
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (radMa.Checked == true)
+            {
+                string std = string.Format("ma_nv like '%{0}%'", txtTimKiem.Text);
+                tblHOADON.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("sohoadon like '%{0}%'", txtTimKiem.Text);
+                tblHOADON.DefaultView.RowFilter = std;
+            }
+        }
+
+        private void radTimTheoTen_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void LoadHOADON()
         {
             cbma_nv.DataSource = tblNHANVIEN;

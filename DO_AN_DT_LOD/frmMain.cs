@@ -246,6 +246,7 @@ namespace DO_AN_DT_LOD
                 tabBanhang.SelectedTab = p;
                 f.Show();
             }
+            
 
         }
 
@@ -341,6 +342,62 @@ namespace DO_AN_DT_LOD
                 tabBanhang.SelectedTab = p;
                 f.Show();
             }
+        }
+
+        private void btntaikhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tabtaikhoan");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmTaiKhoan f = new frmTaiKhoan();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabloaisanpham";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tabNCC");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmNCC f = new frmNCC();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabNCC";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+
+        }
+
+        private void btnTaoHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
     

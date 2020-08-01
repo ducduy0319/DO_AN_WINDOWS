@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaiKhoan));
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
@@ -56,47 +53,25 @@
             this.lblgioitinh = new System.Windows.Forms.Label();
             this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
             this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnthoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.label6 = new System.Windows.Forms.Label();
             this.dsNhanVien = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ma_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ten_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nam = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tentaikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Loaitaikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radTimTheoTen = new System.Windows.Forms.RadioButton();
+            this.radMa = new System.Windows.Forms.RadioButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsNhanVien)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(429, 300);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(87, 28);
-            this.btnTimKiem.TabIndex = 37;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(124, 303);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(284, 23);
-            this.txtTimKiem.TabIndex = 36;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(121, 283);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Tìm Kiếm:";
             // 
             // btnSua
             // 
@@ -327,16 +302,16 @@
             this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
             this.lKDTLODDataSetBindingSource.Position = 0;
             // 
-            // btnthoat
+            // btnThoat
             // 
-            this.btnthoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoat.ImageOptions.Image")));
-            this.btnthoat.Location = new System.Drawing.Point(808, 213);
-            this.btnthoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(89, 37);
-            this.btnthoat.TabIndex = 38;
-            this.btnthoat.Text = "Thoát";
-            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(808, 213);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(89, 37);
+            this.btnThoat.TabIndex = 38;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label6
             // 
@@ -353,6 +328,7 @@
             this.dsNhanVien.AutoGenerateColumns = false;
             this.dsNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
             this.ma_nv,
             this.ten_nv,
             this.Nam,
@@ -363,8 +339,15 @@
             this.dsNhanVien.Location = new System.Drawing.Point(104, 345);
             this.dsNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dsNhanVien.Name = "dsNhanVien";
-            this.dsNhanVien.Size = new System.Drawing.Size(755, 179);
+            this.dsNhanVien.Size = new System.Drawing.Size(805, 179);
             this.dsNhanVien.TabIndex = 28;
+            this.dsNhanVien.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dsNhanVien_DataBindingComplete);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 60;
             // 
             // ma_nv
             // 
@@ -404,12 +387,56 @@
             this.Loaitaikhoan.Name = "Loaitaikhoan";
             this.Loaitaikhoan.Width = 150;
             // 
+            // radTimTheoTen
+            // 
+            this.radTimTheoTen.AutoSize = true;
+            this.radTimTheoTen.Location = new System.Drawing.Point(535, 304);
+            this.radTimTheoTen.Name = "radTimTheoTen";
+            this.radTimTheoTen.Size = new System.Drawing.Size(113, 21);
+            this.radTimTheoTen.TabIndex = 42;
+            this.radTimTheoTen.Text = "Tìm Theo Tên";
+            this.radTimTheoTen.UseVisualStyleBackColor = true;
+            this.radTimTheoTen.CheckedChanged += new System.EventHandler(this.radTimTheoTen_CheckedChanged);
+            // 
+            // radMa
+            // 
+            this.radMa.AutoSize = true;
+            this.radMa.Checked = true;
+            this.radMa.Location = new System.Drawing.Point(413, 302);
+            this.radMa.Name = "radMa";
+            this.radMa.Size = new System.Drawing.Size(106, 21);
+            this.radMa.TabIndex = 41;
+            this.radMa.TabStop = true;
+            this.radMa.Text = "Tìm theo mã";
+            this.radMa.UseVisualStyleBackColor = true;
+            this.radMa.CheckedChanged += new System.EventHandler(this.radMa_CheckedChanged);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(104, 302);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(284, 23);
+            this.txtTimKiem.TabIndex = 40;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(101, 282);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Tìm Kiếm:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 573);
-            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.radTimTheoTen);
+            this.Controls.Add(this.radMa);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSua);
@@ -418,7 +445,7 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnthoat);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dsNhanVien);
             this.Name = "frmTaiKhoan";
@@ -435,10 +462,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
@@ -458,13 +481,18 @@
         private System.Windows.Forms.Label lblgioitinh;
         private LKDT_LODDataSet lKDT_LODDataSet;
         private System.Windows.Forms.BindingSource lKDTLODDataSetBindingSource;
-        private DevExpress.XtraEditors.SimpleButton btnthoat;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dsNhanVien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtLTK;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton radTimTheoTen;
+        private System.Windows.Forms.RadioButton radMa;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_nv;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_nv;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Nam;

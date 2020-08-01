@@ -41,6 +41,12 @@
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.dsNhanVien = new System.Windows.Forms.DataGridView();
+            this.ma_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nam = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,15 +60,8 @@
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
-            this.ma_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nam = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radMa = new System.Windows.Forms.RadioButton();
             this.radTimTheoTen = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dsNhanVien)).BeginInit();
@@ -176,6 +175,42 @@
             this.dsNhanVien.Name = "dsNhanVien";
             this.dsNhanVien.Size = new System.Drawing.Size(755, 248);
             this.dsNhanVien.TabIndex = 17;
+            // 
+            // ma_nv
+            // 
+            this.ma_nv.DataPropertyName = "ma_nv";
+            this.ma_nv.HeaderText = "Mã NV";
+            this.ma_nv.Name = "ma_nv";
+            // 
+            // ten_nv
+            // 
+            this.ten_nv.DataPropertyName = "ten_nv";
+            this.ten_nv.HeaderText = "Tên NV";
+            this.ten_nv.Name = "ten_nv";
+            // 
+            // Nam
+            // 
+            this.Nam.DataPropertyName = "gioitinh";
+            this.Nam.HeaderText = "Nam";
+            this.Nam.Name = "Nam";
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.DataPropertyName = "ngaysinh";
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa Chỉ";
+            this.diachi.Name = "diachi";
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sdt";
+            this.sdt.HeaderText = "SĐT";
+            this.sdt.Name = "sdt";
             // 
             // lKDTLODDataSetBindingSource
             // 
@@ -318,17 +353,6 @@
             this.txtTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimKiem_KeyPress);
             this.txtTimKiem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTimKiem_MouseDown);
             // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(390, 263);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(87, 28);
-            this.btnTimKiem.TabIndex = 25;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
@@ -351,46 +375,11 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // ma_nv
-            // 
-            this.ma_nv.DataPropertyName = "ma_nv";
-            this.ma_nv.HeaderText = "Mã NV";
-            this.ma_nv.Name = "ma_nv";
-            // 
-            // ten_nv
-            // 
-            this.ten_nv.DataPropertyName = "ten_nv";
-            this.ten_nv.HeaderText = "Tên NV";
-            this.ten_nv.Name = "ten_nv";
-            // 
-            // Nam
-            // 
-            this.Nam.DataPropertyName = "gioitinh";
-            this.Nam.HeaderText = "Nam";
-            this.Nam.Name = "Nam";
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.DataPropertyName = "ngaysinh";
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "Địa Chỉ";
-            this.diachi.Name = "diachi";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "SĐT";
-            this.sdt.Name = "sdt";
-            // 
             // radMa
             // 
             this.radMa.AutoSize = true;
-            this.radMa.Location = new System.Drawing.Point(494, 246);
+            this.radMa.Checked = true;
+            this.radMa.Location = new System.Drawing.Point(394, 266);
             this.radMa.Name = "radMa";
             this.radMa.Size = new System.Drawing.Size(106, 21);
             this.radMa.TabIndex = 27;
@@ -401,11 +390,10 @@
             // radTimTheoTen
             // 
             this.radTimTheoTen.AutoSize = true;
-            this.radTimTheoTen.Location = new System.Drawing.Point(494, 280);
+            this.radTimTheoTen.Location = new System.Drawing.Point(516, 268);
             this.radTimTheoTen.Name = "radTimTheoTen";
             this.radTimTheoTen.Size = new System.Drawing.Size(113, 21);
             this.radTimTheoTen.TabIndex = 28;
-            this.radTimTheoTen.TabStop = true;
             this.radTimTheoTen.Text = "Tìm Theo Tên";
             this.radTimTheoTen.UseVisualStyleBackColor = true;
             // 
@@ -417,7 +405,6 @@
             this.Controls.Add(this.radTimTheoTen);
             this.Controls.Add(this.radMa);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSua);
@@ -468,7 +455,6 @@
         private LKDT_LODDataSet lKDT_LODDataSet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnTimKiem;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_nv;

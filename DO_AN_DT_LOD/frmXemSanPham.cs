@@ -25,18 +25,14 @@ namespace DO_AN_DT_LOD
 
         //XLSANPHAM tblSanPham;
 
-        DataTable tblSANPHAM, tblLSP;
-        SqlDataAdapter daSANPHAM, dalLSP;
+        DataTable tblSANPHAM;
+        SqlDataAdapter daSANPHAM;
         BindingManagerBase DSHD;
         private void frmXemSanPham_Load(object sender, EventArgs e)
         {
             tblSANPHAM = new DataTable();
             daSANPHAM= new SqlDataAdapter("SELECT SANPHAM.ma_sp,SANPHAM.ten_sp,SANPHAM.ma_loai ,SANPHAM.donvitinh,SANPHAM.dongia,PHIEUNHAP_CT.soluong, PHIEUNHAP_CT.soluong - HOADONCT.soluong as N'tonkho' FROM PHIEUNHAP_CT,SANPHAM, HOADONCT WHERE PHIEUNHAP_CT.ma_sp = SANPHAM.ma_sp AND SANPHAM.ma_sp = HOADONCT.ma_sp", XLBANG.cnnStr);
-            tblLSP= new DataTable();
-            dalLSP = new SqlDataAdapter("SELECT SANPHAM.ma_sp,SANPHAM.ten_sp,SANPHAM.ma_loai ,SANPHAM.donvitinh,SANPHAM.dongia,PHIEUNHAP_CT.soluong, PHIEUNHAP_CT.soluong - HOADONCT.soluong as N'tonkho' FROM PHIEUNHAP_CT,SANPHAM, HOADONCT WHERE PHIEUNHAP_CT.ma_sp = SANPHAM.ma_sp AND SANPHAM.ma_sp = HOADONCT.ma_sp AND SANPHAM.ma_sp like'%"+txtloc+ "%'", XLBANG.cnnStr);
-            /*tblLSP = new DataTable();
-            daLSP = new SqlDataAdapter("SELECT SANPHAM.ma_sp,SANPHAM.ten_sp,SANPHAM.ma_loai ,SANPHAM.donvitinh,SANPHAM.dongia,PHIEUNHAP_CT.soluong, PHIEUNHAP_CT.soluong - HOADONCT.soluong as N'tonkho' FROM PHIEUNHAP_CT,SANPHAM, HOADONCT WHERE PHIEUNHAP_CT.ma_sp = SANPHAM.ma_sp AND SANPHAM.ma_sp = HOADONCT.ma_sp AND SANPHAM.ma_sp like'%c%'", XLBANG.cnnStr);
-*/
+          
 
             try
             {
@@ -57,61 +53,13 @@ namespace DO_AN_DT_LOD
             
         }
 
-        public void loadloc()
-        {
-            tblLSP = new DataTable();
-            dalLSP = new SqlDataAdapter("SELECT SANPHAM.ma_sp,SANPHAM.ten_sp,SANPHAM.ma_loai ,SANPHAM.donvitinh,SANPHAM.dongia,PHIEUNHAP_CT.soluong, PHIEUNHAP_CT.soluong - HOADONCT.soluong as N'tonkho' FROM PHIEUNHAP_CT,SANPHAM, HOADONCT WHERE PHIEUNHAP_CT.ma_sp = SANPHAM.ma_sp AND SANPHAM.ma_sp = HOADONCT.ma_sp AND SANPHAM.ma_sp like'%c%'", XLBANG.cnnStr);
-        }
-
         private void dgvDSHD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow r in dgvDSSP.Rows)
                 r.Cells[0].Value = r.Index + 1;
         }
 
-
-        //lọc
-        /*public void loadformtim()
-        {
-            dgvDSSP.AutoGenerateColumns = false;
-            dgvDSSP.DataSource = tblPHIEUNHAP_CT;
-
-        }*/
-
-        private void btntimkiem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DataRow r = tblSANPHAM.Select("ma_sp ='" + txttimkiem.Text + "'")[0];
-                DSHD.Position = tblSANPHAM.Rows.IndexOf(r);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("không có kết quả");
-            }
-        }
-
-        private void txttimkiem_MouseDown(object sender, MouseEventArgs e)
-        {
-            txttimkiem.Text = "";
-        }
-
-        private void txttimkiem_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-                btntimkiem_Click(sender, e);
-        }
-
-        private void txttimkiem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvDSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -119,29 +67,24 @@ namespace DO_AN_DT_LOD
             T.Dispose();
         }
 
-        private void btnloc_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-        }
-
-        private void txtloc_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void txtloc_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
+            if (radMa.Checked == true)
+            {
+                string std = string.Format("ma_sp like '%{0}%'", txtTimKiem.Text);
+                tblSANPHAM.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("ten_sp like '%{0}%'", txtTimKiem.Text);
+                tblSANPHAM.DefaultView.RowFilter = std;
+            }
         }
 
         private void LoadDSSANPHAM()
         {
             dgvDSSP.AutoGenerateColumns = false;
             dgvDSSP.DataSource = tblSANPHAM;
-        }
-        private void LoadLSP()
-        {
-            dgvDSSP.AutoGenerateColumns = false;
-            dgvDSSP.DataSource = tblLSP;
         }
     }
 }

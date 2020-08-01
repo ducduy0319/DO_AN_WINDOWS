@@ -133,5 +133,34 @@ namespace DO_AN_DT_LOD
             foreach (DataGridViewRow r in dgvDSHD.Rows)
                 r.Cells[0].Value = r.Index + 1;
         }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (radMa.Checked == true)
+            {
+                string std = string.Format("ma_loai like '%{0}%'", txtTimKiem.Text);
+                tblLOAI_SP.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("ten_loai like '%{0}%'", txtTimKiem.Text);
+                tblLOAI_SP.DefaultView.RowFilter = std;
+            }
+        }
+
+        private void radMa_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radTimTheoTen_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

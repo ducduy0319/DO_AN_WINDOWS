@@ -137,31 +137,6 @@ namespace DO_AN_DT_LOD
             }
         }
 
-        private void btntimkiem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DataRow r = tblSANPHAM.Select("ma_sp='" + txttimkiem.Text + "'")[0];
-                DSSP.Position = tblSANPHAM.Rows.IndexOf(r);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("không có kết quả");
-            }
-        }
-
-        private void txttimkiem_MouseDown(object sender, MouseEventArgs e)
-        {
-            txttimkiem.Text = "";
-        }
-
-        private void txttimkiem_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-                btntimkiem_Click(sender, e);
-        }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DSSP.CancelCurrentEdit();
@@ -179,6 +154,20 @@ namespace DO_AN_DT_LOD
         {
             foreach (DataGridViewRow r in dsSanPham.Rows)
                 r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void txtTimKiem_TextChanged_1(object sender, EventArgs e)
+        {
+            if (radMa.Checked == true)
+            {
+                string std = string.Format("ma_sp like '%{0}%'", txtTimKiem.Text);
+                tblSANPHAM.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("ten_sp like '%{0}%'", txtTimKiem.Text);
+                tblSANPHAM.DefaultView.RowFilter = std;
+            }
         }
 
         private void txttimkiem_TextChanged(object sender, EventArgs e)

@@ -44,11 +44,10 @@
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.txttimkiem = new System.Windows.Forms.TextBox();
-            this.btntimkiem = new DevExpress.XtraEditors.SimpleButton();
-            this.txtloc = new System.Windows.Forms.TextBox();
+            this.radTimTheoTen = new System.Windows.Forms.RadioButton();
+            this.radMa = new System.Windows.Forms.RadioButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnloc = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSP)).BeginInit();
@@ -103,7 +102,6 @@
             this.dgvDSSP.Name = "dgvDSSP";
             this.dgvDSSP.Size = new System.Drawing.Size(956, 396);
             this.dgvDSSP.TabIndex = 36;
-            this.dgvDSSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSSP_CellContentClick);
             this.dgvDSSP.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHD_DataBindingComplete);
             // 
             // STT
@@ -172,71 +170,57 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // txttimkiem
+            // radTimTheoTen
             // 
-            this.txttimkiem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttimkiem.Location = new System.Drawing.Point(291, 80);
-            this.txttimkiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txttimkiem.Multiline = true;
-            this.txttimkiem.Name = "txttimkiem";
-            this.txttimkiem.Size = new System.Drawing.Size(267, 37);
-            this.txttimkiem.TabIndex = 43;
-            this.txttimkiem.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
-            this.txttimkiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttimkiem_KeyPress);
-            this.txttimkiem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txttimkiem_MouseDown);
+            this.radTimTheoTen.AutoSize = true;
+            this.radTimTheoTen.Location = new System.Drawing.Point(449, 143);
+            this.radTimTheoTen.Name = "radTimTheoTen";
+            this.radTimTheoTen.Size = new System.Drawing.Size(113, 21);
+            this.radTimTheoTen.TabIndex = 50;
+            this.radTimTheoTen.Text = "Tìm Theo Tên";
+            this.radTimTheoTen.UseVisualStyleBackColor = true;
             // 
-            // btntimkiem
+            // radMa
             // 
-            this.btntimkiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btntimkiem.ImageOptions.Image")));
-            this.btntimkiem.Location = new System.Drawing.Point(581, 80);
-            this.btntimkiem.Name = "btntimkiem";
-            this.btntimkiem.Size = new System.Drawing.Size(43, 37);
-            this.btntimkiem.TabIndex = 46;
-            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
+            this.radMa.AutoSize = true;
+            this.radMa.Checked = true;
+            this.radMa.Location = new System.Drawing.Point(278, 143);
+            this.radMa.Name = "radMa";
+            this.radMa.Size = new System.Drawing.Size(106, 21);
+            this.radMa.TabIndex = 49;
+            this.radMa.TabStop = true;
+            this.radMa.Text = "Tìm theo mã";
+            this.radMa.UseVisualStyleBackColor = true;
             // 
-            // txtloc
+            // txtTimKiem
             // 
-            this.txtloc.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtloc.Location = new System.Drawing.Point(291, 137);
-            this.txtloc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtloc.Multiline = true;
-            this.txtloc.Name = "txtloc";
-            this.txtloc.Size = new System.Drawing.Size(267, 37);
-            this.txtloc.TabIndex = 43;
-            this.txtloc.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
-            this.txtloc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtloc_KeyPress);
-            this.txtloc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtloc_MouseDown);
+            this.txtTimKiem.Location = new System.Drawing.Point(278, 87);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(284, 23);
+            this.txtTimKiem.TabIndex = 48;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 140);
+            this.label1.Location = new System.Drawing.Point(17, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 24);
+            this.label1.Size = new System.Drawing.Size(105, 24);
             this.label1.TabIndex = 44;
-            this.label1.Text = "Nhập từ khóa để lọc :";
-            // 
-            // btnloc
-            // 
-            this.btnloc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnloc.ImageOptions.Image")));
-            this.btnloc.Location = new System.Drawing.Point(581, 137);
-            this.btnloc.Name = "btnloc";
-            this.btnloc.Size = new System.Drawing.Size(43, 37);
-            this.btnloc.TabIndex = 46;
-            this.btnloc.Click += new System.EventHandler(this.btnloc_Click);
+            this.label1.Text = "Chọn Loại:";
             // 
             // frmXemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 684);
-            this.Controls.Add(this.btnloc);
-            this.Controls.Add(this.btntimkiem);
+            this.Controls.Add(this.radTimTheoTen);
+            this.Controls.Add(this.radMa);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtloc);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txttimkiem);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvDSSP);
@@ -258,8 +242,6 @@
         private System.Windows.Forms.BindingSource lKDTLODDataSetBindingSource;
         private System.Windows.Forms.DataGridView dgvDSSP;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
-        private System.Windows.Forms.TextBox txttimkiem;
-        private DevExpress.XtraEditors.SimpleButton btntimkiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_sp;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_loai;
@@ -268,8 +250,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tonkho;
-        private System.Windows.Forms.TextBox txtloc;
+        private System.Windows.Forms.RadioButton radTimTheoTen;
+        private System.Windows.Forms.RadioButton radMa;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton btnloc;
     }
 }
