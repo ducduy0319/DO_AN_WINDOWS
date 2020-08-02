@@ -53,31 +53,40 @@ namespace DO_AN_DT_LOD
 
         private void enableButton()
         {
-            btnLuu.Enabled = capnhat;
-            btnSua.Enabled = !capnhat;
             btnThem.Enabled = !capnhat;
+            btnSua.Enabled = !capnhat;
             btnXoa.Enabled = !capnhat;
-            btnthoat.Enabled = !capnhat;
+            btnThoat.Enabled = !capnhat;
+
+            btnLuu.Enabled = capnhat;
+            btnHuy.Enabled = capnhat;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             DSTK.AddNew();
-            capnhat = false;
-            enableButton();
+            capnhat = true;
+            enableButton(); ;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
             {
-                DSTK.RemoveAt(DSTK.Position);
-                tblNhanVien.ghi();
-                tblNhanVien.AcceptChanges();
+                if (MessageBox.Show("Bạn có muốn xóa sách " + txtMaNV.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DSTK.RemoveAt(DSTK.Position);
+                    capnhat = false;
+                    tblNhanVien.ghi();
+                    tblNhanVien.AcceptChanges();
 
+                    tblNhanVien.AcceptChanges();
+                    MessageBox.Show("Xóa thành công!");
+                }
             }
             catch (SqlException ex)
             {
+                //sửa lại cần thông bào trước khi xóa
                 tblNhanVien.RejectChanges();
                 MessageBox.Show("xóa thất bại !!!");
             }
@@ -85,7 +94,7 @@ namespace DO_AN_DT_LOD
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            capnhat = false;
+            capnhat = true;
             enableButton();
         }
 
@@ -93,6 +102,7 @@ namespace DO_AN_DT_LOD
         {
             try
             {
+                DSTK.EndCurrentEdit();
                 tblNhanVien.ghi();
                 tblNhanVien.AcceptChanges();
                 capnhat = false;
@@ -109,18 +119,53 @@ namespace DO_AN_DT_LOD
             radnu.Checked = !radnam.Checked;
         }
 
-        private void btnthoat_Click(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSTK.CancelCurrentEdit();
+            tblNhanVien.RejectChanges();
+            capnhat = false;
+            enableButton();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (radMa.Checked == true)
+            {
+                string std = string.Format("ma_nv like '%{0}%'", txtTimKiem.Text);
+                tblNhanVien.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("ten_nv like '%{0}%'", txtTimKiem.Text);
+                tblNhanVien.DefaultView.RowFilter = std;
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             TabPage T = (TabPage)this.Parent;
             T.Dispose();
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void radMa_CheckedChanged(object sender, EventArgs e)
         {
-            DSTK.CancelCurrentEdit();
-            tblNhanVien.RejectChanges();
-            capnhat = true;
-            enableButton();
+
+        }
+
+        private void radTimTheoTen_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dsNhanVien_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dsNhanVien.Rows)
+                r.Cells[0].Value = r.Index + 1;
         }
     }
 }
