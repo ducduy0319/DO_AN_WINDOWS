@@ -285,6 +285,7 @@
             this.btnTKTThang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKTThang.ImageOptions.Image")));
             this.btnTKTThang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTKTThang.ImageOptions.LargeImage")));
             this.btnTKTThang.Name = "btnTKTThang";
+            this.btnTKTThang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTKTThang_ItemClick);
             // 
             // btnTKTTuan
             // 

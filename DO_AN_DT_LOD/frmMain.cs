@@ -399,6 +399,11 @@ namespace DO_AN_DT_LOD
         {
 
         }
+
+        private void btnTKTThang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
     
 }
