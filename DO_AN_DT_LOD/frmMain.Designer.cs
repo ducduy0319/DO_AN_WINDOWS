@@ -120,7 +120,6 @@
             this.barButtonItem3,
             this.barButtonItem4});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 33;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -128,7 +127,7 @@
             this.ribHangHoa,
             this.ribDoanhThu,
             this.ribNhanVien});
-            this.ribbonControl1.Size = new System.Drawing.Size(1186, 193);
+            this.ribbonControl1.Size = new System.Drawing.Size(1017, 162);
             // 
             // btnDangXuat
             // 
@@ -285,6 +284,7 @@
             this.btnTKTThang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKTThang.ImageOptions.Image")));
             this.btnTKTThang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTKTThang.ImageOptions.LargeImage")));
             this.btnTKTThang.Name = "btnTKTThang";
+            this.btnTKTThang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTKTThang_ItemClick);
             // 
             // btnTKTTuan
             // 
@@ -504,22 +504,20 @@
             // tabBanhang
             // 
             this.tabBanhang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabBanhang.Location = new System.Drawing.Point(0, 193);
-            this.tabBanhang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabBanhang.Location = new System.Drawing.Point(0, 162);
             this.tabBanhang.Name = "tabBanhang";
             this.tabBanhang.SelectedIndex = 0;
-            this.tabBanhang.Size = new System.Drawing.Size(1186, 788);
+            this.tabBanhang.Size = new System.Drawing.Size(1017, 474);
             this.tabBanhang.TabIndex = 1;
             this.tabBanhang.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 981);
+            this.ClientSize = new System.Drawing.Size(1017, 636);
             this.Controls.Add(this.tabBanhang);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "frmmain";

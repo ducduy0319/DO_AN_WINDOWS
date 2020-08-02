@@ -62,6 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataHD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataHD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataThongKe1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,6 +89,18 @@
     </Compile>
     <Compile Include="frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoaDonBan.Designer.cs">
+      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInHD.Designer.cs">
+      <DependentUpon>frmInHD.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLoaiSanPham.cs">
       <SubType>Form</SubType>
@@ -168,6 +185,9 @@
     <Compile Include="Modules\XLHOADON.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Modules\XLHOADONCT.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modules\XLNCC.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -185,6 +205,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptHD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptThongKe1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +225,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHoaDonBan.resx">
+      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInHD.resx">
+      <DependentUpon>frmInHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiSanPham.resx">
       <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
@@ -247,11 +279,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptHD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHD.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptThongKe1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptThongKe1.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="DataHD.xsc">
+      <DependentUpon>DataHD.xsd</DependentUpon>
+    </None>
+    <None Include="DataHD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataHD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataHD.xss">
+      <DependentUpon>DataHD.xsd</DependentUpon>
+    </None>
     <None Include="DataThongKe1.xsc">
       <DependentUpon>DataThongKe1.xsd</DependentUpon>
     </None>
