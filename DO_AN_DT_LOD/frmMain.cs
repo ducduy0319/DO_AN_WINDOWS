@@ -369,7 +369,24 @@ namespace DO_AN_DT_LOD
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            int index = tabBanhang.TabPages.IndexOfKey("tabCTHD");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmPhieuNhap_CT f = new frmPhieuNhap_CT();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabCTHD";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -397,6 +414,7 @@ namespace DO_AN_DT_LOD
 
         private void btnTaoHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            /*
             int index = tabBanhang.TabPages.IndexOfKey("tabHoaDonBan");
             if (index >= 0)
             {
@@ -415,6 +433,7 @@ namespace DO_AN_DT_LOD
                 tabBanhang.SelectedTab = p;
                 f.Show();
             }
+            */
 
         }
 
@@ -442,10 +461,7 @@ namespace DO_AN_DT_LOD
 
         }
 
-        private void btnTKTThang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
 
-        }
     }
     
 }

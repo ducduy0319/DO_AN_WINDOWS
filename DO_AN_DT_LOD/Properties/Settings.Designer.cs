@@ -44,5 +44,16 @@ namespace DO_AN_DT_LOD.Properties {
                 return ((string)(this["QL_LKDT_LODConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-F9HG3KK\\SQLEXPRESS;Initial Catalog=QL_LKDT_LOD;Integrated Sec" +
+            "urity=True")]
+        public string QL_LKDT_LODConnectionString1 {
+            get {
+                return ((string)(this["QL_LKDT_LODConnectionString1"]));
+            }
+        }
     }
 }

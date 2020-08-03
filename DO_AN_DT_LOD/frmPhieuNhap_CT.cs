@@ -66,6 +66,79 @@ namespace DO_AN_DT_LOD
             DSPN = this.BindingContext[tblPHIEUNHAP];
             enableButton();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            DSPN.AddNew();
+            capnhat = true;
+            enableButton();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            capnhat = true;
+            enableButton();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn có muốn xóa sách " + txtSPNCT.Text + "không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DSPN.RemoveAt(DSPN.Position);
+                    capnhat = false;
+                    daPHIEUNHAP_CT.Update(tblPHIEUNHAP_CT);
+
+                    tblPHIEUNHAP_CT.AcceptChanges();
+                    MessageBox.Show("Xóa thành công!");
+                }
+            }
+            catch (SqlException ex)
+            {
+                //sửa lại cần thông bào trước khi xóa
+                tblPHIEUNHAP_CT.RejectChanges();
+                MessageBox.Show("xóa thất bại !!!");
+            }
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DSPN.EndCurrentEdit();
+                daPHIEUNHAP_CT.Update(tblPHIEUNHAP_CT);
+                tblPHIEUNHAP_CT.AcceptChanges();
+                capnhat = false;
+                enableButton();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSPN.CancelCurrentEdit();
+            tblPHIEUNHAP_CT.RejectChanges();
+            capnhat = false;
+            enableButton();
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dataGridView1.Rows)
+                r.Cells[0].Value = r.Index + 1;
+        }
+
         private void LoadSANPHAM()
         {
             txtMaSp.DataSource = tblSANPHAM;

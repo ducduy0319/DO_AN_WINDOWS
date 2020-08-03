@@ -20,17 +20,17 @@ namespace DO_AN_DT_LOD {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataHD")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataInHoaDon")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataHD : global::System.Data.DataSet {
+    public partial class DataInHoaDon : global::System.Data.DataSet {
         
-        private DataTable1DataTable tableDataTable1;
+        private HOADONCTDataTable tableHOADONCT;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataHD() {
+        public DataInHoaDon() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DO_AN_DT_LOD {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DataHD(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataInHoaDon(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DO_AN_DT_LOD {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["HOADONCT"] != null)) {
+                    base.Tables.Add(new HOADONCTDataTable(ds.Tables["HOADONCT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DO_AN_DT_LOD {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTable1DataTable DataTable1 {
+        public HOADONCTDataTable HOADONCT {
             get {
-                return this.tableDataTable1;
+                return this.tableHOADONCT;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DO_AN_DT_LOD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataHD cln = ((DataHD)(base.Clone()));
+            DataInHoaDon cln = ((DataInHoaDon)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DO_AN_DT_LOD {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["HOADONCT"] != null)) {
+                    base.Tables.Add(new HOADONCTDataTable(ds.Tables["HOADONCT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DO_AN_DT_LOD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
+            this.tableHOADONCT = ((HOADONCTDataTable)(base.Tables["HOADONCT"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable1 != null)) {
-                    this.tableDataTable1.InitVars();
+                if ((this.tableHOADONCT != null)) {
+                    this.tableHOADONCT.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DO_AN_DT_LOD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataHD";
+            this.DataSetName = "DataInHoaDon";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataHD.xsd";
+            this.Namespace = "http://tempuri.org/DataInHoaDon.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDataTable1 = new DataTable1DataTable();
-            base.Tables.Add(this.tableDataTable1);
+            this.tableHOADONCT = new HOADONCTDataTable();
+            base.Tables.Add(this.tableHOADONCT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataTable1() {
+        private bool ShouldSerializeHOADONCT() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DO_AN_DT_LOD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataHD ds = new DataHD();
+            DataInHoaDon ds = new DataInHoaDon();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,20 +270,20 @@ namespace DO_AN_DT_LOD {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+        public delegate void HOADONCTRowChangeEventHandler(object sender, HOADONCTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
+        public partial class HOADONCTDataTable : global::System.Data.TypedTableBase<HOADONCTRow> {
+            
+            private global::System.Data.DataColumn columnsohoadonct;
             
             private global::System.Data.DataColumn columnsohoadon;
             
-            private global::System.Data.DataColumn columnma_nv;
-            
-            private global::System.Data.DataColumn columnngayhoadon;
+            private global::System.Data.DataColumn columnma_sp;
             
             private global::System.Data.DataColumn columnten_sp;
             
@@ -291,12 +291,12 @@ namespace DO_AN_DT_LOD {
             
             private global::System.Data.DataColumn columndongia;
             
-            private global::System.Data.DataColumn columnThanhTien;
+            private global::System.Data.DataColumn columnthanhtien;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1DataTable() {
-                this.TableName = "DataTable1";
+            public HOADONCTDataTable() {
+                this.TableName = "HOADONCT";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +304,7 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTable1DataTable(global::System.Data.DataTable table) {
+            internal HOADONCTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,9 +321,17 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected HOADONCTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn sohoadonctColumn {
+                get {
+                    return this.columnsohoadonct;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -336,17 +344,9 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ma_nvColumn {
+            public global::System.Data.DataColumn ma_spColumn {
                 get {
-                    return this.columnma_nv;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ngayhoadonColumn {
-                get {
-                    return this.columnngayhoadon;
+                    return this.columnma_sp;
                 }
             }
             
@@ -376,9 +376,9 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ThanhTienColumn {
+            public global::System.Data.DataColumn thanhtienColumn {
                 get {
-                    return this.columnThanhTien;
+                    return this.columnthanhtien;
                 }
             }
             
@@ -393,58 +393,60 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row this[int index] {
+            public HOADONCTRow this[int index] {
                 get {
-                    return ((DataTable1Row)(this.Rows[index]));
+                    return ((HOADONCTRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+            public event HOADONCTRowChangeEventHandler HOADONCTRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+            public event HOADONCTRowChangeEventHandler HOADONCTRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+            public event HOADONCTRowChangeEventHandler HOADONCTRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+            public event HOADONCTRowChangeEventHandler HOADONCTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataTable1Row(DataTable1Row row) {
+            public void AddHOADONCTRow(HOADONCTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string sohoadon, string ma_nv, System.DateTime ngayhoadon, string ten_sp, decimal soluong, decimal dongia, decimal ThanhTien) {
-                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
+            public HOADONCTRow AddHOADONCTRow(string sohoadonct, string sohoadon, string ma_sp, string ten_sp, decimal soluong, decimal dongia, decimal thanhtien) {
+                HOADONCTRow rowHOADONCTRow = ((HOADONCTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        sohoadonct,
                         sohoadon,
-                        ma_nv,
-                        ngayhoadon,
+                        ma_sp,
                         ten_sp,
                         soluong,
                         dongia,
-                        ThanhTien};
-                rowDataTable1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTable1Row);
-                return rowDataTable1Row;
+                        thanhtien};
+                rowHOADONCTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowHOADONCTRow);
+                return rowHOADONCTRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row FindBysohoadon(string sohoadon) {
-                return ((DataTable1Row)(this.Rows.Find(new object[] {
-                            sohoadon})));
+            public HOADONCTRow FindBysohoadonctsohoadonma_sp(string sohoadonct, string sohoadon, string ma_sp) {
+                return ((HOADONCTRow)(this.Rows.Find(new object[] {
+                            sohoadonct,
+                            sohoadon,
+                            ma_sp})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
+                HOADONCTDataTable cln = ((HOADONCTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -452,72 +454,77 @@ namespace DO_AN_DT_LOD {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTable1DataTable();
+                return new HOADONCTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnsohoadonct = base.Columns["sohoadonct"];
                 this.columnsohoadon = base.Columns["sohoadon"];
-                this.columnma_nv = base.Columns["ma_nv"];
-                this.columnngayhoadon = base.Columns["ngayhoadon"];
+                this.columnma_sp = base.Columns["ma_sp"];
                 this.columnten_sp = base.Columns["ten_sp"];
                 this.columnsoluong = base.Columns["soluong"];
                 this.columndongia = base.Columns["dongia"];
-                this.columnThanhTien = base.Columns["ThanhTien"];
+                this.columnthanhtien = base.Columns["thanhtien"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnsohoadonct = new global::System.Data.DataColumn("sohoadonct", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsohoadonct);
                 this.columnsohoadon = new global::System.Data.DataColumn("sohoadon", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsohoadon);
-                this.columnma_nv = new global::System.Data.DataColumn("ma_nv", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnma_nv);
-                this.columnngayhoadon = new global::System.Data.DataColumn("ngayhoadon", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnngayhoadon);
+                this.columnma_sp = new global::System.Data.DataColumn("ma_sp", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnma_sp);
                 this.columnten_sp = new global::System.Data.DataColumn("ten_sp", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnten_sp);
                 this.columnsoluong = new global::System.Data.DataColumn("soluong", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsoluong);
                 this.columndongia = new global::System.Data.DataColumn("dongia", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndongia);
-                this.columnThanhTien = new global::System.Data.DataColumn("ThanhTien", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnThanhTien);
+                this.columnthanhtien = new global::System.Data.DataColumn("thanhtien", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnthanhtien);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnsohoadon}, true));
+                                this.columnsohoadonct,
+                                this.columnsohoadon,
+                                this.columnma_sp}, true));
+                this.columnsohoadonct.AllowDBNull = false;
+                this.columnsohoadonct.MaxLength = 10;
                 this.columnsohoadon.AllowDBNull = false;
-                this.columnsohoadon.Unique = true;
                 this.columnsohoadon.MaxLength = 10;
-                this.columnma_nv.MaxLength = 10;
+                this.columnma_sp.AllowDBNull = false;
+                this.columnma_sp.MaxLength = 10;
+                this.columnten_sp.AllowDBNull = false;
                 this.columnten_sp.MaxLength = 30;
-                this.columnThanhTien.ReadOnly = true;
+                this.columnthanhtien.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row NewDataTable1Row() {
-                return ((DataTable1Row)(this.NewRow()));
+            public HOADONCTRow NewHOADONCTRow() {
+                return ((HOADONCTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTable1Row(builder);
+                return new HOADONCTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTable1Row);
+                return typeof(HOADONCTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTable1RowChanged != null)) {
-                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.HOADONCTRowChanged != null)) {
+                    this.HOADONCTRowChanged(this, new HOADONCTRowChangeEvent(((HOADONCTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -525,8 +532,8 @@ namespace DO_AN_DT_LOD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTable1RowChanging != null)) {
-                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.HOADONCTRowChanging != null)) {
+                    this.HOADONCTRowChanging(this, new HOADONCTRowChangeEvent(((HOADONCTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -534,8 +541,8 @@ namespace DO_AN_DT_LOD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTable1RowDeleted != null)) {
-                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.HOADONCTRowDeleted != null)) {
+                    this.HOADONCTRowDeleted(this, new HOADONCTRowChangeEvent(((HOADONCTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -543,14 +550,14 @@ namespace DO_AN_DT_LOD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTable1RowDeleting != null)) {
-                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.HOADONCTRowDeleting != null)) {
+                    this.HOADONCTRowDeleting(this, new HOADONCTRowChangeEvent(((HOADONCTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataTable1Row(DataTable1Row row) {
+            public void RemoveHOADONCTRow(HOADONCTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -559,7 +566,7 @@ namespace DO_AN_DT_LOD {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataHD ds = new DataHD();
+                DataInHoaDon ds = new DataInHoaDon();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -577,7 +584,7 @@ namespace DO_AN_DT_LOD {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTable1DataTable";
+                attribute2.FixedValue = "HOADONCTDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -621,57 +628,47 @@ namespace DO_AN_DT_LOD {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTable1Row : global::System.Data.DataRow {
+        public partial class HOADONCTRow : global::System.Data.DataRow {
             
-            private DataTable1DataTable tableDataTable1;
+            private HOADONCTDataTable tableHOADONCT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
+            internal HOADONCTRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
+                this.tableHOADONCT = ((HOADONCTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string sohoadonct {
+                get {
+                    return ((string)(this[this.tableHOADONCT.sohoadonctColumn]));
+                }
+                set {
+                    this[this.tableHOADONCT.sohoadonctColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string sohoadon {
                 get {
-                    return ((string)(this[this.tableDataTable1.sohoadonColumn]));
+                    return ((string)(this[this.tableHOADONCT.sohoadonColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.sohoadonColumn] = value;
+                    this[this.tableHOADONCT.sohoadonColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ma_nv {
+            public string ma_sp {
                 get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.ma_nvColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ma_nv\' in table \'DataTable1\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableHOADONCT.ma_spColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.ma_nvColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime ngayhoadon {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.ngayhoadonColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ngayhoadon\' in table \'DataTable1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.ngayhoadonColumn] = value;
+                    this[this.tableHOADONCT.ma_spColumn] = value;
                 }
             }
             
@@ -679,15 +676,10 @@ namespace DO_AN_DT_LOD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ten_sp {
                 get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.ten_spColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ten_sp\' in table \'DataTable1\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableHOADONCT.ten_spColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.ten_spColumn] = value;
+                    this[this.tableHOADONCT.ten_spColumn] = value;
                 }
             }
             
@@ -696,14 +688,14 @@ namespace DO_AN_DT_LOD {
             public decimal soluong {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.soluongColumn]));
+                        return ((decimal)(this[this.tableHOADONCT.soluongColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'soluong\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'soluong\' in table \'HOADONCT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.soluongColumn] = value;
+                    this[this.tableHOADONCT.soluongColumn] = value;
                 }
             }
             
@@ -712,103 +704,67 @@ namespace DO_AN_DT_LOD {
             public decimal dongia {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.dongiaColumn]));
+                        return ((decimal)(this[this.tableHOADONCT.dongiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dongia\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'dongia\' in table \'HOADONCT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.dongiaColumn] = value;
+                    this[this.tableHOADONCT.dongiaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal ThanhTien {
+            public decimal thanhtien {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.ThanhTienColumn]));
+                        return ((decimal)(this[this.tableHOADONCT.thanhtienColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ThanhTien\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'thanhtien\' in table \'HOADONCT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.ThanhTienColumn] = value;
+                    this[this.tableHOADONCT.thanhtienColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isma_nvNull() {
-                return this.IsNull(this.tableDataTable1.ma_nvColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setma_nvNull() {
-                this[this.tableDataTable1.ma_nvColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsngayhoadonNull() {
-                return this.IsNull(this.tableDataTable1.ngayhoadonColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetngayhoadonNull() {
-                this[this.tableDataTable1.ngayhoadonColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isten_spNull() {
-                return this.IsNull(this.tableDataTable1.ten_spColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setten_spNull() {
-                this[this.tableDataTable1.ten_spColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IssoluongNull() {
-                return this.IsNull(this.tableDataTable1.soluongColumn);
+                return this.IsNull(this.tableHOADONCT.soluongColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetsoluongNull() {
-                this[this.tableDataTable1.soluongColumn] = global::System.Convert.DBNull;
+                this[this.tableHOADONCT.soluongColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsdongiaNull() {
-                return this.IsNull(this.tableDataTable1.dongiaColumn);
+                return this.IsNull(this.tableHOADONCT.dongiaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetdongiaNull() {
-                this[this.tableDataTable1.dongiaColumn] = global::System.Convert.DBNull;
+                this[this.tableHOADONCT.dongiaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsThanhTienNull() {
-                return this.IsNull(this.tableDataTable1.ThanhTienColumn);
+            public bool IsthanhtienNull() {
+                return this.IsNull(this.tableHOADONCT.thanhtienColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetThanhTienNull() {
-                this[this.tableDataTable1.ThanhTienColumn] = global::System.Convert.DBNull;
+            public void SetthanhtienNull() {
+                this[this.tableHOADONCT.thanhtienColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -816,22 +772,22 @@ namespace DO_AN_DT_LOD {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataTable1RowChangeEvent : global::System.EventArgs {
+        public class HOADONCTRowChangeEvent : global::System.EventArgs {
             
-            private DataTable1Row eventRow;
+            private HOADONCTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
+            public HOADONCTRowChangeEvent(HOADONCTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row Row {
+            public HOADONCTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -847,7 +803,7 @@ namespace DO_AN_DT_LOD {
         }
     }
 }
-namespace DO_AN_DT_LOD.DataHDTableAdapters {
+namespace DO_AN_DT_LOD.DataInHoaDonTableAdapters {
     
     
     /// <summary>
@@ -859,7 +815,7 @@ namespace DO_AN_DT_LOD.DataHDTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTable1TableAdapter : global::System.ComponentModel.Component {
+    public partial class HOADONCTTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -873,7 +829,7 @@ namespace DO_AN_DT_LOD.DataHDTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataTable1TableAdapter() {
+        public HOADONCTTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -970,22 +926,64 @@ namespace DO_AN_DT_LOD.DataHDTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTable1";
+            tableMapping.DataSetTable = "HOADONCT";
+            tableMapping.ColumnMappings.Add("sohoadonct", "sohoadonct");
             tableMapping.ColumnMappings.Add("sohoadon", "sohoadon");
-            tableMapping.ColumnMappings.Add("ma_nv", "ma_nv");
-            tableMapping.ColumnMappings.Add("ngayhoadon", "ngayhoadon");
+            tableMapping.ColumnMappings.Add("ma_sp", "ma_sp");
             tableMapping.ColumnMappings.Add("ten_sp", "ten_sp");
             tableMapping.ColumnMappings.Add("soluong", "soluong");
             tableMapping.ColumnMappings.Add("dongia", "dongia");
-            tableMapping.ColumnMappings.Add("ThanhTien", "ThanhTien");
+            tableMapping.ColumnMappings.Add("thanhtien", "thanhtien");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [HOADONCT] WHERE (([sohoadonct] = @Original_sohoadonct) AND ([sohoadon] = @Original_sohoadon) AND ([ma_sp] = @Original_ma_sp) AND ([ten_sp] = @Original_ten_sp) AND ((@IsNull_soluong = 1 AND [soluong] IS NULL) OR ([soluong] = @Original_soluong)) AND ((@IsNull_dongia = 1 AND [dongia] IS NULL) OR ([dongia] = @Original_dongia)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sohoadonct", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadonct", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sohoadon", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ma_sp", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ma_sp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ten_sp", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ten_sp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_soluong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "soluong", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_soluong", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "soluong", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dongia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dongia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dongia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "dongia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [HOADONCT] ([sohoadonct], [sohoadon], [ma_sp], [ten_sp], [soluong], [dongia]) VALUES (@sohoadonct, @sohoadon, @ma_sp, @ten_sp, @soluong, @dongia);
+SELECT sohoadonct, sohoadon, ma_sp, ten_sp, soluong, dongia, soluong * dongia AS thanhtien FROM HOADONCT WHERE (ma_sp = @ma_sp) AND (sohoadon = @sohoadon) AND (sohoadonct = @sohoadonct)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sohoadonct", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadonct", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sohoadon", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ma_sp", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ma_sp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ten_sp", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ten_sp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@soluong", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "soluong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dongia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "dongia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [HOADONCT] SET [sohoadonct] = @sohoadonct, [sohoadon] = @sohoadon, [ma_sp] = @ma_sp, [ten_sp] = @ten_sp, [soluong] = @soluong, [dongia] = @dongia WHERE (([sohoadonct] = @Original_sohoadonct) AND ([sohoadon] = @Original_sohoadon) AND ([ma_sp] = @Original_ma_sp) AND ([ten_sp] = @Original_ten_sp) AND ((@IsNull_soluong = 1 AND [soluong] IS NULL) OR ([soluong] = @Original_soluong)) AND ((@IsNull_dongia = 1 AND [dongia] IS NULL) OR ([dongia] = @Original_dongia)));
+SELECT sohoadonct, sohoadon, ma_sp, ten_sp, soluong, dongia, soluong * dongia AS thanhtien FROM HOADONCT WHERE (ma_sp = @ma_sp) AND (sohoadon = @sohoadon) AND (sohoadonct = @sohoadonct)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sohoadonct", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadonct", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sohoadon", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ma_sp", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ma_sp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ten_sp", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ten_sp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@soluong", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "soluong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dongia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "dongia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sohoadonct", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadonct", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sohoadon", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sohoadon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ma_sp", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ma_sp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ten_sp", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ten_sp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_soluong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "soluong", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_soluong", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "soluong", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dongia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dongia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dongia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "dongia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DO_AN_DT_LOD.Properties.Settings.Default.LKDT_LODConnectionString;
+            this._connection.ConnectionString = global::DO_AN_DT_LOD.Properties.Settings.Default.QL_LKDT_LODConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -994,10 +992,8 @@ namespace DO_AN_DT_LOD.DataHDTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        HOADON.sohoadon, HOADON.ma_nv, HOADON.ngayhoadon, SANPHAM.ten_sp, HOADONCT.soluong, SANPHAM.dongia, SANPHAM.dongia * HOADONCT.soluong AS ThanhTien
-FROM            HOADON INNER JOIN
-                         HOADONCT ON HOADON.sohoadon = HOADONCT.sohoadon INNER JOIN
-                         SANPHAM ON HOADONCT.ma_sp = SANPHAM.ma_sp";
+            this._commandCollection[0].CommandText = "SELECT sohoadonct, sohoadon, ma_sp, ten_sp, soluong, dongia, soluong * dongia AS " +
+                "thanhtien\r\nFROM     HOADONCT";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1005,7 +1001,7 @@ FROM            HOADON INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataHD.DataTable1DataTable dataTable) {
+        public virtual int Fill(DataInHoaDon.HOADONCTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1018,11 +1014,263 @@ FROM            HOADON INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataHD.DataTable1DataTable GetData() {
+        public virtual DataInHoaDon.HOADONCTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataHD.DataTable1DataTable dataTable = new DataHD.DataTable1DataTable();
+            DataInHoaDon.HOADONCTDataTable dataTable = new DataInHoaDon.HOADONCTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataInHoaDon.HOADONCTDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataInHoaDon dataSet) {
+            return this.Adapter.Update(dataSet, "HOADONCT");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_sohoadonct, string Original_sohoadon, string Original_ma_sp, string Original_ten_sp, global::System.Nullable<decimal> Original_soluong, global::System.Nullable<decimal> Original_dongia) {
+            if ((Original_sohoadonct == null)) {
+                throw new global::System.ArgumentNullException("Original_sohoadonct");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_sohoadonct));
+            }
+            if ((Original_sohoadon == null)) {
+                throw new global::System.ArgumentNullException("Original_sohoadon");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_sohoadon));
+            }
+            if ((Original_ma_sp == null)) {
+                throw new global::System.ArgumentNullException("Original_ma_sp");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ma_sp));
+            }
+            if ((Original_ten_sp == null)) {
+                throw new global::System.ArgumentNullException("Original_ten_sp");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_ten_sp));
+            }
+            if ((Original_soluong.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_soluong.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_dongia.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original_dongia.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string sohoadonct, string sohoadon, string ma_sp, string ten_sp, global::System.Nullable<decimal> soluong, global::System.Nullable<decimal> dongia) {
+            if ((sohoadonct == null)) {
+                throw new global::System.ArgumentNullException("sohoadonct");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(sohoadonct));
+            }
+            if ((sohoadon == null)) {
+                throw new global::System.ArgumentNullException("sohoadon");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(sohoadon));
+            }
+            if ((ma_sp == null)) {
+                throw new global::System.ArgumentNullException("ma_sp");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ma_sp));
+            }
+            if ((ten_sp == null)) {
+                throw new global::System.ArgumentNullException("ten_sp");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ten_sp));
+            }
+            if ((soluong.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(soluong.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((dongia.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(dongia.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string sohoadonct, string sohoadon, string ma_sp, string ten_sp, global::System.Nullable<decimal> soluong, global::System.Nullable<decimal> dongia, string Original_sohoadonct, string Original_sohoadon, string Original_ma_sp, string Original_ten_sp, global::System.Nullable<decimal> Original_soluong, global::System.Nullable<decimal> Original_dongia) {
+            if ((sohoadonct == null)) {
+                throw new global::System.ArgumentNullException("sohoadonct");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(sohoadonct));
+            }
+            if ((sohoadon == null)) {
+                throw new global::System.ArgumentNullException("sohoadon");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(sohoadon));
+            }
+            if ((ma_sp == null)) {
+                throw new global::System.ArgumentNullException("ma_sp");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ma_sp));
+            }
+            if ((ten_sp == null)) {
+                throw new global::System.ArgumentNullException("ten_sp");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ten_sp));
+            }
+            if ((soluong.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(soluong.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((dongia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(dongia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_sohoadonct == null)) {
+                throw new global::System.ArgumentNullException("Original_sohoadonct");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_sohoadonct));
+            }
+            if ((Original_sohoadon == null)) {
+                throw new global::System.ArgumentNullException("Original_sohoadon");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_sohoadon));
+            }
+            if ((Original_ma_sp == null)) {
+                throw new global::System.ArgumentNullException("Original_ma_sp");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ma_sp));
+            }
+            if ((Original_ten_sp == null)) {
+                throw new global::System.ArgumentNullException("Original_ten_sp");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ten_sp));
+            }
+            if ((Original_soluong.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_soluong.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_dongia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_dongia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string ten_sp, global::System.Nullable<decimal> soluong, global::System.Nullable<decimal> dongia, string Original_sohoadonct, string Original_sohoadon, string Original_ma_sp, string Original_ten_sp, global::System.Nullable<decimal> Original_soluong, global::System.Nullable<decimal> Original_dongia) {
+            return this.Update(Original_sohoadonct, Original_sohoadon, Original_ma_sp, ten_sp, soluong, dongia, Original_sohoadonct, Original_sohoadon, Original_ma_sp, Original_ten_sp, Original_soluong, Original_dongia);
         }
     }
     
@@ -1038,6 +1286,8 @@ FROM            HOADON INNER JOIN
         
         private UpdateOrderOption _updateOrder;
         
+        private HOADONCTTableAdapter _hOADONCTTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1050,6 +1300,20 @@ FROM            HOADON INNER JOIN
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public HOADONCTTableAdapter HOADONCTTableAdapter {
+            get {
+                return this._hOADONCTTableAdapter;
+            }
+            set {
+                this._hOADONCTTableAdapter = value;
             }
         }
         
@@ -1072,6 +1336,10 @@ FROM            HOADON INNER JOIN
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._hOADONCTTableAdapter != null) 
+                            && (this._hOADONCTTableAdapter.Connection != null))) {
+                    return this._hOADONCTTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -1085,6 +1353,9 @@ FROM            HOADON INNER JOIN
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._hOADONCTTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -1094,8 +1365,17 @@ FROM            HOADON INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DataHD dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataInHoaDon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._hOADONCTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.HOADONCT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._hOADONCTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -1104,8 +1384,16 @@ FROM            HOADON INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DataHD dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataInHoaDon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._hOADONCTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.HOADONCT.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._hOADONCTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -1114,8 +1402,16 @@ FROM            HOADON INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DataHD dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataInHoaDon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._hOADONCTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.HOADONCT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._hOADONCTTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -1148,12 +1444,17 @@ FROM            HOADON INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DataHD dataSet) {
+        public virtual int UpdateAll(DataInHoaDon dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._hOADONCTTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._hOADONCTTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1187,6 +1488,15 @@ FROM            HOADON INNER JOIN
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._hOADONCTTableAdapter != null)) {
+                    revertConnections.Add(this._hOADONCTTableAdapter, this._hOADONCTTableAdapter.Connection);
+                    this._hOADONCTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._hOADONCTTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._hOADONCTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._hOADONCTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._hOADONCTTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1244,6 +1554,10 @@ FROM            HOADON INNER JOIN
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._hOADONCTTableAdapter != null)) {
+                    this._hOADONCTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._hOADONCTTableAdapter]));
+                    this._hOADONCTTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -62,6 +62,7 @@
             this.btntaikhoan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.ribBanHang = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -118,16 +119,18 @@
             this.barButtonItem1,
             this.btntaikhoan,
             this.barButtonItem3,
-            this.barButtonItem4});
+            this.barButtonItem4,
+            this.barButtonItem9});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 33;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl1.MaxItemId = 34;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribBanHang,
             this.ribHangHoa,
             this.ribDoanhThu,
             this.ribNhanVien});
-            this.ribbonControl1.Size = new System.Drawing.Size(1017, 162);
+            this.ribbonControl1.Size = new System.Drawing.Size(1186, 193);
             // 
             // btnDangXuat
             // 
@@ -213,7 +216,7 @@
             // 
             // btnDonHang
             // 
-            this.btnDonHang.Caption = "Thống Kê Đơn Hàng";
+            this.btnDonHang.Caption = "Hóa Đơn";
             this.btnDonHang.Id = 11;
             this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.Image")));
             this.btnDonHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.LargeImage")));
@@ -389,6 +392,14 @@
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "In Hóa Đơn";
+            this.barButtonItem9.Id = 33;
+            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
+            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
+            this.barButtonItem9.Name = "barButtonItem9";
+            // 
             // ribBanHang
             // 
             this.ribBanHang.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -419,6 +430,7 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.btnKhachHang);
             this.ribbonPageGroup5.ItemLinks.Add(this.btnDonHang);
             this.ribbonPageGroup5.ItemLinks.Add(this.btnTaoHoaDon);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Thông tin bán hàng";
             // 
@@ -504,20 +516,22 @@
             // tabBanhang
             // 
             this.tabBanhang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabBanhang.Location = new System.Drawing.Point(0, 162);
+            this.tabBanhang.Location = new System.Drawing.Point(0, 193);
+            this.tabBanhang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabBanhang.Name = "tabBanhang";
             this.tabBanhang.SelectedIndex = 0;
-            this.tabBanhang.Size = new System.Drawing.Size(1017, 474);
+            this.tabBanhang.Size = new System.Drawing.Size(1186, 590);
             this.tabBanhang.TabIndex = 1;
             this.tabBanhang.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 636);
+            this.ClientSize = new System.Drawing.Size(1186, 783);
             this.Controls.Add(this.tabBanhang);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "frmmain";
@@ -579,6 +593,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
     }
 }
 

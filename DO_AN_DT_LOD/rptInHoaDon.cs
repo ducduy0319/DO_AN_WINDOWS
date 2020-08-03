@@ -16,14 +16,14 @@ namespace DO_AN_DT_LOD {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptHD : ReportClass {
+    public class rptInHoaDon : ReportClass {
         
-        public rptHD() {
+        public rptInHoaDon() {
         }
         
         public override string ResourceName {
             get {
-                return "rptHD.rpt";
+                return "rptInHoaDon.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace DO_AN_DT_LOD {
         
         public override string FullResourceName {
             get {
-                return "DO_AN_DT_LOD.rptHD.rpt";
+                return "DO_AN_DT_LOD.rptInHoaDon.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace DO_AN_DT_LOD {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptHD : Component, ICachedReport {
+    public class CachedrptInHoaDon : Component, ICachedReport {
         
-        public CachedrptHD() {
+        public CachedrptInHoaDon() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace DO_AN_DT_LOD {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptHD rpt = new rptHD();
+            rptInHoaDon rpt = new rptInHoaDon();
             rpt.Site = this.Site;
             return rpt;
         }

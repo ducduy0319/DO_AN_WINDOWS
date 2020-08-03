@@ -58,8 +58,6 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
-            this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sophieunhapct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sophieunhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,11 +65,13 @@
             this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -289,6 +289,7 @@
             this.btnLuu.Size = new System.Drawing.Size(87, 36);
             this.btnLuu.TabIndex = 70;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -299,6 +300,7 @@
             this.btnHuy.Size = new System.Drawing.Size(87, 43);
             this.btnHuy.TabIndex = 74;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThoat
             // 
@@ -309,6 +311,7 @@
             this.btnThoat.Size = new System.Drawing.Size(87, 43);
             this.btnThoat.TabIndex = 73;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnSua
             // 
@@ -319,6 +322,7 @@
             this.btnSua.Size = new System.Drawing.Size(87, 43);
             this.btnSua.TabIndex = 72;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -329,6 +333,7 @@
             this.btnXoa.Size = new System.Drawing.Size(87, 38);
             this.btnXoa.TabIndex = 71;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -339,6 +344,7 @@
             this.btnThem.Size = new System.Drawing.Size(87, 37);
             this.btnThem.TabIndex = 69;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dataGridView1
             // 
@@ -358,16 +364,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(979, 329);
             this.dataGridView1.TabIndex = 79;
-            // 
-            // lKDT_LODDataSet
-            // 
-            this.lKDT_LODDataSet.DataSetName = "LKDT_LODDataSet";
-            this.lKDT_LODDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lKDTLODDataSetBindingSource
-            // 
-            this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
-            this.lKDTLODDataSetBindingSource.Position = 0;
+            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
             // STT
             // 
@@ -410,6 +407,16 @@
             this.thanhtien.HeaderText = "Thành Tiền";
             this.thanhtien.Name = "thanhtien";
             // 
+            // lKDTLODDataSetBindingSource
+            // 
+            this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
+            this.lKDTLODDataSetBindingSource.Position = 0;
+            // 
+            // lKDT_LODDataSet
+            // 
+            this.lKDT_LODDataSet.DataSetName = "LKDT_LODDataSet";
+            this.lKDT_LODDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // frmPhieuNhap_CT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -437,8 +444,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
