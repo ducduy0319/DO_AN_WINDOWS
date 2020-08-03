@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIHD));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(345, 9);
+            this.label3.Location = new System.Drawing.Point(311, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 2;
@@ -132,18 +133,20 @@
             // 
             // btninhoadon
             // 
+            this.btninhoadon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btninhoadon.ImageOptions.Image")));
             this.btninhoadon.Location = new System.Drawing.Point(533, 66);
             this.btninhoadon.Name = "btninhoadon";
-            this.btninhoadon.Size = new System.Drawing.Size(75, 23);
+            this.btninhoadon.Size = new System.Drawing.Size(75, 38);
             this.btninhoadon.TabIndex = 9;
             this.btninhoadon.Text = "In HD";
             this.btninhoadon.Click += new System.EventHandler(this.btninhoadon_Click);
             // 
             // btnthoat
             // 
+            this.btnthoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoat.ImageOptions.Image")));
             this.btnthoat.Location = new System.Drawing.Point(533, 110);
             this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(75, 23);
+            this.btnthoat.Size = new System.Drawing.Size(75, 39);
             this.btnthoat.TabIndex = 10;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);

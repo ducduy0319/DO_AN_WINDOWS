@@ -16,6 +16,7 @@ namespace DO_AN_DT_LOD
 {
     public partial class frmIHDCT : DevExpress.XtraEditors.XtraForm
     {
+        public string sohoadon;
         public frmIHDCT()
         {
             InitializeComponent();
@@ -23,7 +24,8 @@ namespace DO_AN_DT_LOD
 
         private void frmIHDCT_Load(object sender, EventArgs e)
         {
-            string query = "SELECT sohoadonct, sohoadon, ma_sp, ten_sp, soluong, dongia, soluong*dongia as thanhtien FROM HOADONCT";
+            string query = "SELECT HOADON.sohoadon, HOADON.ma_nv, HOADON.ngayhoadon, HOADONCT.sohoadonct, HOADONCT.ten_sp, HOADONCT.ma_sp, HOADONCT.soluong, HOADONCT.dongia, SANPHAM.ten_sp AS Expr1, SANPHAM.ma_sp AS Expr2, HOADONCT.soluong* HOADONCT.dongia AS thanhtien"+" FROM HOADON INNER JOIN HOADONCT ON HOADON.sohoadon = HOADONCT.sohoadon INNER JOIN" +
+                        " SANPHAM ON HOADONCT.ma_sp = SANPHAM.ma_sp where HOADON.sohoadon = '" + sohoadon + "'";
 
             SqlDataAdapter da = new SqlDataAdapter(query, XLBANG.cnnStr);
             try

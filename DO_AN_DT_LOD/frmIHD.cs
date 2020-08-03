@@ -30,6 +30,8 @@ namespace DO_AN_DT_LOD
         {
 
             frmIHDCT f = new frmIHDCT();
+            
+            f.sohoadon = txtsohoadon.Text;
             f.WindowState = FormWindowState.Maximized;
             f.Show();
         }
