@@ -14,21 +14,27 @@ using DO_AN_DT_LOD.Modules;
 
 namespace DO_AN_DT_LOD
 {
-    public partial class frmHoaDonBan : DevExpress.XtraEditors.XtraForm
+    public partial class frmIHD : DevExpress.XtraEditors.XtraForm
     {
         DataTable tblHOADONCT;
         SqlDataAdapter daHOADONCT;
         BindingManagerBase bindHDCT;
         bool capnhat;
-        internal string ma_nv;
-
-
-        public frmHoaDonBan()
+       
+        public frmIHD()
         {
             InitializeComponent();
         }
 
-        private void frmHoaDonBan_Load(object sender, EventArgs e)
+        private void btninhoadon_Click(object sender, EventArgs e)
+        {
+
+            frmIHDCT f = new frmIHDCT();
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
+        }
+
+        private void frmIHD_Load(object sender, EventArgs e)
         {
             tblHOADONCT = new DataTable();
             daHOADONCT = new SqlDataAdapter("SELECT sohoadonct, sohoadon, ma_sp, ten_sp, soluong, dongia, soluong*dongia as thanhtien FROM HOADONCT", XLBANG.cnnStr);
@@ -46,60 +52,52 @@ namespace DO_AN_DT_LOD
 
             txtsohoadon.DataBindings.Add("text", tblHOADONCT, "sohoadon", true);
             txtsohoadonct.DataBindings.Add("text", tblHOADONCT, "sohoadonct", true);
-           
+
             enableButton();
 
             loadHOADONCT();
 
             capnhat = false;
         }
-
         private void loadHOADONCT()
         {
-            dgvCTHD.AutoGenerateColumns = false;
-            dgvCTHD.DataSource = tblHOADONCT;
+            dgvhdct.AutoGenerateColumns = false;
+            dgvhdct.DataSource = tblHOADONCT;
         }
         private void enableButton()
         {
-            btnInHoaDon.Enabled = !capnhat;
-            btnThoat.Enabled = !capnhat;
+           btninhoadon.Enabled = !capnhat;
+            btnthoat.Enabled = !capnhat;
         }
 
-        private void dgvCTHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvhdct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
-        private void dgvCTHD_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            foreach (DataGridViewRow r in dgvCTHD.Rows)
-                r.Cells[0].Value = r.Index + 1;
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void btnthoat_Click(object sender, EventArgs e)
         {
             TabPage T = (TabPage)this.Parent;
             T.Dispose();
         }
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (radMa.Checked == true)
+            if (ratheoma.Checked == true)
             {
-                string std = string.Format("sohoadonct like '%{0}%'", txtTimKiem.Text);
+                string std = string.Format("sohoadonct like '%{0}%'", textBox3.Text);
                 tblHOADONCT.DefaultView.RowFilter = std;
             }
             else
             {
-                string std = string.Format("sohoadon like '%{0}%'", txtTimKiem.Text);
+                string std = string.Format("sohoadon like '%{0}%'", textBox3.Text);
                 tblHOADONCT.DefaultView.RowFilter = std;
             }
         }
 
-        private void btnInHoaDon_Click(object sender, EventArgs e)
+        private void dgvhdct_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-        
-          
+            foreach (DataGridViewRow r in dgvhdct.Rows)
+                r.Cells[0].Value = r.Index + 1;
         }
     }
 }

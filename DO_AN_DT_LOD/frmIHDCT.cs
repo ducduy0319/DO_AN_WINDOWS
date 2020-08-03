@@ -14,16 +14,14 @@ using DO_AN_DT_LOD.Modules;
 
 namespace DO_AN_DT_LOD
 {
-    public partial class rptvHDB : DevExpress.XtraEditors.XtraForm
+    public partial class frmIHDCT : DevExpress.XtraEditors.XtraForm
     {
-        private static rptInHoaDon ReportSource;
-
-        public rptvHDB()
+        public frmIHDCT()
         {
             InitializeComponent();
         }
 
-        private void rptvHDB_Load(object sender, EventArgs e)
+        private void frmIHDCT_Load(object sender, EventArgs e)
         {
             string query = "SELECT sohoadonct, sohoadon, ma_sp, ten_sp, soluong, dongia, soluong*dongia as thanhtien FROM HOADONCT";
 
@@ -32,9 +30,9 @@ namespace DO_AN_DT_LOD
             {
                 DataTable tblThanhToan = new DataTable();
                 da.Fill(tblThanhToan);
-               rptInHoaDon rpt = new rptInHoaDon();
+                rptIHD rpt = new rptIHD();
                 rpt.SetDataSource(tblThanhToan);
-                rptvHDB.ReportSource = rpt;
+                rptvIHDCT.ReportSource = rpt;
 
             }
             catch (SqlException ex)
