@@ -279,13 +279,13 @@ namespace DO_AN_DT_LOD {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnma_nv;
-            
-            private global::System.Data.DataColumn columnten_nv;
+            private global::System.Data.DataColumn columnngaylamviec;
             
             private global::System.Data.DataColumn columnthoigianlam;
             
             private global::System.Data.DataColumn columnluongcoban;
+            
+            private global::System.Data.DataColumn columnten_nv;
             
             private global::System.Data.DataColumn columnLuongThucLinh;
             
@@ -324,17 +324,9 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ma_nvColumn {
+            public global::System.Data.DataColumn ngaylamviecColumn {
                 get {
-                    return this.columnma_nv;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ten_nvColumn {
-                get {
-                    return this.columnten_nv;
+                    return this.columnngaylamviec;
                 }
             }
             
@@ -351,6 +343,14 @@ namespace DO_AN_DT_LOD {
             public global::System.Data.DataColumn luongcobanColumn {
                 get {
                     return this.columnluongcoban;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ten_nvColumn {
+                get {
+                    return this.columnten_nv;
                 }
             }
             
@@ -399,24 +399,17 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string ma_nv, string ten_nv, double thoigianlam, double luongcoban, double LuongThucLinh) {
+            public DataTable1Row AddDataTable1Row(System.DateTime ngaylamviec, double thoigianlam, double luongcoban, string ten_nv, double LuongThucLinh) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ma_nv,
-                        ten_nv,
+                        ngaylamviec,
                         thoigianlam,
                         luongcoban,
+                        ten_nv,
                         LuongThucLinh};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row FindByma_nv(string ma_nv) {
-                return ((DataTable1Row)(this.Rows.Find(new object[] {
-                            ma_nv})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -436,31 +429,26 @@ namespace DO_AN_DT_LOD {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnma_nv = base.Columns["ma_nv"];
-                this.columnten_nv = base.Columns["ten_nv"];
+                this.columnngaylamviec = base.Columns["ngaylamviec"];
                 this.columnthoigianlam = base.Columns["thoigianlam"];
                 this.columnluongcoban = base.Columns["luongcoban"];
+                this.columnten_nv = base.Columns["ten_nv"];
                 this.columnLuongThucLinh = base.Columns["LuongThucLinh"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnma_nv = new global::System.Data.DataColumn("ma_nv", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnma_nv);
-                this.columnten_nv = new global::System.Data.DataColumn("ten_nv", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnten_nv);
+                this.columnngaylamviec = new global::System.Data.DataColumn("ngaylamviec", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnngaylamviec);
                 this.columnthoigianlam = new global::System.Data.DataColumn("thoigianlam", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnthoigianlam);
                 this.columnluongcoban = new global::System.Data.DataColumn("luongcoban", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnluongcoban);
+                this.columnten_nv = new global::System.Data.DataColumn("ten_nv", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnten_nv);
                 this.columnLuongThucLinh = new global::System.Data.DataColumn("LuongThucLinh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLuongThucLinh);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnma_nv}, true));
-                this.columnma_nv.AllowDBNull = false;
-                this.columnma_nv.Unique = true;
-                this.columnma_nv.MaxLength = 10;
                 this.columnten_nv.MaxLength = 30;
                 this.columnLuongThucLinh.ReadOnly = true;
             }
@@ -605,28 +593,17 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ma_nv {
-                get {
-                    return ((string)(this[this.tableDataTable1.ma_nvColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.ma_nvColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ten_nv {
+            public System.DateTime ngaylamviec {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.ten_nvColumn]));
+                        return ((global::System.DateTime)(this[this.tableDataTable1.ngaylamviecColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ten_nv\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ngaylamviec\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.ten_nvColumn] = value;
+                    this[this.tableDataTable1.ngaylamviecColumn] = value;
                 }
             }
             
@@ -664,6 +641,22 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ten_nv {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.ten_nvColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ten_nv\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.ten_nvColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double LuongThucLinh {
                 get {
                     try {
@@ -680,14 +673,14 @@ namespace DO_AN_DT_LOD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isten_nvNull() {
-                return this.IsNull(this.tableDataTable1.ten_nvColumn);
+            public bool IsngaylamviecNull() {
+                return this.IsNull(this.tableDataTable1.ngaylamviecColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setten_nvNull() {
-                this[this.tableDataTable1.ten_nvColumn] = global::System.Convert.DBNull;
+            public void SetngaylamviecNull() {
+                this[this.tableDataTable1.ngaylamviecColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -712,6 +705,18 @@ namespace DO_AN_DT_LOD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetluongcobanNull() {
                 this[this.tableDataTable1.luongcobanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isten_nvNull() {
+                return this.IsNull(this.tableDataTable1.ten_nvColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setten_nvNull() {
+                this[this.tableDataTable1.ten_nvColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -886,10 +891,10 @@ namespace DO_AN_DT_LOD.DataLuongNVTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("ma_nv", "ma_nv");
-            tableMapping.ColumnMappings.Add("ten_nv", "ten_nv");
+            tableMapping.ColumnMappings.Add("ngaylamviec", "ngaylamviec");
             tableMapping.ColumnMappings.Add("thoigianlam", "thoigianlam");
             tableMapping.ColumnMappings.Add("luongcoban", "luongcoban");
+            tableMapping.ColumnMappings.Add("ten_nv", "ten_nv");
             tableMapping.ColumnMappings.Add("LuongThucLinh", "LuongThucLinh");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -907,7 +912,7 @@ namespace DO_AN_DT_LOD.DataLuongNVTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        NHANVIEN.ma_nv, NHANVIEN.ten_nv, CHAMCONG.thoigianlam, CHAMCONG.luongcoban, CHAMCONG.thoigianlam * CHAMCONG.luongcoban AS LuongThucLinh
+            this._commandCollection[0].CommandText = @"SELECT        CHAMCONG.ngaylamviec, CHAMCONG.thoigianlam, CHAMCONG.luongcoban, NHANVIEN.ten_nv, CHAMCONG.thoigianlam * CHAMCONG.luongcoban AS LuongThucLinh
 FROM            CHAMCONG INNER JOIN
                          NHANVIEN ON CHAMCONG.ma_nv = NHANVIEN.ma_nv";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
