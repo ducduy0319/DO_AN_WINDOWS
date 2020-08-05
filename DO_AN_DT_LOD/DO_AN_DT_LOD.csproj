@@ -169,6 +169,12 @@
     <Compile Include="frmTaoHoaDon.Designer.cs">
       <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTGLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTGLV.Designer.cs">
+      <DependentUpon>frmTGLV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongKe1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Modules\XLSANPHAM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\XLTGLV.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Modules\XLXEMSANPHAM.cs">
@@ -295,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaoHoaDon.resx">
       <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTGLV.resx">
+      <DependentUpon>frmTGLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKe1.resx">
       <DependentUpon>frmThongKe1.cs</DependentUpon>

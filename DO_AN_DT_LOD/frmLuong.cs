@@ -46,15 +46,15 @@ namespace DO_AN_DT_LOD
             ds.Tables.AddRange(new DataTable[] { tblChamCong,tblNhanVien });
             DataRelation qh = new DataRelation("FPK_NHANVIEN_CHAMCONG", tblNhanVien.Columns["ma_nv"], tblChamCong.Columns["ma_nv"]);
             ds.Relations.Add(qh);
-            //DataColumn cot_ten = new DataColumn("ten_nv", Type.GetType("System.String"), "Parent(FPK_NHANVIEN_CHAMCONG).ten_nv");
-            //tblChamCong.Columns.Add(cot_ten);
+            DataColumn cot_ten = new DataColumn("ten_nv", Type.GetType("System.String"), "Parent(FPK_NHANVIEN_CHAMCONG).ten_nv");
+            tblChamCong.Columns.Add(cot_ten);
 
             txtmacong.DataBindings.Add("text", tblChamCong, "ma_cong", true);
             cbmanv.DataBindings.Add("text", tblChamCong, "ma_nv", true);
             txtTenNV.DataBindings.Add("text", tblNhanVien, "ten_nv", true);
             txtgiolam.DataBindings.Add("text", tblChamCong, "thoigianlam", true);
             txtluongcoban.DataBindings.Add("text", tblChamCong, "luongcoban", true);
-            // txtThanhTien.DataBindings.Add("text", tblChamCong, "luong", true);
+            //txtThanhTien.DataBindings.Add("text", tblChamCong, "luong", true);
 
             //txtTenNV.DataBindings.Add("text", tblHoaDon_CT, "SoLuong", true);
             //txtgiolam.DataBindings.Add("selectedvalue", tblHoaDon_CT, "MaSP", true);
@@ -70,7 +70,7 @@ namespace DO_AN_DT_LOD
             for (int r = 0; r < dsnhanvien.Rows.Count; r++)
             {
                 dsnhanvien.Rows[r].Cells[6].Value = Convert.ToInt32(dsnhanvien.Rows[r].Cells[4].Value) * Convert.ToInt32(dsnhanvien.Rows[r].Cells[5].Value);
-                txtThanhTien.Text = dsnhanvien.Rows[r].Cells[6].Value.ToString();
+                //txtThanhTien.Text = dsnhanvien.Rows[r].Cells[6].Value.ToString();
 
             }
 
@@ -179,7 +179,6 @@ namespace DO_AN_DT_LOD
             {
                 DSNV.EndCurrentEdit();
                 tblChamCong.ghi();
-                tinhtien();
 
                 tblChamCong.AcceptChanges();
                 MessageBox.Show("Cập Nhật thành công!!!");
