@@ -47,22 +47,20 @@ namespace DO_AN_DT_LOD
             Application.Exit();
         }
 
-        private void frmDangNhap_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (int)Keys.Enter)
-            {
-                btnDangNhap_Click(sender, e);
-            }
-        }
-
-        private void frmDangNhap_Enter(object sender, EventArgs e)
-        {
-            btnDangNhap_Click(sender, e);
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmDangNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (int)Keys.Enter)
+            {
+                btnDangNhap_Click(sender, e);
+            }
         }
     }
 }

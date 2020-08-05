@@ -483,6 +483,11 @@ namespace DO_AN_DT_LOD
             }
 
         }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

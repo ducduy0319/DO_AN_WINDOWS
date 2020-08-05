@@ -59,11 +59,11 @@ namespace DO_AN_DT_LOD
             txtTenNV.DataBindings.Add("text", tblNhanVien, "ten_nv", true);
             txtgiolam.DataBindings.Add("text", tblChamCong, "thoigianlam", true);
             txtluongcoban.DataBindings.Add("text", tblChamCong, "luongcoban", true);
-            txtThanhTien.DataBindings.Add("text", tblChamCong, "luong", true);
+           // txtThanhTien.DataBindings.Add("text", tblChamCong, "luong", true);
 
             //txtTenNV.DataBindings.Add("text", tblHoaDon_CT, "SoLuong", true);
             //txtgiolam.DataBindings.Add("selectedvalue", tblHoaDon_CT, "MaSP", true);
-            //DSHD = this.BindingContext[tblHoaDon_CT];
+            DSNV = this.BindingContext[tblChamCong];
             dsnhanvien.AutoGenerateColumns = false;
             dsnhanvien.DataSource = tblChamCong;
 
@@ -93,16 +93,15 @@ namespace DO_AN_DT_LOD
 
         private void txtTimKiem_TextChanged_1(object sender, EventArgs e)
         {
-            //chua chay duoc
             if (radMa.Checked == true)
             {
-                string std = string.Format("ma_nv like '%{0}%'", txtTimKiem.Text);
+                string std = string.Format("ma_cong like '%{0}%'", txtTimKiem.Text);
                 tblChamCong.DefaultView.RowFilter = std;
             }
             else
             {
-                string std = string.Format("ten_nv like '%{0}%'", txtTimKiem.Text);
-                tblChamCong.DefaultView.RowFilter = std;
+                string std = string.Format("ma_nv like '%{0}%'", txtTimKiem.Text);
+               tblChamCong.DefaultView.RowFilter = std;
             }
 
         }
@@ -143,17 +142,79 @@ namespace DO_AN_DT_LOD
             try
             {
                 DSNV.AddNew();
-
-                //BdpDB_PositionChange(sender, e);
                 capnhat = true;
                 enableButton();
-                MessageBox.Show("B?n có mu?n Thêm không!!!");
+                MessageBox.Show("Bạn có muốn thêm không!!!");
             }
             catch (Exception ex)
             {
                 tblChamCong.RejectChanges();
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            capnhat = true;
+            enableButton();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DSNV.RemoveAt(DSNV.Position);
+                tblChamCong.ghi();
+
+                tblChamCong.AcceptChanges();
+                capnhat = true;
+                enableButton();
+
+            }
+            catch (SqlException)
+            {
+                tblChamCong.RejectChanges();
+                MessageBox.Show("Xóa Thành Công!!!");
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DSNV.EndCurrentEdit();
+                tblChamCong.ghi();
+                tinhtien();
+
+                tblChamCong.AcceptChanges();
+                MessageBox.Show("Cập Nhật thành công!!!");
+                capnhat = false;
+                enableButton();
+            }
+            catch (Exception ex)
+            {
+                tblChamCong.RejectChanges();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSNV.CancelCurrentEdit();
+            tblChamCong.RejectChanges();
+            capnhat = false;
+            enableButton();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
+
+        private void dsnhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dsnhanvien.Rows[DSNV.Position].Cells[6].Value.ToString();
         }
     }
 }

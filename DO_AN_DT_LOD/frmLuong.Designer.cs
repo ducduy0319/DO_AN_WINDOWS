@@ -102,7 +102,6 @@
             this.txtluongcoban.Name = "txtluongcoban";
             this.txtluongcoban.Size = new System.Drawing.Size(193, 24);
             this.txtluongcoban.TabIndex = 12;
-            this.txtluongcoban.Text = "15000";
             // 
             // label5
             // 
@@ -178,6 +177,7 @@
             this.txtThanhTien.Location = new System.Drawing.Point(558, 120);
             this.txtThanhTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.ReadOnly = true;
             this.txtThanhTien.Size = new System.Drawing.Size(193, 24);
             this.txtThanhTien.TabIndex = 12;
             // 
@@ -190,6 +190,7 @@
             this.btnHuy.Size = new System.Drawing.Size(87, 43);
             this.btnHuy.TabIndex = 61;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThoat
             // 
@@ -200,6 +201,7 @@
             this.btnThoat.Size = new System.Drawing.Size(87, 43);
             this.btnThoat.TabIndex = 60;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnSua
             // 
@@ -210,6 +212,7 @@
             this.btnSua.Size = new System.Drawing.Size(87, 43);
             this.btnSua.TabIndex = 59;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -220,6 +223,7 @@
             this.btnXoa.Size = new System.Drawing.Size(87, 38);
             this.btnXoa.TabIndex = 58;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -230,6 +234,7 @@
             this.btnLuu.Size = new System.Drawing.Size(87, 36);
             this.btnLuu.TabIndex = 57;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -246,7 +251,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 12F);
-            this.label6.Location = new System.Drawing.Point(273, 26);
+            this.label6.Location = new System.Drawing.Point(446, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(258, 28);
             this.label6.TabIndex = 52;
@@ -271,6 +276,7 @@
             this.dsnhanvien.Name = "dsnhanvien";
             this.dsnhanvien.Size = new System.Drawing.Size(976, 351);
             this.dsnhanvien.TabIndex = 54;
+            this.dsnhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsnhanvien_CellClick);
             this.dsnhanvien.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dsnhanvien_DataBindingComplete);
             // 
             // STT
