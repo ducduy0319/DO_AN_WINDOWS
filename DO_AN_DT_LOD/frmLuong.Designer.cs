@@ -265,7 +265,7 @@
             this.dsnhanvien.DataSource = this.lKDTLODDataSetBindingSource1;
             this.dsnhanvien.Location = new System.Drawing.Point(11, 243);
             this.dsnhanvien.Name = "dsnhanvien";
-            this.dsnhanvien.Size = new System.Drawing.Size(837, 285);
+            this.dsnhanvien.Size = new System.Drawing.Size(953, 285);
             this.dsnhanvien.TabIndex = 54;
             this.dsnhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsnhanvien_CellClick);
             this.dsnhanvien.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dsnhanvien_DataBindingComplete);
