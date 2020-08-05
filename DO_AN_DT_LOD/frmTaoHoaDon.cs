@@ -23,18 +23,24 @@ namespace DO_AN_DT_LOD
         }
         XLNHANVIEN tblNhanVien;
         XLHOADON tblHoaDon;
+
+        XLSANPHAM tblSanPham;
         XLHOADONCT tblHoaDonCT;
+
         BindingManagerBase DSHD;
         BindingManagerBase DSHDCT;
         bool capnhat = false;
 
         private void frmTaoHoaDon_Load(object sender, EventArgs e)
         {
-            tblHoaDonCT = new XLHOADONCT();
+
             tblNhanVien = new XLNHANVIEN();
             tblHoaDon = new XLHOADON();
 
-            LoadHoaDon();
+            tblSanPham = new XLSANPHAM();
+            tblHoaDonCT = new XLHOADONCT();
+
+            //LoadHoaDon();
             LoadHoaDonCT();
             //cbMaSP();
             //cbMaKH();
@@ -46,39 +52,31 @@ namespace DO_AN_DT_LOD
 
         }
 
-        private void LoadHoaDon()
+        private void LoadHoaDonCT()
         {
+            DataSet ds = new DataSet();
+            ds.Tables.AddRange(new DataTable[] { tblHoaDonCT, tblSanPham });
+            DataRelation qh = new DataRelation("FPK_SANPHAM_HOADONCT", tblSanPham.Columns["ma_sp"], tblHoaDonCT.Columns["ma_sp"]);
+            ds.Relations.Add(qh);
+            DataColumn cot_ten = new DataColumn("ten_nv", Type.GetType("System.String"), "Parent(FPK_NHANVIEN_CHAMCONG).ten_nv");
+            tblHoaDonCT.Columns.Add(cot_ten);
+            //DataColumn cot_ten = new DataColumn("ten_sp", Type.GetType("System.String"), "Parent(FPK_SANPHAM_HOADONCT).ten_sp");
+            //tblHoaDonCT.Columns.Add(cot_ten);
 
-            //DataSet ds = new DataSet();
-            //ds.Tables.AddRange(new DataTable[] { tblNhanVien, tblHoaDon, tblHoaDonCT });
-            //DataRelation qh = new DataRelation("FPK_NHANVIEN_HOADON", tblNhanVien.Columns["ma_nv"], tblHoaDon.Columns["ma_nv"]);
-            //DataRelation qx = new DataRelation("FPK_HOADON_HOADONCT", tblHoaDon.Columns["sohoadon"], tblHoaDonCT.Columns["sohoadon"]);
-            //ds.Relations.Add(qx);
-            //ds.Relations.Add(qh);
+            //txtSoHDCT.DataBindings.Add("text", tblHoaDonCT, "sohoadonct", true);
+            //txtMaSp.DataBindings.Add("text", tblHoaDonCT, "ma_sp", true);
+            //txtTenSP.DataBindings.Add("text", tblSanPham, "ten_sp", true);
+            //txtDonGia.DataBindings.Add("text", tblHoaDonCT, "dongia", true);
+            //txtDonGia.DataBindings.Add("text", tblHoaDonCT, "soluong", true);
+            //txtThanhTien.DataBindings.Add("text", tblChamCong, "luong", true);
 
-            //DataColumn cot_DonGia = new DataColumn("DonGia", Type.GetType("System.String"), "Parent(FPK_SANPHAM_HOADON_CT).DonGia");
-            //tblHoaDon_CT.Columns.Add(cot_DonGia);
-            //DataColumn cot_TenSP = new DataColumn("TenSP", Type.GetType("System.String"), "Parent(FPK_SANPHAM_HOADON_CT).TenSP");
-            //tblHoaDon_CT.Columns.Add(cot_TenSP);
-            //DataColumn cot_MaKH = new DataColumn("MaKH", Type.GetType("System.String"), "Parent(FPK_HOADON_HOADON_CT).MaKH");
-            //tblHoaDon_CT.Columns.Add(cot_MaKH);
-            //DataColumn cot_MaNV = new DataColumn("MaNV", Type.GetType("System.String"), "Parent(FPK_HOADON_HOADON_CT).MaNV");
-            //tblHoaDon_CT.Columns.Add(cot_MaNV);
-            //DataColumn cot_NgayHD = new DataColumn("NgayHD", Type.GetType("System.String"), "Parent(FPK_HOADON_HOADON_CT).NgayHD");
-            //tblHoaDon_CT.Columns.Add(cot_NgayHD);
-            //cot_NgayHD.DefaultValue = DateTime.Now;
-
-
-            //txtSoHD.DataBindings.Add("text", tblHoaDon_CT, "SoHD", true);
-            ////txtThanhTien.DataBindings.Add("text", tblHoaDon_CT, "ThanhTien", true);
-            //txtSoLuong.DataBindings.Add("text", tblHoaDon_CT, "SoLuong", true);
-            //cboMaSP.DataBindings.Add("selectedvalue", tblHoaDon_CT, "MaSP", true);
-            //DSHD = this.BindingContext[tblHoaDon_CT];
+            //txtTenNV.DataBindings.Add("text", tblHoaDon_CT, "SoLuong", true);
+            //txtgiolam.DataBindings.Add("selectedvalue", tblHoaDon_CT, "MaSP", true);
+            DSHDCT = this.BindingContext[tblHoaDonCT];
             dgvDSHDCT.AutoGenerateColumns = false;
             dgvDSHDCT.DataSource = tblHoaDonCT;
-            //DSHD.PositionChanged += new EventHandler(BdpDB_PositionChange);
         }
-        private void LoadHoaDonCT()
+        private void LoadHoaDon()
         {
             //DataSet ds = new DataSet();
             //ds.Tables.AddRange(new DataTable[] { tblNhanVien, tblHoaDon, tblHoaDonCT });
@@ -108,6 +106,12 @@ namespace DO_AN_DT_LOD
             dgvDSHD.DataSource = tblHoaDon;
             //DSHD.PositionChanged += new EventHandler(BdpDB_PositionChange);
 
+        }
+
+        private void dgvDSHDCT_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dgvDSHDCT.Rows)
+                r.Cells[0].Value = r.Index + 1;
         }
     }
 }
