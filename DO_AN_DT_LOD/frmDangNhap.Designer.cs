@@ -108,7 +108,6 @@
             this.Name = "frmDangNhap";
             this.Text = "ĐĂNG NHẬP";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
-            this.Enter += new System.EventHandler(this.frmDangNhap_Enter);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmDangNhap_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();

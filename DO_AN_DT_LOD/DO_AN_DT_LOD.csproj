@@ -42,8 +42,10 @@
     <Reference Include="DevExpress.Data.v19.1" />
     <Reference Include="DevExpress.ExpressApp.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Persistent.Base.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.BaseImpl.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v19.1.Core" />
     <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.1" />
     <Reference Include="DevExpress.Sparkline.v19.1.Core" />
     <Reference Include="DevExpress.XtraEditors.v19.1" />
@@ -108,6 +110,12 @@
     <Compile Include="frmLoaiSanPham.Designer.cs">
       <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuong.Designer.cs">
+      <DependentUpon>frmLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +158,12 @@
     <Compile Include="frmThongKe1.Designer.cs">
       <DependentUpon>frmThongKe1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmtinhluong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtinhluong.Designer.cs">
+      <DependentUpon>frmtinhluong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTKDTcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +194,9 @@
       <DependentUpon>LKDT_LODDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modules\XLBANG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\XLCHAMCONG.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Modules\XLHOADON.cs">
@@ -235,6 +252,9 @@
     <EmbeddedResource Include="frmLoaiSanPham.resx">
       <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLuong.resx">
+      <DependentUpon>frmLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKe1.resx">
       <DependentUpon>frmThongKe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtinhluong.resx">
+      <DependentUpon>frmtinhluong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTKDTcs.resx">
       <DependentUpon>frmTKDTcs.cs</DependentUpon>

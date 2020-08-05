@@ -65,8 +65,8 @@
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.ribBanHang = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribHangHoa = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -131,6 +131,7 @@
             this.ribDoanhThu,
             this.ribNhanVien});
             this.ribbonControl1.Size = new System.Drawing.Size(1186, 193);
+            this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // btnDangXuat
             // 
@@ -313,7 +314,7 @@
             // 
             // btnXemSanPham
             // 
-            this.btnXemSanPham.Caption = "Sản Phẩm";
+            this.btnXemSanPham.Caption = "Tìm Kiếm";
             this.btnXemSanPham.Id = 23;
             this.btnXemSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemSanPham.ImageOptions.Image")));
             this.btnXemSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXemSanPham.ImageOptions.LargeImage")));
@@ -399,13 +400,14 @@
             this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
             this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
             this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // ribBanHang
             // 
             this.ribBanHang.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup4,
             this.ribbonPageGroup5,
+            this.ribbonPageGroup4,
             this.ribbonPageGroup13});
             this.ribBanHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribBanHang.ImageOptions.Image")));
             this.ribBanHang.Name = "ribBanHang";
@@ -418,13 +420,6 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Hệ Thống";
             // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup4.ImageOptions.Image")));
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnXemSanPham);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Tồn Kho";
-            // 
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btnKhachHang);
@@ -433,6 +428,13 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Thông tin bán hàng";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup4.ImageOptions.Image")));
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnXemSanPham);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Tồn Kho";
             // 
             // ribbonPageGroup13
             // 
