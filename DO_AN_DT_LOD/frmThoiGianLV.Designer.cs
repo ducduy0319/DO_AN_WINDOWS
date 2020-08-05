@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(659, 268);
             this.Controls.Add(this.rptvTGLV);
             this.Name = "frmThoiGianLV";
-            this.Text = "frmThoiGianLV";
+            this.Text = "Thời Gian LV";
             this.Load += new System.EventHandler(this.frmThoiGianLV_Load);
             this.ResumeLayout(false);
 

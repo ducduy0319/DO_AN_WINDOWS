@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(726, 268);
             this.Controls.Add(this.rptvLuongNV);
             this.Name = "frmLuongNV";
-            this.Text = "frmLuongNV";
+            this.Text = "Lương NV";
             this.Load += new System.EventHandler(this.frmLuongNV_Load);
             this.ResumeLayout(false);
 

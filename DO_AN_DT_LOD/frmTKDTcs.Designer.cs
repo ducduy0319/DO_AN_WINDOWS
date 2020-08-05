@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(579, 309);
             this.Controls.Add(this.rptvTK);
             this.Name = "frmTKDTcs";
-            this.Text = "frmTKDTcs";
+            this.Text = "Thống Kê Doanh Thu";
             this.Load += new System.EventHandler(this.frmTKDTcs_Load);
             this.ResumeLayout(false);
 
