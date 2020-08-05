@@ -216,5 +216,13 @@ namespace DO_AN_DT_LOD
         {
             dsnhanvien.Rows[DSNV.Position].Cells[6].Value.ToString();
         }
+
+        private void btnIN_Click(object sender, EventArgs e)
+        {
+            frmLuongNV f = new frmLuongNV();
+            f.ma_nv = cbmanv.Text;
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
+        }
     }
 }

@@ -64,6 +64,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLuongNV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataLuongNV.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataThongKe1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,6 +120,12 @@
     </Compile>
     <Compile Include="frmLuong.Designer.cs">
       <DependentUpon>frmLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLuongNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuongNV.Designer.cs">
+      <DependentUpon>frmLuongNV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -228,6 +239,12 @@
       <DependentUpon>rptIHD.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptLuongNV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLuongNV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptThongKe1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -254,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLuong.resx">
       <DependentUpon>frmLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuongNV.resx">
+      <DependentUpon>frmLuongNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -306,11 +326,26 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptIHD.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptLuongNV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLuongNV.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptThongKe1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptThongKe1.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="DataLuongNV.xsc">
+      <DependentUpon>DataLuongNV.xsd</DependentUpon>
+    </None>
+    <None Include="DataLuongNV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataLuongNV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataLuongNV.xss">
+      <DependentUpon>DataLuongNV.xsd</DependentUpon>
+    </None>
     <None Include="DataThongKe1.xsc">
       <DependentUpon>DataThongKe1.xsd</DependentUpon>
     </None>
