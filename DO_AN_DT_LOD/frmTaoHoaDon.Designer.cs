@@ -399,6 +399,7 @@
             this.textBox1.Location = new System.Drawing.Point(96, 171);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(248, 24);
             this.textBox1.TabIndex = 12;
             // 
