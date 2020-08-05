@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="QL_LKDT_LODConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        NHANVIEN.ma_nv, NHANVIEN.ten_nv, CHAMCONG.thoigianlam, CHAMCONG.luongcoban, CHAMCONG.thoigianlam * CHAMCONG.luongcoban AS LuongThucLinh
+                    <CommandText>SELECT        CHAMCONG.ngaylamviec, CHAMCONG.thoigianlam, CHAMCONG.luongcoban, NHANVIEN.ten_nv, CHAMCONG.thoigianlam * CHAMCONG.luongcoban AS LuongThucLinh
 FROM            CHAMCONG INNER JOIN
                          NHANVIEN ON CHAMCONG.ma_nv = NHANVIEN.ma_nv</CommandText>
                     <Parameters />
@@ -21,10 +21,10 @@ FROM            CHAMCONG INNER JOIN
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ma_nv" DataSetColumn="ma_nv" />
-              <Mapping SourceColumn="ten_nv" DataSetColumn="ten_nv" />
+              <Mapping SourceColumn="ngaylamviec" DataSetColumn="ngaylamviec" />
               <Mapping SourceColumn="thoigianlam" DataSetColumn="thoigianlam" />
               <Mapping SourceColumn="luongcoban" DataSetColumn="luongcoban" />
+              <Mapping SourceColumn="ten_nv" DataSetColumn="ten_nv" />
               <Mapping SourceColumn="LuongThucLinh" DataSetColumn="LuongThucLinh" />
             </Mappings>
             <Sources />
@@ -40,13 +40,9 @@ FROM            CHAMCONG INNER JOIN
         <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ma_nv" msprop:Generator_ColumnVarNameInTable="columnma_nv" msprop:Generator_ColumnPropNameInRow="ma_nv" msprop:Generator_ColumnPropNameInTable="ma_nvColumn" msprop:Generator_UserColumnName="ma_nv">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="ngaylamviec" msprop:Generator_ColumnVarNameInTable="columnngaylamviec" msprop:Generator_ColumnPropNameInRow="ngaylamviec" msprop:Generator_ColumnPropNameInTable="ngaylamviecColumn" msprop:Generator_UserColumnName="ngaylamviec" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="thoigianlam" msprop:Generator_ColumnVarNameInTable="columnthoigianlam" msprop:Generator_ColumnPropNameInRow="thoigianlam" msprop:Generator_ColumnPropNameInTable="thoigianlamColumn" msprop:Generator_UserColumnName="thoigianlam" type="xs:double" minOccurs="0" />
+              <xs:element name="luongcoban" msprop:Generator_ColumnVarNameInTable="columnluongcoban" msprop:Generator_ColumnPropNameInRow="luongcoban" msprop:Generator_ColumnPropNameInTable="luongcobanColumn" msprop:Generator_UserColumnName="luongcoban" type="xs:double" minOccurs="0" />
               <xs:element name="ten_nv" msprop:Generator_ColumnVarNameInTable="columnten_nv" msprop:Generator_ColumnPropNameInRow="ten_nv" msprop:Generator_ColumnPropNameInTable="ten_nvColumn" msprop:Generator_UserColumnName="ten_nv" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -54,17 +50,11 @@ FROM            CHAMCONG INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="thoigianlam" msprop:Generator_ColumnVarNameInTable="columnthoigianlam" msprop:Generator_ColumnPropNameInRow="thoigianlam" msprop:Generator_ColumnPropNameInTable="thoigianlamColumn" msprop:Generator_UserColumnName="thoigianlam" type="xs:double" minOccurs="0" />
-              <xs:element name="luongcoban" msprop:Generator_ColumnVarNameInTable="columnluongcoban" msprop:Generator_ColumnPropNameInRow="luongcoban" msprop:Generator_ColumnPropNameInTable="luongcobanColumn" msprop:Generator_UserColumnName="luongcoban" type="xs:double" minOccurs="0" />
               <xs:element name="LuongThucLinh" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLuongThucLinh" msprop:Generator_ColumnPropNameInRow="LuongThucLinh" msprop:Generator_ColumnPropNameInTable="LuongThucLinhColumn" msprop:Generator_UserColumnName="LuongThucLinh" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:DataTable1" />
-      <xs:field xpath="mstns:ma_nv" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

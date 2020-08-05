@@ -25,7 +25,7 @@ namespace DO_AN_DT_LOD
 
         private void frmLuongNV_Load(object sender, EventArgs e)
         {
-            string query = "SELECT NHANVIEN.ma_nv, NHANVIEN.ten_nv, CHAMCONG.thoigianlam, CHAMCONG.luongcoban, CHAMCONG.thoigianlam* CHAMCONG.luongcoban AS LuongThucLinh FROM CHAMCONG INNER JOIN NHANVIEN ON CHAMCONG.ma_nv = NHANVIEN.ma_nv where NHANVIEN.ma_nv = '" + ma_nv + "'";
+            string query = "SELECT CHAMCONG.ngaylamviec, CHAMCONG.thoigianlam, CHAMCONG.luongcoban, NHANVIEN.ten_nv, CHAMCONG.thoigianlam * CHAMCONG.luongcoban AS LuongThucLinh FROM CHAMCONG INNER JOIN NHANVIEN ON CHAMCONG.ma_nv = NHANVIEN.ma_nv where NHANVIEN.ma_nv = '" + ma_nv + "'";
          
 
             SqlDataAdapter da = new SqlDataAdapter(query, XLBANG.cnnStr);
