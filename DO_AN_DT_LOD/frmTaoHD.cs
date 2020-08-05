@@ -13,6 +13,7 @@ using System.IO;
 using DO_AN_DT_LOD.Modules;
 
 
+
 namespace DO_AN_DT_LOD
 {
     public partial class frmTaoHD : DevExpress.XtraEditors.XtraForm
@@ -42,16 +43,16 @@ namespace DO_AN_DT_LOD
 
         private void LoadHoaDon()
         {
-            //DataSet ds = new DataSet();
-            //ds.Tables.AddRange(new DataTable[] { tblChamCong, tblNhanVien });
-            //DataRelation qh = new DataRelation("FPK_NHANVIEN_CHAMCONG", tblNhanVien.Columns["ma_nv"], tblChamCong.Columns["ma_nv"]);
-            //ds.Relations.Add(qh);
+            DataSet ds = new DataSet();
+            ds.Tables.AddRange(new DataTable[] { tblSanPham ,tblHoaDonCT });
+            DataRelation qh = new DataRelation("FPK_SANPHAM_HOADONCT", tblSanPham.Columns["ma_sp"], tblHoaDonCT.Columns["ma_sp"]);
+            ds.Relations.Add(qh);
             //DataColumn cot_ten = new DataColumn("ten_nv", Type.GetType("System.String"), "Parent(FPK_NHANVIEN_CHAMCONG).ten_nv");
             //tblChamCong.Columns.Add(cot_ten);
 
-            //DSSP = this.BindingContext[tblHoaDonCT];
-            //ds.AutoGenerateColumns = false;
-            //ds.DataSource = tblHoaDonCT;
+            DSSP = this.BindingContext[tblHoaDonCT];
+            dsspct.AutoGenerateColumns = false;
+            dsspct.DataSource = tblHoaDonCT;
 
         }
     }

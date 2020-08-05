@@ -36,30 +36,7 @@
             this.radMa = new System.Windows.Forms.RadioButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.ds = new System.Windows.Forms.DataGridView();
-            this.lblMasp = new System.Windows.Forms.Label();
-            this.txtsoluong = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtHDCT = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbmahd = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSP = new System.Windows.Forms.TextBox();
-            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnIN = new DevExpress.XtraEditors.SimpleButton();
-            this.txtdongia = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lKDTLODDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
-            this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsspct = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHDCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,11 +45,34 @@
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
+            this.lblMasp = new System.Windows.Forms.Label();
+            this.txtsoluong = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHDCT = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbmahd = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtdongia = new System.Windows.Forms.TextBox();
+            this.txtSP = new System.Windows.Forms.TextBox();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnIN = new DevExpress.XtraEditors.SimpleButton();
+            this.lKDTLODDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dsspct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -135,12 +135,12 @@
             this.label6.TabIndex = 66;
             this.label6.Text = "TẠO HÓA ĐƠN";
             // 
-            // ds
+            // dsspct
             // 
-            this.ds.AllowUserToOrderColumns = true;
-            this.ds.AutoGenerateColumns = false;
-            this.ds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ds.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dsspct.AllowUserToOrderColumns = true;
+            this.dsspct.AutoGenerateColumns = false;
+            this.dsspct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dsspct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.MaHDCT,
             this.MaHoaDon,
@@ -149,12 +149,73 @@
             this.DonGia,
             this.SoLuong,
             this.ThanhTien});
-            this.ds.DataSource = this.lKDTLODDataSetBindingSource;
-            this.ds.Location = new System.Drawing.Point(15, 310);
-            this.ds.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ds.Name = "ds";
-            this.ds.Size = new System.Drawing.Size(976, 351);
-            this.ds.TabIndex = 67;
+            this.dsspct.DataSource = this.lKDTLODDataSetBindingSource;
+            this.dsspct.Location = new System.Drawing.Point(15, 310);
+            this.dsspct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dsspct.Name = "dsspct";
+            this.dsspct.Size = new System.Drawing.Size(976, 351);
+            this.dsspct.TabIndex = 67;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 60;
+            // 
+            // MaHDCT
+            // 
+            this.MaHDCT.DataPropertyName = "sohoadonct";
+            this.MaHDCT.HeaderText = "Mã Hóa Đơn CT";
+            this.MaHDCT.Name = "MaHDCT";
+            this.MaHDCT.Width = 150;
+            // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.DataPropertyName = "sohoadon";
+            this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.Width = 150;
+            // 
+            // Masp
+            // 
+            this.Masp.DataPropertyName = "ma_sp";
+            this.Masp.HeaderText = "Mã SP";
+            this.Masp.Name = "Masp";
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "ten_sp";
+            this.TenSP.HeaderText = "Tên SP";
+            this.TenSP.Name = "TenSP";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "dongia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "soluong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "thanhtien";
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 150;
+            // 
+            // lKDTLODDataSetBindingSource
+            // 
+            this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
+            this.lKDTLODDataSetBindingSource.Position = 0;
+            // 
+            // lKDT_LODDataSet
+            // 
+            this.lKDT_LODDataSet.DataSetName = "LKDT_LODDataSet";
+            this.lKDT_LODDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblMasp
             // 
@@ -233,6 +294,15 @@
             this.cbmahd.Size = new System.Drawing.Size(224, 25);
             this.cbmahd.TabIndex = 25;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(380, 89);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 17);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Đơn Giá:";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -258,6 +328,14 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 20;
+            // 
+            // txtdongia
+            // 
+            this.txtdongia.Location = new System.Drawing.Point(481, 77);
+            this.txtdongia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtdongia.Name = "txtdongia";
+            this.txtdongia.Size = new System.Drawing.Size(224, 24);
+            this.txtdongia.TabIndex = 1;
             // 
             // txtSP
             // 
@@ -337,84 +415,6 @@
             this.btnIN.TabIndex = 70;
             this.btnIN.Text = "In";
             // 
-            // txtdongia
-            // 
-            this.txtdongia.Location = new System.Drawing.Point(481, 77);
-            this.txtdongia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtdongia.Name = "txtdongia";
-            this.txtdongia.Size = new System.Drawing.Size(224, 24);
-            this.txtdongia.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(380, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 17);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Đơn Giá:";
-           // 
-            // lKDT_LODDataSet
-            // 
-            this.lKDT_LODDataSet.DataSetName = "LKDT_LODDataSet";
-            this.lKDT_LODDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lKDTLODDataSetBindingSource
-            // 
-            this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
-            this.lKDTLODDataSetBindingSource.Position = 0;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 60;
-            // 
-            // MaHDCT
-            // 
-            this.MaHDCT.DataPropertyName = "sohoadonct";
-            this.MaHDCT.HeaderText = "Mã Hóa Đơn CT";
-            this.MaHDCT.Name = "MaHDCT";
-            this.MaHDCT.Width = 150;
-            // 
-            // MaHoaDon
-            // 
-            this.MaHoaDon.DataPropertyName = "sohoadon";
-            this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
-            this.MaHoaDon.Name = "MaHoaDon";
-            this.MaHoaDon.Width = 150;
-            // 
-            // Masp
-            // 
-            this.Masp.DataPropertyName = "ma_sp";
-            this.Masp.HeaderText = "Mã SP";
-            this.Masp.Name = "Masp";
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "ten_sp";
-            this.TenSP.HeaderText = "Tên SP";
-            this.TenSP.Name = "TenSP";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "dongia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "soluong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "thanhtien";
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.Width = 150;
-            // 
             // frmTaoHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -432,17 +432,17 @@
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnIN);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ds);
+            this.Controls.Add(this.dsspct);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTaoHD";
             this.Text = "frmTaoHD";
             this.Load += new System.EventHandler(this.frmTaoHD_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsspct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,7 +462,7 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private DevExpress.XtraEditors.SimpleButton btnIN;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView ds;
+        private System.Windows.Forms.DataGridView dsspct;
         private System.Windows.Forms.Label lblMasp;
         private System.Windows.Forms.TextBox txtsoluong;
         private System.Windows.Forms.Label label3;
