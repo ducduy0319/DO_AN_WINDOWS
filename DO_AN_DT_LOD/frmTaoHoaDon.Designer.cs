@@ -42,6 +42,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvDSHDCT = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sohoadonct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ma_sp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_sp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sohoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,13 +82,6 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sohoadonct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ma_sp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_sp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sohoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHDCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
@@ -220,6 +220,49 @@
             this.dgvDSHDCT.Size = new System.Drawing.Size(737, 270);
             this.dgvDSHDCT.TabIndex = 52;
             this.dgvDSHDCT.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHDCT_DataBindingComplete);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 40;
+            // 
+            // sohoadonct
+            // 
+            this.sohoadonct.DataPropertyName = "sohoadonct";
+            this.sohoadonct.HeaderText = "Số HDCT";
+            this.sohoadonct.Name = "sohoadonct";
+            // 
+            // ma_sp
+            // 
+            this.ma_sp.DataPropertyName = "ma_sp";
+            this.ma_sp.HeaderText = "Mã SP";
+            this.ma_sp.Name = "ma_sp";
+            // 
+            // ten_sp
+            // 
+            this.ten_sp.DataPropertyName = "ten_sp";
+            this.ten_sp.HeaderText = "Tên SP";
+            this.ten_sp.Name = "ten_sp";
+            // 
+            // dongia
+            // 
+            this.dongia.DataPropertyName = "dongia";
+            this.dongia.HeaderText = "Đơn giá";
+            this.dongia.Name = "dongia";
+            // 
+            // thanhtien
+            // 
+            this.thanhtien.DataPropertyName = "thanhtien";
+            this.thanhtien.HeaderText = "Thành Tiền";
+            this.thanhtien.Name = "thanhtien";
+            this.thanhtien.Width = 150;
+            // 
+            // sohoadon
+            // 
+            this.sohoadon.DataPropertyName = "sohoadon";
+            this.sohoadon.HeaderText = "Số HD";
+            this.sohoadon.Name = "sohoadon";
             // 
             // lKDTLODDataSetBindingSource
             // 
@@ -523,49 +566,6 @@
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 150;
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 40;
-            // 
-            // sohoadonct
-            // 
-            this.sohoadonct.DataPropertyName = "sohoadonct";
-            this.sohoadonct.HeaderText = "Số HDCT";
-            this.sohoadonct.Name = "sohoadonct";
-            // 
-            // ma_sp
-            // 
-            this.ma_sp.DataPropertyName = "ma_sp";
-            this.ma_sp.HeaderText = "Mã SP";
-            this.ma_sp.Name = "ma_sp";
-            // 
-            // ten_sp
-            // 
-            this.ten_sp.DataPropertyName = "ten_sp";
-            this.ten_sp.HeaderText = "Tên SP";
-            this.ten_sp.Name = "ten_sp";
-            // 
-            // dongia
-            // 
-            this.dongia.DataPropertyName = "dongia";
-            this.dongia.HeaderText = "Đơn giá";
-            this.dongia.Name = "dongia";
-            // 
-            // thanhtien
-            // 
-            this.thanhtien.DataPropertyName = "thanhtien";
-            this.thanhtien.HeaderText = "Thành Tiền";
-            this.thanhtien.Name = "thanhtien";
-            this.thanhtien.Width = 150;
-            // 
-            // sohoadon
-            // 
-            this.sohoadon.DataPropertyName = "sohoadon";
-            this.sohoadon.HeaderText = "Số HD";
-            this.sohoadon.Name = "sohoadon";
-            // 
             // frmTaoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -587,7 +587,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTaoHoaDon";
-            this.Text = "frmTaoHoaDon";
+            this.Text = "TẠO HÓA ĐƠN";
             this.Load += new System.EventHandler(this.frmTaoHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHDCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();

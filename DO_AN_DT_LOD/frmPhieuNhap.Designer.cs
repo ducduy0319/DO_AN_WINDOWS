@@ -53,9 +53,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtNgayPN = new System.Windows.Forms.DateTimePicker();
             this.txtMaNV = new System.Windows.Forms.ComboBox();
             this.txtNoiDung = new System.Windows.Forms.TextBox();
-            this.dtNgayPN = new System.Windows.Forms.DateTimePicker();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -198,7 +198,7 @@
             this.dsphieunhap.Location = new System.Drawing.Point(8, 282);
             this.dsphieunhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dsphieunhap.Name = "dsphieunhap";
-            this.dsphieunhap.Size = new System.Drawing.Size(779, 351);
+            this.dsphieunhap.Size = new System.Drawing.Size(772, 351);
             this.dsphieunhap.TabIndex = 41;
             this.dsphieunhap.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dsphieunhap_DataBindingComplete);
             // 
@@ -307,6 +307,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phiếu nhập";
             // 
+            // dtNgayPN
+            // 
+            this.dtNgayPN.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgayPN.Location = new System.Drawing.Point(152, 86);
+            this.dtNgayPN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtNgayPN.Name = "dtNgayPN";
+            this.dtNgayPN.Size = new System.Drawing.Size(151, 24);
+            this.dtNgayPN.TabIndex = 26;
+            // 
             // txtMaNV
             // 
             this.txtMaNV.FormattingEnabled = true;
@@ -325,15 +334,6 @@
             this.txtNoiDung.Size = new System.Drawing.Size(151, 62);
             this.txtNoiDung.TabIndex = 15;
             // 
-            // dtNgayPN
-            // 
-            this.dtNgayPN.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayPN.Location = new System.Drawing.Point(152, 86);
-            this.dtNgayPN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dtNgayPN.Name = "dtNgayPN";
-            this.dtNgayPN.Size = new System.Drawing.Size(151, 24);
-            this.dtNgayPN.TabIndex = 26;
-            // 
             // STT
             // 
             this.STT.HeaderText = "STT";
@@ -345,24 +345,28 @@
             this.SoPhieuNhap.DataPropertyName = "sophieuphap";
             this.SoPhieuNhap.HeaderText = "Số Phiếu Nhập";
             this.SoPhieuNhap.Name = "SoPhieuNhap";
+            this.SoPhieuNhap.Width = 150;
             // 
             // NgayPhieuNhap
             // 
             this.NgayPhieuNhap.DataPropertyName = "ngayphieunhap";
             this.NgayPhieuNhap.HeaderText = "Ngày Phiếu Nhập";
             this.NgayPhieuNhap.Name = "NgayPhieuNhap";
+            this.NgayPhieuNhap.Width = 150;
             // 
             // MaNCC
             // 
             this.MaNCC.DataPropertyName = "ma_ncc";
             this.MaNCC.HeaderText = "Mã Nhà Cung Cấp";
             this.MaNCC.Name = "MaNCC";
+            this.MaNCC.Width = 150;
             // 
             // MaNV
             // 
             this.MaNV.DataPropertyName = "ma_nv";
             this.MaNV.HeaderText = "Mã Nhân Viên";
             this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 120;
             // 
             // NoiDung
             // 
@@ -389,7 +393,7 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhieuNhap";
-            this.Text = "frmPhieuNhap";
+            this.Text = "PHIẾU NHẬP";
             this.Load += new System.EventHandler(this.frmPhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();

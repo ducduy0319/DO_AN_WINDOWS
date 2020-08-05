@@ -115,7 +115,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDoiMatKhau";
-            this.Text = "Đổi Mật Khẩu";
+            this.Text = "ĐỔI MẬT KHẨU";
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

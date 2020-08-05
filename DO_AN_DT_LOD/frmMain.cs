@@ -38,12 +38,16 @@ namespace DO_AN_DT_LOD
                     btnLSanPham.Enabled = true;
                     btnSanPham.Enabled = true;
 
+                    barButtonItem4.Enabled = true;
+                    barButtonItem3.Enabled = true;
+
                     //Quản lý doanh thu
                     btnTKTThang.Enabled = true;
                     btnTKTTuan.Enabled = true;
                     btnTKTNgay.Enabled = true;
 
                     //Quản lý nhân viên
+                    btntaikhoan.Enabled = true;
                     btnNhanVien1.Enabled = true;
                     btnChamCong.Enabled = true;
                     btnPhanCong.Enabled = true;
@@ -66,12 +70,16 @@ namespace DO_AN_DT_LOD
                     btnLSanPham.Enabled = false;
                     btnSanPham.Enabled = false;
 
+                    barButtonItem4.Enabled = false;
+                    barButtonItem3.Enabled = false;
+
                     //Quản lý doanh thu
                     btnTKTThang.Enabled = false;
                     btnTKTTuan.Enabled = false;
                     btnTKTNgay.Enabled = false;
 
                     //Quản lý nhân viên
+                    btntaikhoan.Enabled = false;
                     btnNhanVien1.Enabled = false;
                     btnChamCong.Enabled = false;
                     btnPhanCong.Enabled = false;
@@ -94,12 +102,18 @@ namespace DO_AN_DT_LOD
                     btnLSanPham.Enabled = false;
                     btnSanPham.Enabled = false;
 
+
                     //Quản lý doanh thu
                     btnTKTThang.Enabled = false;
                     btnTKTTuan.Enabled = false;
                     btnTKTNgay.Enabled = false;
 
+                    barButtonItem4.Enabled = false;
+                    barButtonItem3.Enabled = false;
+
                     //Quản lý nhân viên
+                    btntaikhoan.Enabled = false;
+
                     btnNhanVien1.Enabled = false;
                     btnChamCong.Enabled = false;
                     btnPhanCong.Enabled = false;
@@ -369,6 +383,7 @@ namespace DO_AN_DT_LOD
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             int index = tabBanhang.TabPages.IndexOfKey("tabCTHD");
             if (index >= 0)
             {
@@ -414,7 +429,7 @@ namespace DO_AN_DT_LOD
 
         private void btnTaoHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            /*
+            
             int index = tabBanhang.TabPages.IndexOfKey("tabHoaDonBan");
             if (index >= 0)
             {
@@ -422,7 +437,7 @@ namespace DO_AN_DT_LOD
             }
             else
             {
-               frmHoaDonBan f = new frmHoaDonBan();
+                frmTaoHD f = new frmTaoHD();
                 TabPage p = new TabPage(f.Text);
                 p.Name = "tabHoaDonBan";
                 f.TopLevel = false;
@@ -433,7 +448,7 @@ namespace DO_AN_DT_LOD
                 tabBanhang.SelectedTab = p;
                 f.Show();
             }
-            */
+            
 
         }
 
@@ -501,6 +516,51 @@ namespace DO_AN_DT_LOD
                 frmLuong f = new frmLuong();
                 TabPage p = new TabPage(f.Text);
                 p.Name = "tbluong";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+        }
+
+        private void btnPhanCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tblphancong");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmTGLV f = new frmTGLV();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tblphancong";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+
+        }
+
+        private void btnXemPhanCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tblxemphancong");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmXemPhanCong f = new frmXemPhanCong();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tblxemphancong";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;

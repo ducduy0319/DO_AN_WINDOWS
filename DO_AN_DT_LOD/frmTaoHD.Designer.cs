@@ -53,20 +53,18 @@
             this.txtHDCT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSP = new System.Windows.Forms.ComboBox();
             this.cbmahd = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtdongia = new System.Windows.Forms.TextBox();
-            this.txtSP = new System.Windows.Forms.TextBox();
+            this.txtTenSP1 = new System.Windows.Forms.TextBox();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnIN = new DevExpress.XtraEditors.SimpleButton();
             this.lKDTLODDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsspct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
@@ -86,22 +84,22 @@
             // 
             // txtTenSP
             // 
-            this.txtTenSP.Location = new System.Drawing.Point(115, 125);
+            this.txtTenSP.Location = new System.Drawing.Point(238, 86);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
-            this.txtTenSP.Size = new System.Drawing.Size(224, 24);
+            this.txtTenSP.Size = new System.Drawing.Size(101, 24);
             this.txtTenSP.TabIndex = 12;
             // 
             // radTimTheoTen
             // 
             this.radTimTheoTen.AutoSize = true;
-            this.radTimTheoTen.Location = new System.Drawing.Point(450, 281);
+            this.radTimTheoTen.Location = new System.Drawing.Point(493, 279);
             this.radTimTheoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radTimTheoTen.Name = "radTimTheoTen";
-            this.radTimTheoTen.Size = new System.Drawing.Size(113, 21);
+            this.radTimTheoTen.Size = new System.Drawing.Size(130, 21);
             this.radTimTheoTen.TabIndex = 79;
-            this.radTimTheoTen.Text = "Tìm Theo Tên";
+            this.radTimTheoTen.Text = "Tìm Theo Mã HD";
             this.radTimTheoTen.UseVisualStyleBackColor = true;
             // 
             // radMa
@@ -111,10 +109,10 @@
             this.radMa.Location = new System.Drawing.Point(327, 279);
             this.radMa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radMa.Name = "radMa";
-            this.radMa.Size = new System.Drawing.Size(106, 21);
+            this.radMa.Size = new System.Drawing.Size(146, 21);
             this.radMa.TabIndex = 78;
             this.radMa.TabStop = true;
-            this.radMa.Text = "Tìm theo mã";
+            this.radMa.Text = "Tìm theo mã HDCT";
             this.radMa.UseVisualStyleBackColor = true;
             // 
             // txtTimKiem
@@ -124,6 +122,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(284, 23);
             this.txtTimKiem.TabIndex = 77;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label6
             // 
@@ -155,6 +154,7 @@
             this.dsspct.Name = "dsspct";
             this.dsspct.Size = new System.Drawing.Size(976, 351);
             this.dsspct.TabIndex = 67;
+            this.dsspct.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dsspct_DataBindingComplete);
             // 
             // STT
             // 
@@ -262,6 +262,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSP);
             this.groupBox1.Controls.Add(this.cbmahd);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
@@ -272,9 +273,9 @@
             this.groupBox1.Controls.Add(this.txtsoluong);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtTenSP);
+            this.groupBox1.Controls.Add(this.txtTenSP1);
             this.groupBox1.Controls.Add(this.txtHDCT);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtSP);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.groupBox1.Location = new System.Drawing.Point(12, 80);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -284,6 +285,15 @@
             this.groupBox1.TabIndex = 68;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // txtSP
+            // 
+            this.txtSP.FormattingEnabled = true;
+            this.txtSP.Location = new System.Drawing.Point(115, 86);
+            this.txtSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSP.Name = "txtSP";
+            this.txtSP.Size = new System.Drawing.Size(117, 25);
+            this.txtSP.TabIndex = 25;
             // 
             // cbmahd
             // 
@@ -315,11 +325,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 80);
+            this.label1.Location = new System.Drawing.Point(31, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Mã Sp:";
+            this.label1.Text = "Mã SP:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -337,13 +348,13 @@
             this.txtdongia.Size = new System.Drawing.Size(224, 24);
             this.txtdongia.TabIndex = 1;
             // 
-            // txtSP
+            // txtTenSP1
             // 
-            this.txtSP.Location = new System.Drawing.Point(115, 82);
-            this.txtSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSP.Name = "txtSP";
-            this.txtSP.Size = new System.Drawing.Size(224, 24);
-            this.txtSP.TabIndex = 12;
+            this.txtTenSP1.Location = new System.Drawing.Point(115, 128);
+            this.txtTenSP1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenSP1.Name = "txtTenSP1";
+            this.txtTenSP1.Size = new System.Drawing.Size(224, 24);
+            this.txtTenSP1.TabIndex = 12;
             // 
             // btnHuy
             // 
@@ -354,36 +365,18 @@
             this.btnHuy.Size = new System.Drawing.Size(87, 43);
             this.btnHuy.TabIndex = 75;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(904, 207);
+            this.btnThoat.Location = new System.Drawing.Point(811, 148);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(87, 43);
             this.btnThoat.TabIndex = 74;
             this.btnThoat.Text = "Thoát";
-            // 
-            // btnSua
-            // 
-            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(811, 150);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(87, 43);
-            this.btnSua.TabIndex = 73;
-            this.btnSua.Text = "Sửa";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(811, 209);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(87, 38);
-            this.btnXoa.TabIndex = 72;
-            this.btnXoa.Text = "Xóa";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnLuu
             // 
@@ -394,6 +387,7 @@
             this.btnLuu.Size = new System.Drawing.Size(87, 36);
             this.btnLuu.TabIndex = 71;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -404,38 +398,26 @@
             this.btnThem.Size = new System.Drawing.Size(87, 37);
             this.btnThem.TabIndex = 69;
             this.btnThem.Text = "Thêm";
-            // 
-            // btnIN
-            // 
-            this.btnIN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIN.ImageOptions.Image")));
-            this.btnIN.Location = new System.Drawing.Point(901, 258);
-            this.btnIN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnIN.Name = "btnIN";
-            this.btnIN.Size = new System.Drawing.Size(87, 37);
-            this.btnIN.TabIndex = 70;
-            this.btnIN.Text = "In";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmTaoHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 567);
+            this.ClientSize = new System.Drawing.Size(1039, 567);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.radTimTheoTen);
             this.Controls.Add(this.radMa);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.btnIN);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dsspct);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTaoHD";
-            this.Text = "frmTaoHD";
+            this.Text = "TẠO HÓA ĐƠN";
             this.Load += new System.EventHandler(this.frmTaoHD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsspct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();
@@ -452,15 +434,12 @@
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
-        private DevExpress.XtraEditors.SimpleButton btnSua;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.RadioButton radTimTheoTen;
         private System.Windows.Forms.RadioButton radMa;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private DevExpress.XtraEditors.SimpleButton btnIN;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dsspct;
         private System.Windows.Forms.Label lblMasp;
@@ -473,7 +452,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSP;
         private System.Windows.Forms.TextBox txtdongia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.BindingSource lKDTLODDataSetBindingSource2;
@@ -487,5 +465,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.ComboBox txtSP;
+        private System.Windows.Forms.TextBox txtTenSP1;
     }
 }

@@ -225,7 +225,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvDSSP);
             this.Name = "frmXemSanPham";
-            this.Text = "frmXemSanPham";
+            this.Text = "XEM SẢN PHẨM";
             this.Load += new System.EventHandler(this.frmXemSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();

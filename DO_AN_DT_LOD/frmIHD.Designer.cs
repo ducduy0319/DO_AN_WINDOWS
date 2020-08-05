@@ -32,15 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtsohoadon = new System.Windows.Forms.TextBox();
             this.txtsohoadonct = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.ratheoten = new System.Windows.Forms.RadioButton();
-            this.ratheoma = new System.Windows.Forms.RadioButton();
             this.btninhoadon = new DevExpress.XtraEditors.SimpleButton();
             this.btnthoat = new DevExpress.XtraEditors.SimpleButton();
             this.dgvhdct = new System.Windows.Forms.DataGridView();
+            this.radTimTheoTen = new System.Windows.Forms.RadioButton();
+            this.radMa = new System.Windows.Forms.RadioButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sohoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sohoadonct = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,20 +72,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(363, 41);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(355, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
+            this.label3.Size = new System.Drawing.Size(138, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "IN HÓA ĐƠN";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(126, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Tìm Kiếm:";
             // 
             // txtsohoadon
             // 
@@ -102,39 +94,6 @@
             this.txtsohoadonct.Name = "txtsohoadonct";
             this.txtsohoadonct.Size = new System.Drawing.Size(116, 23);
             this.txtsohoadonct.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(198, 183);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 23);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // ratheoten
-            // 
-            this.ratheoten.AutoSize = true;
-            this.ratheoten.Location = new System.Drawing.Point(366, 183);
-            this.ratheoten.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ratheoten.Name = "ratheoten";
-            this.ratheoten.Size = new System.Drawing.Size(87, 21);
-            this.ratheoten.TabIndex = 7;
-            this.ratheoten.TabStop = true;
-            this.ratheoten.Text = "Theo Tên";
-            this.ratheoten.UseVisualStyleBackColor = true;
-            // 
-            // ratheoma
-            // 
-            this.ratheoma.AutoSize = true;
-            this.ratheoma.Location = new System.Drawing.Point(475, 185);
-            this.ratheoma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ratheoma.Name = "ratheoma";
-            this.ratheoma.Size = new System.Drawing.Size(81, 21);
-            this.ratheoma.TabIndex = 8;
-            this.ratheoma.TabStop = true;
-            this.ratheoma.Text = "Theo Mã";
-            this.ratheoma.UseVisualStyleBackColor = true;
             // 
             // btninhoadon
             // 
@@ -172,10 +131,51 @@
             this.dgvhdct.Location = new System.Drawing.Point(1, 266);
             this.dgvhdct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvhdct.Name = "dgvhdct";
-            this.dgvhdct.Size = new System.Drawing.Size(869, 185);
+            this.dgvhdct.Size = new System.Drawing.Size(873, 185);
             this.dgvhdct.TabIndex = 11;
             this.dgvhdct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvhdct_CellContentClick);
             this.dgvhdct.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvhdct_DataBindingComplete);
+            // 
+            // radTimTheoTen
+            // 
+            this.radTimTheoTen.AutoSize = true;
+            this.radTimTheoTen.Location = new System.Drawing.Point(607, 210);
+            this.radTimTheoTen.Name = "radTimTheoTen";
+            this.radTimTheoTen.Size = new System.Drawing.Size(200, 21);
+            this.radTimTheoTen.TabIndex = 43;
+            this.radTimTheoTen.Text = "Tìm theo số hóa đơn chi tiết";
+            this.radTimTheoTen.UseVisualStyleBackColor = true;
+            // 
+            // radMa
+            // 
+            this.radMa.AutoSize = true;
+            this.radMa.Checked = true;
+            this.radMa.Location = new System.Drawing.Point(417, 209);
+            this.radMa.Name = "radMa";
+            this.radMa.Size = new System.Drawing.Size(156, 21);
+            this.radMa.TabIndex = 42;
+            this.radMa.TabStop = true;
+            this.radMa.Text = "Tìm theo số hóa đơn";
+            this.radMa.UseVisualStyleBackColor = true;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(101, 209);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(284, 23);
+            this.txtTimKiem.TabIndex = 41;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 209);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 17);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Tìm Kiếm:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // STT
             // 
@@ -188,18 +188,21 @@
             this.sohoadon.DataPropertyName = "sohoadon";
             this.sohoadon.HeaderText = "Số Hóa Đơn ";
             this.sohoadon.Name = "sohoadon";
+            this.sohoadon.Width = 120;
             // 
             // sohoadonct
             // 
             this.sohoadonct.DataPropertyName = "sohoadonct";
             this.sohoadonct.HeaderText = "Số Hóa Đơn CT";
             this.sohoadonct.Name = "sohoadonct";
+            this.sohoadonct.Width = 140;
             // 
             // ten_sp
             // 
             this.ten_sp.DataPropertyName = "ten_sp";
             this.ten_sp.HeaderText = "Tên Sản Phẩm";
             this.ten_sp.Name = "ten_sp";
+            this.ten_sp.Width = 145;
             // 
             // soluong
             // 
@@ -218,27 +221,28 @@
             this.thanhtien.DataPropertyName = "thanhtien";
             this.thanhtien.HeaderText = "Thành Tiền";
             this.thanhtien.Name = "thanhtien";
+            this.thanhtien.Width = 120;
             // 
             // frmIHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 577);
+            this.ClientSize = new System.Drawing.Size(886, 577);
+            this.Controls.Add(this.radTimTheoTen);
+            this.Controls.Add(this.radMa);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvhdct);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btninhoadon);
-            this.Controls.Add(this.ratheoma);
-            this.Controls.Add(this.ratheoten);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtsohoadonct);
             this.Controls.Add(this.txtsohoadon);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmIHD";
-            this.Text = "e";
+            this.Text = "IN HÓA ĐƠN";
             this.Load += new System.EventHandler(this.frmIHD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvhdct)).EndInit();
             this.ResumeLayout(false);
@@ -251,15 +255,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtsohoadon;
         private System.Windows.Forms.TextBox txtsohoadonct;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RadioButton ratheoten;
-        private System.Windows.Forms.RadioButton ratheoma;
         private DevExpress.XtraEditors.SimpleButton btninhoadon;
         private DevExpress.XtraEditors.SimpleButton btnthoat;
         private System.Windows.Forms.DataGridView dgvhdct;
+        private System.Windows.Forms.RadioButton radTimTheoTen;
+        private System.Windows.Forms.RadioButton radMa;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn sohoadon;
         private System.Windows.Forms.DataGridViewTextBoxColumn sohoadonct;

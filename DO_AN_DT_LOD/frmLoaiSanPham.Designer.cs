@@ -334,7 +334,7 @@
             this.Controls.Add(this.dgvDSHD);
             this.Controls.Add(this.label6);
             this.Name = "frmLoaiSanPham";
-            this.Text = "frmLoaiSanPham";
+            this.Text = "LOẠI SẢN PHẨM";
             this.Load += new System.EventHandler(this.frmLoaiSanPham_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

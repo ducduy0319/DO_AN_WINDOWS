@@ -38,18 +38,21 @@
             this.rptvIHDCT.Cursor = System.Windows.Forms.Cursors.Default;
             this.rptvIHDCT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rptvIHDCT.Location = new System.Drawing.Point(0, 0);
+            this.rptvIHDCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rptvIHDCT.Name = "rptvIHDCT";
-            this.rptvIHDCT.Size = new System.Drawing.Size(688, 268);
+            this.rptvIHDCT.Size = new System.Drawing.Size(803, 330);
             this.rptvIHDCT.TabIndex = 0;
+            this.rptvIHDCT.ToolPanelWidth = 233;
             // 
             // frmIHDCT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 268);
+            this.ClientSize = new System.Drawing.Size(803, 330);
             this.Controls.Add(this.rptvIHDCT);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmIHDCT";
-            this.Text = "frmIHDCT";
+            this.Text = "IN HÓA ĐƠN CHI TIẾT";
             this.Load += new System.EventHandler(this.frmIHDCT_Load);
             this.ResumeLayout(false);
 

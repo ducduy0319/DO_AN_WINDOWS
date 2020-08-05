@@ -131,7 +131,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmThongKe1";
-            this.Text = "frmThongKe1";
+            this.Text = "THỐNG KÊ ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmThongKe1_Load);
             this.ResumeLayout(false);

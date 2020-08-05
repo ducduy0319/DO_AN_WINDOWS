@@ -89,5 +89,15 @@ namespace DO_AN_DT_LOD.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z2011010588973_e447fc7758a424fd1f2cb4b7b7f0dc50 {
+            get {
+                object obj = ResourceManager.GetObject("z2011010588973_e447fc7758a424fd1f2cb4b7b7f0dc50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

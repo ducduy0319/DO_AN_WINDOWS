@@ -17,5 +17,11 @@ namespace DO_AN_DT_LOD
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
     }
 }

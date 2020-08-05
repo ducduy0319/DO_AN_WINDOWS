@@ -58,6 +58,8 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sophieunhapct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sophieunhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,8 +67,6 @@
             this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lKDTLODDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lKDT_LODDataSet = new DO_AN_DT_LOD.LKDT_LODDataSet();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -359,12 +359,22 @@
             this.dongia,
             this.thanhtien});
             this.dataGridView1.DataSource = this.lKDTLODDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 323);
+            this.dataGridView1.Location = new System.Drawing.Point(80, 309);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(979, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(894, 329);
             this.dataGridView1.TabIndex = 79;
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            // 
+            // lKDTLODDataSetBindingSource
+            // 
+            this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
+            this.lKDTLODDataSetBindingSource.Position = 0;
+            // 
+            // lKDT_LODDataSet
+            // 
+            this.lKDT_LODDataSet.DataSetName = "LKDT_LODDataSet";
+            this.lKDT_LODDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // STT
             // 
@@ -376,18 +386,21 @@
             this.sophieunhapct.DataPropertyName = "sophieunhapct";
             this.sophieunhapct.HeaderText = "Số Phiếu Nhập CT";
             this.sophieunhapct.Name = "sophieunhapct";
+            this.sophieunhapct.Width = 150;
             // 
             // sophieunhap
             // 
             this.sophieunhap.DataPropertyName = "sophieunhap";
             this.sophieunhap.HeaderText = "Số Phiếu Nhập";
             this.sophieunhap.Name = "sophieunhap";
+            this.sophieunhap.Width = 150;
             // 
             // ma_sp
             // 
             this.ma_sp.DataPropertyName = "ma_sp";
             this.ma_sp.HeaderText = "Mã Sản Phẩm";
             this.ma_sp.Name = "ma_sp";
+            this.ma_sp.Width = 120;
             // 
             // soluong
             // 
@@ -406,16 +419,7 @@
             this.thanhtien.DataPropertyName = "thanhtien";
             this.thanhtien.HeaderText = "Thành Tiền";
             this.thanhtien.Name = "thanhtien";
-            // 
-            // lKDTLODDataSetBindingSource
-            // 
-            this.lKDTLODDataSetBindingSource.DataSource = this.lKDT_LODDataSet;
-            this.lKDTLODDataSetBindingSource.Position = 0;
-            // 
-            // lKDT_LODDataSet
-            // 
-            this.lKDT_LODDataSet.DataSetName = "LKDT_LODDataSet";
-            this.lKDT_LODDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.thanhtien.Width = 120;
             // 
             // frmPhieuNhap_CT
             // 
@@ -437,7 +441,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.radTimTheoTen);
             this.Name = "frmPhieuNhap_CT";
-            this.Text = "frmPhieuNhap_CT";
+            this.Text = "PHIẾU NHẬP CHI TIẾT";
             this.Load += new System.EventHandler(this.frmPhieuNhap_CT_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -481,6 +485,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton radTimTheoTen;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource lKDTLODDataSetBindingSource;
+        private LKDT_LODDataSet lKDT_LODDataSet;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn sophieunhapct;
         private System.Windows.Forms.DataGridViewTextBoxColumn sophieunhap;
@@ -488,7 +494,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien;
-        private System.Windows.Forms.BindingSource lKDTLODDataSetBindingSource;
-        private LKDT_LODDataSet lKDT_LODDataSet;
     }
 }

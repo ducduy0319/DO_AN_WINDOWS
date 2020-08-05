@@ -359,7 +359,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DSCC);
             this.Name = "frmNCC";
-            this.Text = "frmNCC";
+            this.Text = "NHÀ CUNG CẤP";
             this.Load += new System.EventHandler(this.frmNCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();

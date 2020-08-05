@@ -337,6 +337,7 @@
             this.radTimTheoTen.TabIndex = 39;
             this.radTimTheoTen.Text = "Tìm Theo Tên";
             this.radTimTheoTen.UseVisualStyleBackColor = true;
+            this.radTimTheoTen.CheckedChanged += new System.EventHandler(this.radTimTheoTen_CheckedChanged);
             // 
             // radMa
             // 
@@ -349,6 +350,7 @@
             this.radMa.TabStop = true;
             this.radMa.Text = "Tìm theo mã";
             this.radMa.UseVisualStyleBackColor = true;
+            this.radMa.CheckedChanged += new System.EventHandler(this.radMa_CheckedChanged);
             // 
             // txtTimKiem
             // 
@@ -367,6 +369,7 @@
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 35;
             this.label7.Text = "Tìm Kiếm:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // frmSanPham
             // 
@@ -388,7 +391,7 @@
             this.Controls.Add(this.label6);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSanPham";
-            this.Text = "frmSanPham";
+            this.Text = "DANH SÁCH SẢN PHẨM";
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -82,24 +82,30 @@ namespace DO_AN_DT_LOD
             T.Dispose();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            if (ratheoma.Checked == true)
-            {
-                string std = string.Format("sohoadonct like '%{0}%'", textBox3.Text);
-                tblHOADONCT.DefaultView.RowFilter = std;
-            }
-            else
-            {
-                string std = string.Format("sohoadon like '%{0}%'", textBox3.Text);
-                tblHOADONCT.DefaultView.RowFilter = std;
-            }
-        }
-
         private void dgvhdct_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow r in dgvhdct.Rows)
                 r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (radMa.Checked == true)
+            {
+                string std = string.Format("sohoadon like '%{0}%'", txtTimKiem.Text);
+                tblHOADONCT.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("sohoadonct like '%{0}%'", txtTimKiem.Text);
+                tblHOADONCT.DefaultView.RowFilter = std;
+            }
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

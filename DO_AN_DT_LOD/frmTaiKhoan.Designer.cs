@@ -449,7 +449,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dsNhanVien);
             this.Name = "frmTaiKhoan";
-            this.Text = "frmTaiKhoan";
+            this.Text = "TÀI KHOẢN";
             this.Load += new System.EventHandler(this.frmTaiKhoan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

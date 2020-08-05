@@ -170,6 +170,21 @@ namespace DO_AN_DT_LOD
             }
         }
 
+        private void radMa_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radTimTheoTen_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void txttimkiem_TextChanged(object sender, EventArgs e)
         {
 

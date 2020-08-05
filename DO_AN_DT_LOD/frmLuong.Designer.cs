@@ -440,7 +440,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLuong";
-            this.Text = "frmLuong";
+            this.Text = "LƯƠNG";
             this.Load += new System.EventHandler(this.frmLuong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();

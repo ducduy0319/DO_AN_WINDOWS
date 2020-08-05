@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUngDung));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(241, 19);
+            this.label2.Location = new System.Drawing.Point(240, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(417, 22);
             this.label2.TabIndex = 2;
@@ -52,7 +54,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(179, 66);
+            this.label3.Location = new System.Drawing.Point(178, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(525, 22);
             this.label3.TabIndex = 2;
@@ -62,7 +64,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 201);
+            this.label4.Location = new System.Drawing.Point(43, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 2;
@@ -72,7 +74,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 139);
+            this.label5.Location = new System.Drawing.Point(43, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 22);
             this.label5.TabIndex = 2;
@@ -82,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 139);
+            this.label1.Location = new System.Drawing.Point(207, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 22);
             this.label1.TabIndex = 2;
@@ -92,7 +94,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(208, 201);
+            this.label6.Location = new System.Drawing.Point(207, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(567, 22);
             this.label6.TabIndex = 2;
@@ -101,17 +103,29 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DO_AN_DT_LOD.Properties.Resources.tang_133333up;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(899, 480);
+            this.pictureBox1.Size = new System.Drawing.Size(899, 481);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(319, 419);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(202, 45);
+            this.btnThoat.TabIndex = 31;
+            this.btnThoat.Text = "CHỌN VÀO ĐỂ THOÁT";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmUngDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 476);
+            this.ClientSize = new System.Drawing.Size(895, 477);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -122,7 +136,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUngDung";
-            this.Text = "frmUngDung";
+            this.Text = "ỨNG DỤNG";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -137,5 +151,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }
