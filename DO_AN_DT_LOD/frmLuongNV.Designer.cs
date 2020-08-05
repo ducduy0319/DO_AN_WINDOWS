@@ -38,21 +38,18 @@
             this.rptvLuongNV.Cursor = System.Windows.Forms.Cursors.Default;
             this.rptvLuongNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rptvLuongNV.Location = new System.Drawing.Point(0, 0);
-            this.rptvLuongNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rptvLuongNV.Name = "rptvLuongNV";
-            this.rptvLuongNV.Size = new System.Drawing.Size(847, 330);
+            this.rptvLuongNV.Size = new System.Drawing.Size(726, 268);
             this.rptvLuongNV.TabIndex = 0;
-            this.rptvLuongNV.ToolPanelWidth = 233;
             // 
             // frmLuongNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 330);
+            this.ClientSize = new System.Drawing.Size(726, 268);
             this.Controls.Add(this.rptvLuongNV);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLuongNV";
-            this.Text = "LƯƠNG NHÂN VIÊN";
+            this.Text = "Lương NV";
             this.Load += new System.EventHandler(this.frmLuongNV_Load);
             this.ResumeLayout(false);
 

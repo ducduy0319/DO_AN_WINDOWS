@@ -38,21 +38,18 @@
             this.rptvTK.Cursor = System.Windows.Forms.Cursors.Default;
             this.rptvTK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rptvTK.Location = new System.Drawing.Point(0, 0);
-            this.rptvTK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rptvTK.Name = "rptvTK";
-            this.rptvTK.Size = new System.Drawing.Size(675, 380);
+            this.rptvTK.Size = new System.Drawing.Size(579, 309);
             this.rptvTK.TabIndex = 0;
-            this.rptvTK.ToolPanelWidth = 233;
             // 
             // frmTKDTcs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 380);
+            this.ClientSize = new System.Drawing.Size(579, 309);
             this.Controls.Add(this.rptvTK);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTKDTcs";
-            this.Text = "THỐNG KÊ DOANH THU";
+            this.Text = "Thống Kê Doanh Thu";
             this.Load += new System.EventHandler(this.frmTKDTcs_Load);
             this.ResumeLayout(false);
 

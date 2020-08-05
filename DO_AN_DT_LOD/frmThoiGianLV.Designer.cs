@@ -38,21 +38,18 @@
             this.rptvTGLV.Cursor = System.Windows.Forms.Cursors.Default;
             this.rptvTGLV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rptvTGLV.Location = new System.Drawing.Point(0, 0);
-            this.rptvTGLV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rptvTGLV.Name = "rptvTGLV";
-            this.rptvTGLV.Size = new System.Drawing.Size(769, 330);
+            this.rptvTGLV.Size = new System.Drawing.Size(659, 268);
             this.rptvTGLV.TabIndex = 0;
-            this.rptvTGLV.ToolPanelWidth = 233;
             // 
             // frmThoiGianLV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 330);
+            this.ClientSize = new System.Drawing.Size(659, 268);
             this.Controls.Add(this.rptvTGLV);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmThoiGianLV";
-            this.Text = "THỜI GIAN LV";
+            this.Text = "Thời Gian LV";
             this.Load += new System.EventHandler(this.frmThoiGianLV_Load);
             this.ResumeLayout(false);
 

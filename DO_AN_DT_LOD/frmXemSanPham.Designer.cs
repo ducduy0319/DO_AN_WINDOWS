@@ -57,9 +57,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 83);
+            this.label7.Location = new System.Drawing.Point(15, 67);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(255, 24);
+            this.label7.Size = new System.Drawing.Size(205, 19);
             this.label7.TabIndex = 44;
             this.label7.Text = "Nhập từ khóa để tìm kiếm :";
             // 
@@ -67,9 +67,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 12F);
-            this.label6.Location = new System.Drawing.Point(356, 24);
+            this.label6.Location = new System.Drawing.Point(305, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(247, 28);
+            this.label6.Size = new System.Drawing.Size(196, 21);
             this.label6.TabIndex = 35;
             this.label6.Text = "THÔNG TIN SẢN PHẨM";
             // 
@@ -97,10 +97,9 @@
             this.SoLuong,
             this.tonkho});
             this.dgvDSSP.DataSource = this.lKDTLODDataSetBindingSource;
-            this.dgvDSSP.Location = new System.Drawing.Point(12, 223);
-            this.dgvDSSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvDSSP.Location = new System.Drawing.Point(10, 181);
             this.dgvDSSP.Name = "dgvDSSP";
-            this.dgvDSSP.Size = new System.Drawing.Size(956, 396);
+            this.dgvDSSP.Size = new System.Drawing.Size(819, 322);
             this.dgvDSSP.TabIndex = 36;
             this.dgvDSSP.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHD_DataBindingComplete);
             // 
@@ -162,10 +161,9 @@
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(868, 627);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThoat.Location = new System.Drawing.Point(744, 509);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(109, 44);
+            this.btnThoat.Size = new System.Drawing.Size(93, 36);
             this.btnThoat.TabIndex = 42;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -173,9 +171,10 @@
             // radTimTheoTen
             // 
             this.radTimTheoTen.AutoSize = true;
-            this.radTimTheoTen.Location = new System.Drawing.Point(449, 143);
+            this.radTimTheoTen.Location = new System.Drawing.Point(385, 116);
+            this.radTimTheoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radTimTheoTen.Name = "radTimTheoTen";
-            this.radTimTheoTen.Size = new System.Drawing.Size(113, 21);
+            this.radTimTheoTen.Size = new System.Drawing.Size(89, 17);
             this.radTimTheoTen.TabIndex = 50;
             this.radTimTheoTen.Text = "Tìm Theo Tên";
             this.radTimTheoTen.UseVisualStyleBackColor = true;
@@ -184,9 +183,10 @@
             // 
             this.radMa.AutoSize = true;
             this.radMa.Checked = true;
-            this.radMa.Location = new System.Drawing.Point(278, 143);
+            this.radMa.Location = new System.Drawing.Point(238, 116);
+            this.radMa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radMa.Name = "radMa";
-            this.radMa.Size = new System.Drawing.Size(106, 21);
+            this.radMa.Size = new System.Drawing.Size(83, 17);
             this.radMa.TabIndex = 49;
             this.radMa.TabStop = true;
             this.radMa.Text = "Tìm theo mã";
@@ -194,10 +194,9 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(278, 87);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Location = new System.Drawing.Point(238, 71);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(284, 23);
+            this.txtTimKiem.Size = new System.Drawing.Size(244, 21);
             this.txtTimKiem.TabIndex = 48;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -205,17 +204,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 138);
+            this.label1.Location = new System.Drawing.Point(15, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.Size = new System.Drawing.Size(86, 19);
             this.label1.TabIndex = 44;
             this.label1.Text = "Chọn Loại:";
             // 
             // frmXemSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 684);
+            this.ClientSize = new System.Drawing.Size(885, 556);
             this.Controls.Add(this.radTimTheoTen);
             this.Controls.Add(this.radMa);
             this.Controls.Add(this.txtTimKiem);
@@ -224,8 +223,9 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvDSSP);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmXemSanPham";
-            this.Text = "XEM SẢN PHẨM";
+            this.Text = "Xem Sản Phẩm";
             this.Load += new System.EventHandler(this.frmXemSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();

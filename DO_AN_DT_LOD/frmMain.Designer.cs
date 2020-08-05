@@ -124,7 +124,6 @@
             this.barButtonItem9,
             this.barButtonItem12});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 35;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -132,7 +131,7 @@
             this.ribHangHoa,
             this.ribDoanhThu,
             this.ribNhanVien});
-            this.ribbonControl1.Size = new System.Drawing.Size(1186, 193);
+            this.ribbonControl1.Size = new System.Drawing.Size(1017, 162);
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // btnDangXuat
@@ -340,7 +339,6 @@
             this.btnPhanCong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanCong.ImageOptions.Image")));
             this.btnPhanCong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhanCong.ImageOptions.LargeImage")));
             this.btnPhanCong.Name = "btnPhanCong";
-            this.btnPhanCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanCong_ItemClick);
             // 
             // btnXemPhanCong
             // 
@@ -349,7 +347,6 @@
             this.btnXemPhanCong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemPhanCong.ImageOptions.Image")));
             this.btnXemPhanCong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXemPhanCong.ImageOptions.LargeImage")));
             this.btnXemPhanCong.Name = "btnXemPhanCong";
-            this.btnXemPhanCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemPhanCong_ItemClick);
             // 
             // barButtonItem11
             // 
@@ -529,25 +526,23 @@
             // tabBanhang
             // 
             this.tabBanhang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabBanhang.Location = new System.Drawing.Point(0, 193);
-            this.tabBanhang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabBanhang.Location = new System.Drawing.Point(0, 162);
             this.tabBanhang.Name = "tabBanhang";
             this.tabBanhang.SelectedIndex = 0;
-            this.tabBanhang.Size = new System.Drawing.Size(1186, 590);
+            this.tabBanhang.Size = new System.Drawing.Size(1017, 474);
             this.tabBanhang.TabIndex = 1;
             this.tabBanhang.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 783);
+            this.ClientSize = new System.Drawing.Size(1017, 636);
             this.Controls.Add(this.tabBanhang);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
-            this.Text = "CỬA HÀNG LINH KIỆN ĐIỆN TỬ LOD";
+            this.Text = "Cửa Hàng Linh Kiện Điện Tử  LOD";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
