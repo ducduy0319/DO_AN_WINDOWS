@@ -152,17 +152,17 @@
     <Compile Include="frmTaiKhoan.Designer.cs">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoHoaDon.Designer.cs">
+      <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongKe1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmThongKe1.Designer.cs">
       <DependentUpon>frmThongKe1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmtinhluong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmtinhluong.Designer.cs">
-      <DependentUpon>frmtinhluong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTKDTcs.cs">
       <SubType>Form</SubType>
@@ -273,11 +273,11 @@
     <EmbeddedResource Include="frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoHoaDon.resx">
+      <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThongKe1.resx">
       <DependentUpon>frmThongKe1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmtinhluong.resx">
-      <DependentUpon>frmtinhluong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTKDTcs.resx">
       <DependentUpon>frmTKDTcs.cs</DependentUpon>

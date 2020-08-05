@@ -488,6 +488,28 @@ namespace DO_AN_DT_LOD
         {
 
         }
+
+        private void btnChamCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabBanhang.TabPages.IndexOfKey("tblluong");
+            if (index >= 0)
+            {
+                tabBanhang.SelectedIndex = index;
+            }
+            else
+            {
+                frmLuong f = new frmLuong();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tbluong";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabBanhang.TabPages.Add(p);
+                tabBanhang.SelectedTab = p;
+                f.Show();
+            }
+        }
     }
     
 }

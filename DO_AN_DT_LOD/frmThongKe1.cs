@@ -66,6 +66,10 @@ namespace DO_AN_DT_LOD
             f.Show();
         }
 
-       
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
     }
 }

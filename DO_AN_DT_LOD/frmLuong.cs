@@ -34,7 +34,6 @@ namespace DO_AN_DT_LOD
             tblNhanVien = new XLNHANVIEN();
             tblChamCong = new XLCHAMCONG();
 
-            loadHoaDon();
             LoadHoaDon();
 
             tinhtien();
@@ -50,16 +49,13 @@ namespace DO_AN_DT_LOD
             ds.Relations.Add(qh);
             DataColumn cot_ten = new DataColumn("ten_nv", Type.GetType("System.String"), "Parent(FPK_NHANVIEN_CHAMCONG).ten_nv");
             tblChamCong.Columns.Add(cot_ten);
-     
-        }
-        private void loadHoaDon()
-        {
+
             txtmacong.DataBindings.Add("text", tblChamCong, "ma_cong", true);
             cbmanv.DataBindings.Add("text", tblChamCong, "ma_nv", true);
             txtTenNV.DataBindings.Add("text", tblNhanVien, "ten_nv", true);
             txtgiolam.DataBindings.Add("text", tblChamCong, "thoigianlam", true);
             txtluongcoban.DataBindings.Add("text", tblChamCong, "luongcoban", true);
-           // txtThanhTien.DataBindings.Add("text", tblChamCong, "luong", true);
+            // txtThanhTien.DataBindings.Add("text", tblChamCong, "luong", true);
 
             //txtTenNV.DataBindings.Add("text", tblHoaDon_CT, "SoLuong", true);
             //txtgiolam.DataBindings.Add("selectedvalue", tblHoaDon_CT, "MaSP", true);
@@ -95,12 +91,12 @@ namespace DO_AN_DT_LOD
         {
             if (radMa.Checked == true)
             {
-                string std = string.Format("ma_cong like '%{0}%'", txtTimKiem.Text);
+                string std = string.Format("ma_nv like '%{0}%'", txtTimKiem.Text);
                 tblChamCong.DefaultView.RowFilter = std;
             }
             else
             {
-                string std = string.Format("ma_nv like '%{0}%'", txtTimKiem.Text);
+                string std = string.Format("ten_nv like '%{0}%'", txtTimKiem.Text);
                tblChamCong.DefaultView.RowFilter = std;
             }
 

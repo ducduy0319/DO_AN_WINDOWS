@@ -42,62 +42,65 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 32);
+            this.label1.Location = new System.Drawing.Point(29, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label2.Location = new System.Drawing.Point(376, 9);
+            this.label2.Location = new System.Drawing.Point(439, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(408, 23);
+            this.label2.Size = new System.Drawing.Size(514, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mời Bạn Chọn Thời Gian Muốn Xem Doanh Thu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(355, 50);
+            this.label3.Location = new System.Drawing.Point(414, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Theo Tháng:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(558, 50);
+            this.label4.Location = new System.Drawing.Point(651, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Theo Năm:";
             // 
             // cbThang
             // 
             this.cbThang.FormattingEnabled = true;
-            this.cbThang.Location = new System.Drawing.Point(447, 47);
+            this.cbThang.Location = new System.Drawing.Point(521, 58);
+            this.cbThang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbThang.Name = "cbThang";
-            this.cbThang.Size = new System.Drawing.Size(105, 21);
+            this.cbThang.Size = new System.Drawing.Size(122, 24);
             this.cbThang.TabIndex = 4;
             this.cbThang.SelectedIndexChanged += new System.EventHandler(this.cbThang_SelectedIndexChanged);
             // 
             // cbNam
             // 
             this.cbNam.FormattingEnabled = true;
-            this.cbNam.Location = new System.Drawing.Point(639, 47);
+            this.cbNam.Location = new System.Drawing.Point(745, 58);
+            this.cbNam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(121, 21);
+            this.cbNam.Size = new System.Drawing.Size(140, 24);
             this.cbNam.TabIndex = 5;
             // 
             // btnXemThongTin
             // 
             this.btnXemThongTin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemThongTin.ImageOptions.Image")));
-            this.btnXemThongTin.Location = new System.Drawing.Point(423, 88);
+            this.btnXemThongTin.Location = new System.Drawing.Point(493, 108);
+            this.btnXemThongTin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemThongTin.Name = "btnXemThongTin";
-            this.btnXemThongTin.Size = new System.Drawing.Size(116, 33);
+            this.btnXemThongTin.Size = new System.Drawing.Size(135, 41);
             this.btnXemThongTin.TabIndex = 6;
             this.btnXemThongTin.Text = "Xem Thông Tin";
             this.btnXemThongTin.Click += new System.EventHandler(this.btnXemThongTin_Click);
@@ -105,17 +108,19 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(573, 88);
+            this.simpleButton2.Location = new System.Drawing.Point(668, 108);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(87, 33);
+            this.simpleButton2.Size = new System.Drawing.Size(101, 41);
             this.simpleButton2.TabIndex = 7;
             this.simpleButton2.Text = "Thoát";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frmThongKe1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 305);
+            this.ClientSize = new System.Drawing.Size(1312, 375);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.btnXemThongTin);
             this.Controls.Add(this.cbNam);
@@ -124,6 +129,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmThongKe1";
             this.Text = "frmThongKe1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
