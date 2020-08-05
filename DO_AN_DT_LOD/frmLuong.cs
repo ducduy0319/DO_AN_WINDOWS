@@ -12,7 +12,6 @@ using System.Data.SqlClient;
 using System.IO;
 using DO_AN_DT_LOD.Modules;
 
-using DevExpress.XtraEditors.NavigatorButtons;
 
 namespace DO_AN_DT_LOD
 {
@@ -47,8 +46,8 @@ namespace DO_AN_DT_LOD
             ds.Tables.AddRange(new DataTable[] { tblChamCong,tblNhanVien });
             DataRelation qh = new DataRelation("FPK_NHANVIEN_CHAMCONG", tblNhanVien.Columns["ma_nv"], tblChamCong.Columns["ma_nv"]);
             ds.Relations.Add(qh);
-            DataColumn cot_ten = new DataColumn("ten_nv", Type.GetType("System.String"), "Parent(FPK_NHANVIEN_CHAMCONG).ten_nv");
-            tblChamCong.Columns.Add(cot_ten);
+            //DataColumn cot_ten = new DataColumn("ten_nv", Type.GetType("System.String"), "Parent(FPK_NHANVIEN_CHAMCONG).ten_nv");
+            //tblChamCong.Columns.Add(cot_ten);
 
             txtmacong.DataBindings.Add("text", tblChamCong, "ma_cong", true);
             cbmanv.DataBindings.Add("text", tblChamCong, "ma_nv", true);
