@@ -313,7 +313,7 @@
             // 
             // btnXemSanPham
             // 
-            this.btnXemSanPham.Caption = "Sản Phẩm";
+            this.btnXemSanPham.Caption = "Tìm Kiếm";
             this.btnXemSanPham.Id = 23;
             this.btnXemSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemSanPham.ImageOptions.Image")));
             this.btnXemSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXemSanPham.ImageOptions.LargeImage")));
@@ -399,13 +399,14 @@
             this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
             this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
             this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // ribBanHang
             // 
             this.ribBanHang.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup4,
             this.ribbonPageGroup5,
+            this.ribbonPageGroup4,
             this.ribbonPageGroup13});
             this.ribBanHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribBanHang.ImageOptions.Image")));
             this.ribBanHang.Name = "ribBanHang";
