@@ -155,5 +155,13 @@ namespace DO_AN_DT_LOD
             foreach (DataGridViewRow r in dsCLV.Rows)
                 r.Cells[0].Value = r.Index + 1;
         }
+
+        private void btnIN_Click(object sender, EventArgs e)
+        {
+           frmThoiGianLV f = new frmThoiGianLV();
+            f.ma_nv = cbtMaNV.Text;
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
+        }
     }
 }
