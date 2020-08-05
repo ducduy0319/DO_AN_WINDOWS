@@ -68,6 +68,7 @@
             this.radMa = new System.Windows.Forms.RadioButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnIN = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsnhanvien)).BeginInit();
@@ -184,7 +185,7 @@
             // btnHuy
             // 
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(905, 159);
+            this.btnHuy.Location = new System.Drawing.Point(905, 139);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(87, 43);
@@ -195,7 +196,7 @@
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(905, 216);
+            this.btnThoat.Location = new System.Drawing.Point(905, 196);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(87, 43);
@@ -206,7 +207,7 @@
             // btnSua
             // 
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(812, 159);
+            this.btnSua.Location = new System.Drawing.Point(812, 139);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(87, 43);
@@ -217,7 +218,7 @@
             // btnXoa
             // 
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(812, 218);
+            this.btnXoa.Location = new System.Drawing.Point(812, 198);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(87, 38);
@@ -228,7 +229,7 @@
             // btnLuu
             // 
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(905, 104);
+            this.btnLuu.Location = new System.Drawing.Point(905, 84);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(87, 36);
@@ -239,7 +240,7 @@
             // btnThem
             // 
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(810, 103);
+            this.btnThem.Location = new System.Drawing.Point(810, 83);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(87, 37);
@@ -426,6 +427,17 @@
             this.label7.Text = "Tìm Kiếm:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // btnIN
+            // 
+            this.btnIN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnIN.Location = new System.Drawing.Point(902, 247);
+            this.btnIN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnIN.Name = "btnIN";
+            this.btnIN.Size = new System.Drawing.Size(87, 37);
+            this.btnIN.TabIndex = 56;
+            this.btnIN.Text = "In";
+            this.btnIN.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // frmLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -440,6 +452,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnIN);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dsnhanvien);
@@ -499,5 +512,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn thoigianlam;
         private System.Windows.Forms.DataGridViewTextBoxColumn luongcoban;
         private System.Windows.Forms.DataGridViewTextBoxColumn luong;
+        private DevExpress.XtraEditors.SimpleButton btnIN;
     }
 }
