@@ -386,7 +386,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTGLV";
-            this.Text = "frmTGLV";
+            this.Text = "Thời Gian Làm Việc";
             this.Load += new System.EventHandler(this.frmTGLV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lKDT_LODDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lKDTLODDataSetBindingSource)).EndInit();

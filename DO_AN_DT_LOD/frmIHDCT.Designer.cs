@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(688, 268);
             this.Controls.Add(this.rptvIHDCT);
             this.Name = "frmIHDCT";
-            this.Text = "frmIHDCT";
+            this.Text = "In Hóa Đơn CT";
             this.Load += new System.EventHandler(this.frmIHDCT_Load);
             this.ResumeLayout(false);
 
