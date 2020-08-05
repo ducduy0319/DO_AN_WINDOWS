@@ -62,5 +62,10 @@ namespace DO_AN_DT_LOD
                 btnDangNhap_Click(sender, e);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
